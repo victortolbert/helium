@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UX Lab</title>
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <script>
+    window.__unocss = {
+      rules: [
+        // custom rules...
+      ],
+      presets: [
+        // custom presets...
+      ],
+      // ...
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/@unocss/runtime"></script>
+  <script src="https://cdn.jsdelivr.net/npm/theme-change@2.4.0/index.js"></script>
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@unocss/reset/normalize.min.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@unocss/reset/tailwind.min.css">
+
+  <style>
+    :root {
+      --color-default: #fff;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --color-default: #252b30;
+      }
+    }
+
+    [data-theme='dark'] {
+      --color-default: #252b30;
+    }
+
+    [data-theme='black'] {
+      --color-default: #000000;
+    }
+
+    [data-theme='🌸'] {
+      --color-default: #ffabc8;
+    }
+
+    [data-theme='🐬'] {
+      --color-default: #7ec6ff;
+    }
+
+    [data-theme='🐤'] {
+      --color-default: #ffd65a;
+    }
+
+    body {
+      background-color: var(--color-default);
+    }
+  </style>
+<!-- Site Level CSS -->
+<link rel="preload" href="/content/dam/botoxone/css/botoxplus.css" as="style">
+<link rel="stylesheet" href="/content/dam/botoxone/css/botoxplus.css" type="text/css">
+<!-- Page Level CSS -->
+
+<script>
+  window.AbbViePageInfo = {
+    loginPage: '',
+    forcedLogin: '',
+    editState: 'false',
+    pagepath: '/content/botoxone/en-us',
+    adminConfigPath: '/content/admin/botoxone/en-us',
+    apiEndPoints: { getPatientFullfilment: '/api/BrandAPIGateway/api/V2/PatientFulfillment/GetPatientFulfillment', saveAssessment: '/api/BrandAPIGateway/api/Assessment/Save', physicianLookUp: '/api/BrandAPIGateway/api/Physician/LookUp', getAssessment: '/api/BrandAPIGateway/api/Assessment/Get', getAggregated: '/api/BrandAPIGateway/api/Assessment/GetAggregated', refreshToken: '/bin/abbvieforms/refreshlogin', getSearchSuggestions: '/suggest', getSearchResults: '/search', apigeePhysicianLookUp: '/bin/abbvie/apiproxy', apigeeProviderLookUp: '/bin/abbvie/providerlookupapiproxy' },
+    share: { copy: { text: '', showSuccess: false, enable: false }, email: { modalID: '', enable: false }, facebook: { url: 'https://www.facebook.com/sharer/sharer.php?u=', enable: false }, twitter: { url: 'https://www.twitter.com/share?url=', enable: false }, linkedin: { url: 'https://www.linkedin.com/shareArticle?mini=true&amp;url=', enable: false }, tumblr: { url: 'https://www.tumblr.com/widgets/share/tool?canonicalUrl=', enable: false }, pinterest: { url: 'https://pinterest.com/pin/create/button/?url=', enable: false }, instagram: { url: 'https://instagram.com/share?uri=', enable: false }, exitModal: { modalID: '' } },
+    brandConfig: 'fm-brandname-botoxplus',
+    headers: '',
+    targetTimeout: '1000',
+    timeOut: '',
+    originNames: '',
+    indicationName: '',
+    indicationReset: 'true',
+    epassNumber: 'US-BTX-240203',
+    indicationAware: '',
+    indicationEndPoints: {
+      header: '/{{indication}}/jcr:content/headerIpar.html',
+      footer: '/{{indication}}/jcr:content/footerIpar.html',
+      safetyBar: '/{{indication}}/jcr:content/safetybar.html',
+      inlineUse: '/content/global/en-us/botoxone/professional/{{indication}}/use/jcr:content/contentpar.html',
+      inlineISI: '/content/global/en-us/botoxone/professional/{{indication}}/isi/jcr:content/contentpar.html'
+    },
+    campaignConfig: { "sids": {}, "emids": {}, "qids": {}, "videooptionids": {}, "eids": {}, "optionids": {} },
+    runModes: 'prod, s7connect, crx3, nosamplecontent, publish, crx3tar',
+    friendlyNames: '',
+    coveoSearchHub: 'botoxone-search',
+    coveoSearchUrl: 'https://platform.cloud.coveo.com/rest/search',
+    coveoOrganizationId: 'abbvieincproductionyd9g1cpe',
+    coveoHostedSearchPageAPIKey: 'xx63ab8217-2b82-4c4a-967f-d6894f422ff3',
+    coveoQuerySuggestionsEnabled: 'false',
+    admpInvisibleEntRecaptchaSitekey: '6Ld-4xkiAAAAAIqU4DUDupoGer6ss43KQeOGEtk0',
+    maxComponentCount: '100',
+    headerInheritance: '',
+    footerInheritance: '',
+    safetybarInheritance: '',
+    globalFooterLinks: '[{ 	&quot;findLinkText&quot;: &quot;PRIVACY POLICY&quot;, 	&quot;newLinkText&quot;: &quot;Consumer Health Data Privacy Notice&quot;, 	&quot;newLinkUrl&quot;: &quot;https://abbv.ie/PrivacyConsumerHealth&quot;, 	&quot;language&quot;: &quot;en&quot; }, { 	&quot;findLinkText&quot;: &quot;PRIVACY Notice&quot;, 	&quot;newLinkText&quot;: &quot;Consumer Health Data Privacy Notice&quot;, 	&quot;newLinkUrl&quot;: &quot;https://abbv.ie/PrivacyConsumerHealth&quot;, 	&quot;language&quot;: &quot;en&quot; }, { 	&quot;findLinkText&quot;: &quot;Aviso De privacidad&quot;, 	&quot;newLinkText&quot;: &quot;Aviso de Privacidad de los Datos de Salud de los Consumidores&quot;, 	&quot;newLinkUrl&quot;: &quot;https://abbv.ie/PrivacidadConsumidores&quot;, 	&quot;language&quot;: &quot;es&quot; }, { 	&quot;findLinkText&quot;: &quot;Aviso De privacidad&quot;, 	&quot;newLinkText&quot;: &quot;Aviso de Privacidad de los Datos de Salud de los Consumidores&quot;, 	&quot;newLinkUrl&quot;: &quot;https://abbv.ie/PrivacidadConsumidores&quot;, 	&quot;language&quot;: &quot;es-pr&quot; }]',
+    pageAudienceType: 'Health Care Professional (HCP)'
+  };
+</script>
+
+<script>
+  // Add constants here - not using const here b/c this code is also in preloadframeworkinlineJS.html
+  var MEDIA_DESKTOP = 985;  //desktop everything > 985
+  var MEDIA_TABLET = 601;   //tablet everything > 600 and < 985
+  var MEDIA_MOBILE = 600;   //mobile <= 600
+
+  function arrayBufferToBase64(buffer) {
+    var binary = '';
+    var bytes = new Uint8Array(buffer);
+    var len = bytes.byteLength;
+    for (var i = 0; i < len; i++) {
+      binary += String.fromCharCode(bytes[i]);
+    }
+    return window.btoa(binary);
+  }
+
+  function base64ToArrayBuffer(base64) {
+    var binary_string = window.atob(base64);
+    var len = binary_string.length;
+    var bytes = new Uint8Array(len);
+    for (var i = 0; i < len; i++) {
+      bytes[i] = binary_string.charCodeAt(i);
+    }
+    return bytes.buffer;
+  }
+
+  // Browser Detection
+  var browserAgent = (function () {
+    var bAgents = {
+      opera: { status: false, browser: 'opera' },
+      firefox: { status: false, browser: 'firefox' },
+      safari: { status: false, browser: 'safari' },
+      ie: { status: false, browser: 'ie' },
+      edge: { status: false, browser: 'edge' },
+      chrome: { status: false, browser: 'chrome' },
+      blink: { status: false, browser: 'blink' },
+      touch: { status: false, browser: 'touch-device' },
+      mChrome: { status: false, browser: 'chrome-mobile' },
+      mSafari: { status: false, browser: 'safari-mobile' }
+    };
+    return {
+      init: function () {
+        // Opera 8.0+
+        bAgents['opera'].status = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+        // Firefox 1.0+
+        bAgents['firefox'].status = typeof InstallTrigger !== 'undefined';
+        // Safari 3.0+ "[object HTMLElementConstructor]"
+        bAgents['safari'].status = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification));
+        // Internet Explorer 6-11
+        // bAgents['ie'].status = true;
+        bAgents['ie'].status = !!document.documentMode;
+        // Edge 20+
+        bAgents['edge'].status = !bAgents['ie'].status && !!window.StyleMedia;
+        // Chrome 1 - 71
+        bAgents['chrome'].status = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+        // Blink engine detection
+        bAgents['blink'].status = (bAgents['chrome'].status || bAgents['opera'].status) && !!window.CSS;
+        // Touch Device
+        bAgents['touch'].status = "ontouchstart" in document.documentElement;
+        // Mobile Chrome
+        bAgents['mChrome'].status = (window.navigator.userAgent.indexOf('Android') > -1 && (/Chrome\/[.0-9]*/).test(window.navigator.userAgent)) || navigator.userAgent.match('CriOS');
+        // Mobile Safari
+        bAgents['mSafari'].status = /Mac OS X|iP(ad|od|hone)/i.test(window.navigator.userAgent) && /WebKit/i.test(window.navigator.userAgent) && !(/(CriOS|FxiOS|OPiOS|mercury)/i.test(window.navigator.userAgent));
+        // Print browser name into html tag
+        var htmlObj = document.getElementsByTagName("html")[0];
+        for (var prop in bAgents) {
+          if (bAgents[prop].status) { htmlObj.classList.add('abbv-browser-' + bAgents[prop].browser); }
+        }
+      },
+      checkIfBrowser: function (ifBrowser) {
+        return bAgents[ifBrowser].status;
+      },
+      printObj: function () {
+        console.log(bAgents);
+      }
+    };
+  })();
+
+  var cookieObj = (function () {
+    var cookieVars = {};
+    return {
+      init: function () {
+        cookieObj.analzeCookies();
+      },
+      analzeCookies: function () {
+        var cString = document.cookie;
+        if (cString != undefined) {
+          var temp = cString.split(';');
+          for (let i = 0; i < temp.length; i++) {
+            let tempSplit = temp[i].trim().split('=');
+            cookieVars[tempSplit[0]] = tempSplit[1];
+          }
+        }
+      },
+      getCookie: function (key) {
+        if (decodeURIComponent(cookieVars[encodeURIComponent(key)]) == "undefined") { return undefined; }
+        else { return decodeURIComponent(cookieVars[encodeURIComponent(key)]); }
+      },
+      createCookie: function (name, value, days, notSecure) {
+        var expires;
+        if (days) {
+          var date = new Date();
+          date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+          expires = "; expires=" + date.toGMTString();
+        } else {
+          expires = "";
+        }
+        document.cookie = encodeURIComponent(name) + "=" + encodeURIComponent(value) + expires + "; path=/;" + (notSecure === true ? "" : "secure");
+        cookieVars[name] = value;
+      },
+      deleteCookie: function (name) {
+        var date = new Date();
+        date.setTime(date.getTime() + (-1 * 24 * 60 * 60 * 1000));
+        var expires = "; expires=" + date.toGMTString();
+        document.cookie = encodeURIComponent(name) + "=" + "" + expires + "; path=/";
+        delete cookieVars[name];
+      },
+      getCookieObj: function () {
+        return cookieVars;
+      },
+      printObj: function () {
+        console.log(cookieVars);
+      }
+    };
+  })();
+
+  var urlObj = (function () {
+    var queryVars = {};
+    var queryVarsU = {};
+    return {
+      init: function () {
+        urlObj.analzeQuery();
+      },
+      analzeQuery: function () {
+        var qString = window.location.search.split('?')[1];
+        if (qString != undefined) {
+          var temp = qString.split('&');
+          for (let i = 0; i < temp.length; i++) {
+            let tempSplit = temp[i].split('=');
+            queryVars[tempSplit[0]] = tempSplit[1];
+            queryVarsU[tempSplit[0].toUpperCase()] = tempSplit[1];
+          }
+        }
+      },
+      getParam: function (key, caseSensative) {
+        caseSensative = caseSensative == undefined ? true : caseSensative;
+        let val;
+        if (caseSensative == true) { val = decodeURIComponent(queryVars[encodeURIComponent(key)]); }
+        else { val = decodeURIComponent(queryVarsU[encodeURIComponent(key.toUpperCase())]); }
+        return val;
+      },
+      getParamsObj: function () {
+        return queryVars;
+      },
+      getParamsObjU: function () {
+        return queryVarsU;
+      },
+      printObj: function () {
+        console.log(queryVars);
+        console.log(queryVarsU);
+      }
+    };
+  })();
+
+  var campaignTracking = (function () {
+    var idTables;
+    var gpf_payload = {};
+    var sa_payload = {
+      "CampaignMasterId": "",
+      "CompleteDate": null,
+      "ConsumerId": "",
+      "IndividualId": "",
+      "AssessmentQuestion": [{
+        "QuestionId": "",
+        "QuestionOptions": [{
+          "OptionId": "",
+          "ResponseText": ""
+        }]
+      }],
+      "OtherInformation": {}
+    };
+    var questionLookupReq = false;
+    var saveReady = false;
+    return {
+      init: function () {
+        idTables = AbbViePageInfo.campaignConfig;
+        AbbViePageInfo.campaignTracking = {};
+        if (campaignTracking.getIndividualID()) {
+          // console.log('-- Individual ID Found --');
+          AbbViePageInfo.campaignTracking.individualID = sa_payload.IndividualId;
+          if (campaignTracking.getCampaignMasterID()) {
+            // console.log('-- Campaign Master ID Found --');
+            AbbViePageInfo.campaignTracking.campaignMasterId = sa_payload.CampaignMasterId;
+            if (campaignTracking.getOptionID()) {
+              // console.log('-- Option ID Found --');
+              if (campaignTracking.getQuestionID()) {
+                // console.log('-- Question ID Found --');
+                saveReady = true;
+              }
+              campaignTracking.getAdditionalInfo();
+            }
+          }
+        }
+        if (saveReady) {
+          campaignTracking.saveAssessment();
+        }
+      },
+      getIndividualID: function () {
+        let haveInfo = false;
+        if (urlObj.getParam('s_fid', false) != 'undefined') {
+          gpf_payload.Source = "Intouch";
+          gpf_payload.FulfillmentID = urlObj.getParam('s_fid', false);
+          haveInfo = true;
+          // return true;
+        } else if (urlObj.getParam('h_fid', false) != 'undefined') {
+          gpf_payload.Source = "Epsilon";
+          gpf_payload.FulfillmentID = urlObj.getParam('h_fid', false);
+          haveInfo = true;
+          // return true;
+        } else if (urlObj.getParam('fid') != 'undefined') {
+          gpf_payload.Source = "Epsilon";
+          gpf_payload.FulfillmentID = urlObj.getParam('fid', false);
+          haveInfo = true;
+          // return true;
+        } else {
+          console.log('missing fid variant');
+          // return false;
+        }
+        if (haveInfo) {
+          //Ajax call to get individual ID
+          let url = AbbViePageInfo.apiEndPoints.getPatientFullfilment;
+          let successState = false;
+          ajaxCall(url, "POST", JSON.stringify(gpf_payload), gpfSuccess, gpfFail);
+          //Success
+          function gpfSuccess(data) {
+            //Set to sa_payload
+            if (data.ContentResult && data.ContentResult.IndividualId) {
+              var id = data.ContentResult.IndividualId;
+              sa_payload.IndividualId = id;
+              sessionStorage.setItem('IndividualId', id);
+              //Write cookie
+              successState = true;
+            }
+          }
+          //Fail
+          function gpfFail(jqXHR, textStatus, errorThrown) {
+            //return false
+            console.log('Get Patient Fullfillment Fail');
+            successState = false;
+          }
+          return successState;
+        } else {
+          return false;
+        }
+      },
+      getCampaignMasterID: function () {
+        if (urlObj.getParam('mcid', false) != 'undefined') {
+          sa_payload.CampaignMasterId = urlObj.getParam('mcid', false);
+          return true;
+        } else if (urlObj.getParam('em_id') != 'undefined') {
+          sa_payload.CampaignMasterId = idTables.emids[urlObj.getParam('em_id')];
+          questionLookupReq = true;
+          return true;
+        } else if (urlObj.getParam('sid') != 'undefined') {
+          sa_payload.CampaignMasterId = idTables.sids[urlObj.getParam('sid')];
+          questionLookupReq = true;
+          return true;
+        } else if (urlObj.getParam('qID') != 'undefined') {
+          sa_payload.CampaignMasterId = idTables.qids[urlObj.getParam('qID')];
+          questionLookupReq = true;
+          return true;
+        } else if (urlObj.getParam('eid') != 'undefined') {
+          sa_payload.CampaignMasterId = idTables.eids[urlObj.getParam('eid')];
+          questionLookupReq = true;
+          return true;
+        } else {
+          console.log('missing master campaign id in query or corresponding id');
+          return false;
+        }
+      },
+      getQuestionID: function () {
+        if (questionLookupReq) {
+          // console.log('Question Id lookup Required');
+          let successState = false;
+          let cmi_query = "?CampaignMasterId=" + sa_payload.CampaignMasterId;
+          let url = AbbViePageInfo.apiEndPoints.getAssessment + cmi_query;
+          ajaxCall(url, 'GET', '', getAssessmentSuccess, getAssessmentFail);
+          function getAssessmentSuccess(data) {
+            // console.log('getAssessmentSuccess');
+            if (data.IsStatusSuccessful == true) {
+              var matchOption = sa_payload.AssessmentQuestion[0].QuestionOptions[0].OptionId;
+              var questionList = data.ContentResult.AssessmentQuestion;
+              var matchedQuestionID = campaignTracking.reverseLookup(questionList, matchOption);
+              if (matchedQuestionID != undefined) {
+                sa_payload.AssessmentQuestion[0].QuestionId = matchedQuestionID;
+                successState = true;
+                // console.log('reverse lookup found question id');
+              } else { console.log('no option id matching in campaign'); }
+            } else {
+              console.warn('getAssessment status successful = false');
+            }
+          }
+          function getAssessmentFail(jqXHR, textStatus, errorThrown) { console.log('getAssessmentFail'); }
+          return successState;
+        } else {
+          if (urlObj.getParam('qid') != 'undefined') {
+            sa_payload.AssessmentQuestion[0].QuestionId = urlObj.getParam('qid');
+            return true;
+          }
+          else {
+            console.log('missing question id in query or corresponding id');
+            return false;
+          }
+        }
+      },
+      getOptionID: function () {
+        if (urlObj.getParam('oid', false) != 'undefined') {
+          sa_payload.AssessmentQuestion[0].QuestionOptions[0].OptionId = urlObj.getParam('oid', false);
+          return true;
+        } else if (urlObj.getParam('eid') != 'undefined') {
+          if (urlObj.getParam('qid') != 'undefined') {
+            let lookup = urlObj.getParam('eid') + urlObj.getParam('qid');
+            if (idTables.optionids[lookup] != undefined) {
+              sa_payload.AssessmentQuestion[0].QuestionOptions[0].OptionId = idTables.optionids[lookup];
+              return true;
+            } else {
+              console.warn('eid + qid no option id to match');
+              return false;
+            }
+          }
+          console.log('missing qid for looking up eid + qid');
+        } else if (urlObj.getParam('q1', false) != 'undefined') {
+          sa_payload.AssessmentQuestion[0].QuestionOptions[0].OptionId = urlObj.getParam('q1', false);
+          return true;
+        } else {
+          console.log('missing option id in query or corresponding id');
+          return false;
+        }
+      },
+      getAdditionalInfo: function () {
+        if (urlObj.getParam('cid', false) != 'undefined') {
+          sa_payload.OtherInformation.cid = urlObj.getParam('cid', false);
+          return true;
+        } else if (urlObj.getParam('s_mcid', false) != 'undefined') {
+          sa_payload.OtherInformation.cid = urlObj.getParam('s_mcid', false);
+          return true;
+        }
+        if (urlObj.getParam('ep_ind', false) != 'undefined') {
+          sa_payload.OtherInformation.cid = urlObj.getParam('cid', false);
+          return true;
+        }
+      },
+      reverseLookup: function (data, optionID) {
+        for (let i = 0; i < data.length; i++) {
+          let optionList = data[i].QuestionOption;
+          let tempQuestion = data[i].QuestionId;
+          for (let k = 0; k < optionList.length; k++) {
+            if (optionList[k].OptionId.toUpperCase() == optionID.toUpperCase()) {
+              return tempQuestion;
+            }
+          }
+        }
+      },
+      saveAssessment: function () {
+        let url = AbbViePageInfo.apiEndPoints.saveAssessment;
+        ajaxCall(url, "POST", JSON.stringify(sa_payload), saveAssessmentSuccess, saveAssessmentFail);
+        function saveAssessmentSuccess() {
+          console.log("Save Asessement Success");
+        }
+        function saveAssessmentFail(jqXHR, textStatus, errorThrown) {
+          console.error("Save Assessment Fail");
+        }
+      },
+      printPayloads: function () {
+        console.log(gpf_payload);
+        console.log(sa_payload);
+      }
+    };
+  })();
+
+
+  function updateToken(cookieCheck) {
+    if (AbbViePageInfo.apiEndPoints.refreshToken) {
+      if (AbbViePageInfo.apiEndPoints.refreshToken === '/bin/abbvieforms/refreshlogin') {
+        brandAPIRefreshLogin(cookieCheck);
+      } else if (AbbViePageInfo.apiEndPoints.refreshToken === '/bin/abbvieforms/refreshapigeelogin') {
+        apigeeAPIRefreshLogin();
+      }
+    } else {
+      console.warn('refreshToken url not defined');
+    }
+  }
+
+  function brandAPIRefreshLogin(cookieCheck) {
+    var payload = {
+      "oldToken": cookieCheck
+    };
+    if (AbbViePageInfo.brandConfig != undefined) {
+      payload.brandName = AbbViePageInfo.brandConfig;
+    }
+    var refreshToken_api_url = AbbViePageInfo.apiEndPoints.refreshToken;
+    console.log('Inside  refresh login ' + refreshToken_api_url);
+    ajaxCall(refreshToken_api_url, "POST", JSON.stringify(payload), onSuccessTokenCall, onFailedTokenCall, true);
+    function onSuccessTokenCall(data) {
+      if (data.IsStatusSuccessful) {
+        var newToken = data.ContentResult;
+        cookieObj.createCookie("admp_login_token", newToken, 15 / 1440);
+        cookieObj.createCookie("HID", newToken, 15 / 1440);
+      } else {
+        console.log("Failed to update tokens");
+      }
+    }
+    function onFailedTokenCall() {
+      console.log("Failed to update tokens");
+    }
+  }
+
+  function apigeeAPIRefreshLogin(cookieCheck) {
+    var payload = {
+      "admp_login_token": cookieCheck
+    };
+    if (AbbViePageInfo.brandConfig != undefined) {
+      payload.brandName = AbbViePageInfo.brandConfig;
+    }
+    var refreshToken_api_url = AbbViePageInfo.apiEndPoints.refreshToken;
+    console.log('Inside apigee refresh login ' + refreshToken_api_url);
+    ajaxCall(refreshToken_api_url, "POST", JSON.stringify(payload), onSuccessTokenCall, onFailedTokenCall, true);
+    function onSuccessTokenCall(response) {
+      var refreshLoginResp = JSON.parse(response.admp_login_token);
+      if (refreshLoginResp.RefreshTokenResponse.IsStatusSuccessful === "true") {
+        cookieObj.createCookie("admp_login_token", refreshLoginResp.RefreshTokenResponse.TokenDetails[0].RefreshToken, response.cookie_age / 60 / 60 / 24, response.cookie_seccure_flag === "false");
+      } else {
+        console.log("Failed to update tokens in APIGEE");
+      }
+    }
+    function onFailedTokenCall() {
+      console.log("Failed to update tokens IN APIGEE");
+    }
+  }
+  function setHeaders(url, xhr) {
+    xhr.setRequestHeader("content-type", "application/json");
+    // If call is a save assessment call
+    if (AbbViePageInfo.apiEndPoints.saveAssessment === url) {
+      let acMcIdCookie = cookieObj.getCookie('ac_mcid');
+      if (acMcIdCookie != undefined) {
+        xhr.setRequestHeader("MId", acMcIdCookie);
+      }
+    }
+  }
+  function ajaxCall(url, type, payload, successCallback, failedCallback, async, dataType) {
+    var xhr = new XMLHttpRequest();
+    xhr.open(type, url, async === true);
+
+    setHeaders(url, xhr);
+    xhr.addEventListener("error", failedCallback);
+
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState == 4) {
+        var data;
+        // console.log('XHR: Request Done');
+        if (xhr.status != 200) {
+          if (Array.isArray(failedCallback)) {
+            for (var f = 0; f < failedCallback.length; f++) {
+              failedCallback[f](data, xhr.statusText, xhr);
+            }
+          } else {
+            failedCallback(data, xhr.statusText, xhr);
+          }
+        } else {
+          //HACK: for some reason an API is returning a 200/OK, but content-type is null
+          if (xhr.getResponseHeader('content-type') && xhr.getResponseHeader('content-type').includes("application/json")) {
+            data = JSON.parse(xhr.responseText);
+          } else {
+            data = xhr.responseText;
+          }
+          if (Array.isArray(successCallback)) {
+            for (var s = 0; s < successCallback.length; s++) {
+              successCallback[s](data, xhr.statusText, xhr);
+            }
+          } else {
+            successCallback(data, xhr.statusText, xhr);
+          }
+        }
+      }
+    };
+    if (payload != "") {
+      xhr.send(payload);
+    } else {
+      xhr.send();
+    }
+  }
+
+  function addWindowLoad(func) {
+    var oldonload = window.onload;
+    if (typeof window.onload != 'function') {
+      window.onload = func;
+    }
+    // window load event is not getting triggered for the IOS having video inside XF pages */
+    else if (browserAgent.checkIfBrowser('safari') || browserAgent.checkIfBrowser('mSafari')) {
+      if ($("video-js").length) {
+        window.addEventListener('load', func());
+      }
+    }
+    else {
+      window.onload = function () {
+        if (oldonload) {
+          oldonload();
+        }
+        func();
+      };
+    }
+  }
+
+  var postLoadActions = (function () {
+    var pageLoadQueue = [];
+    var waitFlags = 0;
+    var pageLoadImportance = [
+      "isi",
+      "modal-once",
+      "modal-always",
+      "modal-indication",
+      "modal-hash",
+      "ftvid",
+      "pageScroll"
+    ];
+
+    return {
+      addPageLoadStack: function (func, type) {
+        let priority = pageLoadImportance.indexOf(type);
+        var newFunc = {
+          "priority": priority,
+          "func": func
+        };
+        if (pageLoadQueue.length == 0) {
+          pageLoadQueue.push(newFunc);
+        } else {
+          if (!postLoadActions.checkExistence(type)) {
+            let insertIndex = pageLoadQueue.length;
+            for (let i = 0; i < pageLoadQueue.length; i++) {
+              if (priority > pageLoadQueue[i].priority) {
+                insertIndex = i;
+                break;
+              }
+            }
+            pageLoadQueue.splice(insertIndex, 0, newFunc);
+          }
+        }
+      },
+      addWaitFlag: function () { waitFlags++; },
+      removeWaitFlag: function () { waitFlags--; },
+      isWaiting: function () { return waitFlags != 0; },
+      isReady: function () { return waitFlags == 0; },
+      pop: function () {
+        if (pageLoadQueue.length != 0) {
+          var popped = pageLoadQueue.pop();
+          popped.func();
+        } else {
+          return;
+        }
+      },
+      checkExistence: function (type) {
+        let priority = pageLoadImportance.indexOf(type);
+        let isAvailable = false;
+        if (pageLoadQueue.length > 0) {
+          for (let i = 0; i < pageLoadQueue.length; i++) {
+            if (priority == pageLoadQueue[i].priority) {
+              isAvailable = true;
+              break;
+            }
+          }
+        }
+        return isAvailable;
+      },
+      printObj: function () {
+        console.log(pageLoadQueue);
+      }
+    };
+  })();
+
+  // Initialize cookieObj
+  cookieObj.init();
+
+  // Initialize urlObj, campaignTracking and browserAgent
+  urlObj.init();
+
+  campaignTracking.init();
+
+  browserAgent.init();
+
+  /*AIP-2696: Update campaignId in cookie */
+  if (urlObj.getParam('cid') !== 'undefined') {
+    cookieObj.createCookie("admp_cid", urlObj.getParam('cid'));
+  }
+  if (urlObj.getParam('segid') !== 'undefined') {
+    cookieObj.createCookie('admp_segid', urlObj.getParam('segid'));
+  }
+  //create indicationName cookie
+  let pageIndication = AbbViePageInfo.indicationName;
+  if (pageIndication !== "" && pageIndication !== "generic-indication") {
+    cookieObj.createCookie("indicationName", pageIndication);
+  } else if (AbbViePageInfo.indicationReset === 'true') {
+    cookieObj.deleteCookie('indicationName');
+  }
+  var queryParams = new URLSearchParams(window.location.search);
+  if (queryParams.has('indicationName')) {
+    if (queryParams.get('indicationName') != "") {
+      cookieObj.createCookie("indicationName", queryParams.get('indicationName'));
+    }
+  }
+  var forceScroll = function () {
+    let sectionId = urlObj.getParam('section', false);
+    if (sectionId !== "undefined") {
+      scrollToObject($('html,body'), $('#' + sectionId), 0, 'slow');
+    }
+  }
+  postLoadActions.addPageLoadStack(forceScroll, 'pageScroll');
+
+  // Check and set load states for reference with XFs
+  var abbvPageLoaded = false;
+  var loadUpdateFunction = function () {
+    abbvPageLoaded = true;
+  };
+  addWindowLoad(loadUpdateFunction);
+</script>
+
+<script>
+  var digitalData = {
+    page: {
+      pageInfo: {
+        domain: 'botoxone',
+        subDomain: '',
+        url: 'https://www.botoxone.com/content/botoxone/en-us',
+        path: '/content/botoxone/en-us',
+        pageName: 'en-us',
+        title: 'HOME | BOTOX ONE  | BOTOX  (onabotulinumtoxinA)',
+        prefix: 'Botoxone'
+      },
+      category: {
+        primaryCategory: 'homepage',
+        subCategory1: '',
+        subCategory2: ''
+      },
+      attributes: {
+        country: 'us',
+        language: 'en',
+        template: 'full width content page',
+        promoMatsNumber: 'US-BTX-240203',
+        globalISI: 'US-BTX-220125',
+        type: 'homepage'
+      },
+      journey: {
+        content: 'brand benefit',
+        patient: '',
+        messageBucket: 'Awareness'
+
+      },
+      product: {
+        name: 'OnabotulinumtoxinA',
+        franchise: 'Cross Franchise (Cross)',
+        indication: 'Cross Indication (Cross)',
+        division: 'Medical Therapeutics',
+        brand: 'Botox'
+      },
+      site: {
+        type: 'branded',
+        experience: 'responsive',
+        audience: 'Health Care Professional (HCP)'
+      },
+      modal: {
+        type: ' ',
+        name: '',
+        position: ' ',
+        enabled: '',
+        displayed: ''
+      },
+      search: {
+        autoPosition: '',
+        term: '',
+        count: '',
+        indication: '',
+        type: '',
+        filterType: '',
+        filterValue: '',
+        filterCategory: '',
+        sortByInit: '',
+        origin: '',
+        originURL: ''
+      }
+    },
+    user: [{
+      profile: [{
+        id: {
+          crmID: '',
+          transID: '',
+          abbvieCustomerID: '',
+          hcpAccountID: '',
+          npiID: '',
+          dmpID: '',
+          adobeID: ''
+        },
+        attributes: {
+          status: '',
+          type: ''
+        }
+      }]
+    }]
+
+  };
+</script>
+</head>
+
+<body>
+  <div class="m-5">
+    <h2 class="mb-4 text-2xl text-green-700 font-bold">Toggle</h2>
+    🌞
+    <div class="inline-block w-10">
+      <span data-toggle-theme="dark" data-act-class="pl-4"
+        class="border rounded-full border-green-700 flex items-center cursor-pointer w-10 transition-all duration-300 ease-in-out pl-0">
+        <span class="rounded-full w-3 h-3 m-1 bg-green-700">
+        </span>
+      </span>
+    </div>
+    🌚
+  </div>
+
+  <div class="m-5">
+    <h2 class="mb-4 text-2xl text-green-700 font-bold">Buttons</h2>
+    <button data-act-class="shadow-outline" data-set-theme=""
+      class="bg-green-700 focus:outline-none m-1 rounded p-2">Default</button>
+    <button data-act-class="shadow-outline" data-set-theme="dark"
+      class="bg-green-700 focus:outline-none m-1 rounded p-2">Dark</button>
+    <button data-act-class="shadow-outline" data-set-theme="black"
+      class="bg-green-700 focus:outline-none m-1 rounded p-2">Black</button>
+    <button data-act-class="shadow-outline" data-set-theme="🌸"
+      class="bg-green-700 focus:outline-none m-1 rounded p-2">🌸
+      Pink</button>
+    <button data-act-class="shadow-outline" data-set-theme="🐬"
+      class="bg-green-700 focus:outline-none m-1 rounded p-2">🐬
+      Blue</button>
+    <button data-act-class="shadow-outline" data-set-theme="🐤"
+      class="bg-green-700 focus:outline-none m-1 rounded p-2">🐤
+      Yellow</button>
+  </div>
+
+  <div class="m-5">
+    <h2 class="mb-4 text-2xl text-green-700 font-bold">Select</h2>
+    <select data-choose-theme class="focus:outline-none h-10 rounded-full px-3 border">
+      <option value="">Default</option>
+      <option value="dark">Dark</option>
+      <option value="black">Black</option>
+      <option value="🌸">🌸 Pink</option>
+      <option value="🐬">🐬 Blue</option>
+      <option value="🐤">🐤 Yellow</option>
+    </select>
+  </div>
+
+
+  <div class="m-5 bg-white rounded p-5">
+    <h2 class="mb-4 text-2xl text-bold">How to use:</h2>
+    Github: <a class="text-blue-600" href="https://github.com/saadeghi/theme-change"
+      target="_blank">https://github.com/saadeghi/theme-change</a>
+  </div>
+</body>
+
+</html>

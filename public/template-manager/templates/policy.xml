@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="nt:unstructured"
+          components="${state.componentName.toLowerCase()}">
+    <jcr:content jcr:primaryType="nt:unstructured">
+        ${state.props
+            .map(prop =>
+                `<${prop.name.toLowerCase()}
+              jcr:primaryType="nt:unstructured"
+              required="${prop.required}"
+              type="${prop.type}"/>`
+            )
+            .join('\n        ')}
+    </jcr:content>
+</jcr:root>

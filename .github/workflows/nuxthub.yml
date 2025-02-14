@@ -1,0 +1,42 @@
+name: Deploy to NuxtHub
+on: push
+
+jobs:
+  deploy:
+    name: "Deploy to NuxtHub"
+    runs-on: ubuntu-latest
+    environment:
+      name: ${{ github.ref == 'refs/heads/main' && 'production' || 'preview' }}
+      url: ${{ steps.deploy.outputs.deployment-url }}
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install bun
+        uses: oven-sh/setup-bun@v1
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: |
+          rm -rf node_modules
+          bun install
+        env:
+          NUXT_UI_PRO_LICENSE: ${{ secrets.NUXT_UI_PRO_LICENSE }}
+
+      - name: Build application
+        run: bun run build
+        env:
+          NUXT_UI_PRO_LICENSE: ${{ secrets.NUXT_UI_PRO_LICENSE }}
+
+      - name: Deploy to NuxtHub
+        uses: nuxt-hub/action@v1
+        id: deploy
+        with:
+          project-key: hub-10jm

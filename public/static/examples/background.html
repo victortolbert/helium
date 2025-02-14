@@ -1,0 +1,383 @@
+<!doctype html>
+<html
+  lang="en"
+  style="--preferred-bg-color: #0d0d0d; --preferred-color: #e6e6e6; --csb-cursor: pointer"
+  class="t-cukNRE dark"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      try {
+        let bgColor = '#0D0D0D'
+        let color = '#E6E6E6'
+
+        const preferredTheme = window.localStorage.getItem('CSB/THEME/0.1')
+
+        if (preferredTheme) {
+          if (preferredTheme) {
+            const data = JSON.parse(preferredTheme)
+
+            // Old theme
+            if (data.type && data.colors) {
+              bgColor = data.colors['neutral-bg-base']
+              color = data.type === 'light' ? '#1A1A1A' : '#E6E6E6'
+            }
+          }
+        }
+        document.documentElement.style.setProperty('--preferred-bg-color', bgColor)
+        document.documentElement.style.setProperty('--preferred-color', color)
+      } catch (error) {
+        console.log('Could not set preferred theme', error)
+        // no op
+      }
+    </script>
+    <style>
+      #root {
+        position: relative;
+        z-index: 0;
+      }
+
+      ::selection {
+        background: var(--colors-support-system-selection);
+      }
+
+      :host,
+      :root {
+        --rem: 16;
+      }
+      html {
+        overscroll-behavior-x: none;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        overflow: hidden;
+        user-select: none;
+      }
+      :root,
+      .t-cukNRE {
+        --colors-accent-primary-base: #dff976;
+        --colors-accent-secondary-base: #bdb1f6;
+        --colors-accent-secondary-subtle: #d4ccff;
+        --colors-accent-secondary-high: #e5e0ff;
+        --colors-accent-trial-base: #bdb1f6;
+        --colors-accent-trial-subtle: #d4ccff;
+        --colors-neutral-bg-low: #000000;
+        --colors-neutral-bg-base: #0d0d0d;
+        --colors-neutral-bg-subtle: #1a1a1a;
+        --colors-neutral-bg-medium: #333333;
+        --colors-neutral-bg-high: #525252;
+        --colors-neutral-bg-contrast: #ffffff;
+        --colors-neutral-bg-focus: #ffffff1a;
+        --colors-neutral-bg-focus_contrast: #0000001a;
+        --colors-neutral-bg-base_transparent: #0d0d0d00;
+        --colors-neutral-fg-low: #adadad;
+        --colors-neutral-fg-base: #cccccc;
+        --colors-neutral-fg-subtle: #e6e6e6;
+        --colors-neutral-fg-medium: #f2f2f2;
+        --colors-neutral-fg-high: #ffffff;
+        --colors-informative-warning-base: #f7e06e;
+        --colors-informative-alert-base: #f6b98e;
+        --colors-informative-error-base: #f5a8a8;
+        --colors-informative-error-subtle: #fad6d6;
+        --colors-informative-success-base: #a3ec98;
+        --colors-informative-info-base: #a8bffa;
+        --colors-support-git-modified: #f7e06e;
+        --colors-support-git-untracked: #a3ec98;
+        --colors-support-git-deleted: #f5a8a8;
+        --colors-support-git-renamed: #cccccc;
+        --colors-support-git-conflict: #f6b98e;
+        --colors-support-system-selection: #9d8bf933;
+        --colors-support-system-terminal: #000000;
+        --colors-support-system-scrollbar: #f2f2f233;
+        --fontSizes-12: 1.2rem;
+        --fontSizes-13: 1.3rem;
+        --fontSizes-14: 1.4rem;
+        --fontSizes-16: 1.6rem;
+        --fontSizes-24: 2.4rem;
+        --fontSizes-32: 3.2rem;
+        --fontSizes-48: 4.8rem;
+        --fontSizes-64: 6.4rem;
+        --fontSizes-code: var(--fontSizes-13);
+        --fontSizes-xs: var(--fontSizes-12);
+        --fontSizes-base: var(--fontSizes-13);
+        --fontSizes-sm: var(--fontSizes-16);
+        --fontSizes-md: var(--fontSizes-24);
+        --fontSizes-lg: var(--fontSizes-32);
+        --fontSizes-xl: var(--fontSizes-48);
+        --fontSizes-xxl: var(--fontSizes-64);
+        --fontWeights-regular: 400;
+        --fontWeights-medium: 500;
+        --fontWeights-semibold: 600;
+        --fonts-base: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+          'Helvetica Neue', sans-serif;
+        --fonts-display: Everett, Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu,
+          Cantarell, 'Helvetica Neue', sans-serif;
+        --fonts-mono: Fira Code, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+        --letterSpacings-0: -0.03em;
+        --letterSpacings-1: -0.02em;
+        --letterSpacings-2: -0.01em;
+        --letterSpacings-3: 0em;
+        --letterSpacings-4: 0.05em;
+        --letterSpacings-5: 0.01em;
+        --letterSpacings-code: var(--letterSpacings-3);
+        --letterSpacings-xs: var(--letterSpacings-4);
+        --letterSpacings-base: var(--letterSpacings-3);
+        --letterSpacings-sm: var(--letterSpacings-2);
+        --letterSpacings-md: var(--letterSpacings-2);
+        --letterSpacings-lg: var(--letterSpacings-1);
+        --letterSpacings-xl: var(--letterSpacings-1);
+        --letterSpacings-xxl: var(--letterSpacings-0);
+        --lineHeights-20: 1.25em;
+        --lineHeights-30: 1.35em;
+        --lineHeights-code: var(--lineHeights-30);
+        --lineHeights-xs: var(--lineHeights-20);
+        --lineHeights-base: var(--lineHeights-20);
+        --lineHeights-sm: var(--lineHeights-30);
+        --lineHeights-md: var(--lineHeights-30);
+        --lineHeights-lg: var(--lineHeights-30);
+        --lineHeights-xl: var(--lineHeights-30);
+        --lineHeights-xxl: var(--lineHeights-30);
+        --radii-1: 2px;
+        --radii-2: 4px;
+        --radii-3: 8px;
+        --shadows-popup: 0px 2px 7px rgba(0, 0, 0, 0.15), 0px -2px 7px rgba(0, 0, 0, 0.15),
+          0px 5px 17px rgba(0, 0, 0, 0.3);
+        --sizes-0: 0px;
+        --sizes-1: 4px;
+        --sizes-2: 8px;
+        --sizes-3: 12px;
+        --sizes-4: 16px;
+        --sizes-5: 20px;
+        --sizes-6: 24px;
+        --sizes-7: 28px;
+        --sizes-8: 32px;
+        --sizes-9: 36px;
+        --sizes-10: 40px;
+        --sizes-11: 44px;
+        --sizes-12: 48px;
+        --sizes-13: 52px;
+        --sizes-14: 56px;
+        --sizes-15: 60px;
+        --sizes-16: 64px;
+        --sizes-17: 68px;
+        --sizes-18: 72px;
+        --sizes-19: 76px;
+        --sizes-20: 80px;
+        --sizes-21: 84px;
+        --sizes-22: 88px;
+        --sizes-23: 92px;
+        --sizes-24: 96px;
+        --sizes-25: 100px;
+        --space-0: 0px;
+        --space-1: 4px;
+        --space-2: 8px;
+        --space-3: 12px;
+        --space-4: 16px;
+        --space-5: 20px;
+        --space-6: 24px;
+        --space-7: 28px;
+        --space-8: 32px;
+        --space-9: 36px;
+        --space-10: 40px;
+        --space-11: 44px;
+        --space-12: 48px;
+        --space-13: 52px;
+        --space-14: 56px;
+        --space-15: 60px;
+        --space-16: 64px;
+        --space-17: 68px;
+        --space-18: 72px;
+        --space-19: 76px;
+        --space-20: 80px;
+        --space-21: 84px;
+        --space-22: 88px;
+        --space-23: 92px;
+        --space-24: 96px;
+        --space-25: 100px;
+        --transitions-fast: 125ms ease-in;
+        --transitions-slow: 300ms cubic-bezier(0.2, 1, 0.2, 1);
+        --transitions-transform: transform var(--transitions-slow);
+        --transitions-background: background var(--transitions-fast);
+        --transitions-opacity: opacity var(--transitions-fast);
+        --zIndices-base: 1;
+        --zIndices-menuOverlay: 2;
+        --zIndices-menu: 3;
+        --zIndices-overlay: 4;
+        --zIndices-dialog: 11;
+        --zIndices-commandPalette: 12;
+        --zIndices-top: 20;
+      }
+      :root {
+        --z-index-notebook-progress-bar: 5;
+        --z-index-notebook-list-insertion-indicator: 10;
+        --z-index-notebook-cell-editor-outline: 20;
+        --z-index-notebook-scrollbar: 25;
+        --z-index-notebook-cell-status: 26;
+        --z-index-notebook-folding-indicator: 26;
+        --z-index-notebook-output: 27;
+        --z-index-notebook-cell-bottom-toolbar-container: 28;
+        --z-index-notebook-run-button-container: 29;
+        --z-index-notebook-input-collapse-condicon: 29;
+        --z-index-notebook-cell-output-toolbar: 30;
+        --z-index-notebook-cell-expand-part-button: 36;
+        --z-index-notebook-cell-toolbar: 37;
+        --z-index-notebook-cell-toolbar-dropdown-active: 38;
+        --z-index-notebook-diff-view-viewport-slider: 10;
+      }
+      :root {
+        --cc-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
+          'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+        --cc-modal-border-radius: 0.5rem;
+        --cc-btn-border-radius: 0.4rem;
+        --cc-modal-transition-duration: 0.25s;
+        --cc-link-color: var(--cc-btn-primary-bg);
+        --cc-modal-margin: 1rem;
+        --cc-z-index: 2147483647;
+        --cc-bg: #fff;
+        --cc-primary-color: #2c2f31;
+        --cc-secondary-color: #5e6266;
+        --cc-btn-primary-bg: #30363c;
+        --cc-btn-primary-color: #fff;
+        --cc-btn-primary-border-color: var(--cc-btn-primary-bg);
+        --cc-btn-primary-hover-bg: #000;
+        --cc-btn-primary-hover-color: #fff;
+        --cc-btn-primary-hover-border-color: var(--cc-btn-primary-hover-bg);
+        --cc-btn-secondary-bg: #eaeff2;
+        --cc-btn-secondary-color: var(--cc-primary-color);
+        --cc-btn-secondary-border-color: var(--cc-btn-secondary-bg);
+        --cc-btn-secondary-hover-bg: #d4dae0;
+        --cc-btn-secondary-hover-color: #000;
+        --cc-btn-secondary-hover-border-color: #d4dae0;
+        --cc-separator-border-color: #f0f4f7;
+        --cc-toggle-on-bg: var(--cc-btn-primary-bg);
+        --cc-toggle-off-bg: #667481;
+        --cc-toggle-on-knob-bg: #fff;
+        --cc-toggle-off-knob-bg: var(--cc-toggle-on-knob-bg);
+        --cc-toggle-enabled-icon-color: var(--cc-bg);
+        --cc-toggle-disabled-icon-color: var(--cc-bg);
+        --cc-toggle-readonly-bg: #d5dee2;
+        --cc-toggle-readonly-knob-bg: #fff;
+        --cc-toggle-readonly-knob-icon-color: var(--cc-toggle-readonly-bg);
+        --cc-section-category-border: var(--cc-cookie-category-block-bg);
+        --cc-cookie-category-block-bg: #f0f4f7;
+        --cc-cookie-category-block-border: #f0f4f7;
+        --cc-cookie-category-block-hover-bg: #e9eff4;
+        --cc-cookie-category-block-hover-border: #e9eff4;
+        --cc-cookie-category-expanded-block-bg: transparent;
+        --cc-cookie-category-expanded-block-hover-bg: #dee4e9;
+        --cc-overlay-bg: rgba(0, 0, 0, 0.65);
+        --cc-webkit-scrollbar-bg: var(--cc-section-category-border);
+        --cc-webkit-scrollbar-hover-bg: var(--cc-btn-primary-hover-bg);
+        --cc-footer-bg: var(--cc-btn-secondary-bg);
+        --cc-footer-color: var(--cc-secondary-color);
+        --cc-footer-border-color: #e4eaed;
+        --cc-pm-toggle-border-radius: 4em;
+      }
+      *,
+      ::after,
+      ::before {
+        box-sizing: border-box;
+        scrollbar-width: thin;
+        scrollbar-color: var(--support-system-scrollbar) transparent;
+      }
+      body {
+        background: var(--preferred-bg-color);
+        overscroll-behavior-x: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: var(--fonts-base);
+        font-size: var(--fontSizes-base);
+        font-weight: var(--fontWeights-regular);
+        color: var(--colors-neutral-fg-base);
+        margin: 0px;
+        overflow: hidden;
+      }
+
+      .c-PJLV-icpVdOR-css {
+        height: 100vh;
+        background-color: var(--colors-neutral-bg-low);
+        line-height: 140%;
+      }
+      .c-PJLV-ibjozLv-css {
+        height: 100%;
+        padding: 10vw;
+        position: relative;
+        z-index: 9;
+        justify-content: center;
+        display: flex;
+      }
+      .c-PJLV-ibjozLv-css {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+      .c-jVSmXc {
+        --canvabg: linear-gradient(45deg, var(--colors-accent-primary-base), var(--colors-accent-secondary-high));
+        --spread: 50;
+        --dot: 1;
+        --size: 1000;
+        --speed: 50;
+        background: var(--bg);
+        position: fixed;
+        top: 0px;
+        bottom: 0px;
+        right: 0px;
+        width: 70vw;
+      }
+      .c-PJLV-gGEYOD-selectable-true {
+        user-select: text;
+      }
+
+      .c-jXboK {
+        position: absolute;
+        inset: 0px;
+        background: var(--canvabg);
+        animation: k-iAuaPT calc(var(--speed) * 1s) infinite linear;
+      }
+      @keyframes k-iAuaPT {
+        100% {
+          mask-position:
+            50% 50%,
+            0px 50%;
+          mask-size:
+            100% 100%,
+            100% 100%;
+        }
+      }
+
+      .c-msMoc {
+        position: absolute;
+        inset: 0px;
+        background: linear-gradient(120deg, var(--bg), transparent);
+        z-index: 10;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div class="c-PJLV c-PJLV-gGEYOD-selectable-true c-PJLV-icpVdOR-css">
+        <div class="c-jVSmXc c-jVSmXc-iesDcei-css">
+          <div
+            class="c-jXboK"
+            style="
+              mask-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.05) 60%, transparent 80%);
+              -webkit-mask-position-x:;
+              -webkit-mask-position-y:;
+              mask-size:;
+              mask-repeat:;
+              mask-origin:;
+              mask-clip:;
+              mask-composite: intersect;
+              mask-mode:;
+            "
+          ></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typography System</title>
+    <!-- Add the latest version of jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+      /* Reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Typography Scale */
+      .h1 {
+        font:
+          bold 60px/72px 'Inter',
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        margin-bottom: 1em;
+      }
+
+      .h2 {
+        font:
+          bold 48px/60px 'Inter',
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        margin-bottom: 0.8em;
+      }
+
+      .h3 {
+        font:
+          bold 36px/47px 'Inter',
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        margin-bottom: 0.6em;
+      }
+
+      .body1 {
+        font:
+          normal 36px/50px 'Inter',
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        margin-bottom: 1em;
+      }
+
+      .body2 {
+        font:
+          normal 30px/42px 'Inter',
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        margin-bottom: 1em;
+      }
+
+      .body3 {
+        font:
+          normal 24px/36px 'Inter',
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        margin-bottom: 1em;
+      }
+
+      .note {
+        font:
+          normal 20px/30px 'Inter',
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        color: #666;
+      }
+
+      /* Layout */
+      .container {
+        max-width: 1200px;
+        margin: 4rem auto;
+        padding: 0 2rem;
+      }
+
+      .section {
+        margin-bottom: 6rem;
+      }
+
+      .feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 3rem;
+        margin: 3rem 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header class="section">
+        <h1 class="h1">Designing with Purpose</h1>
+        <p class="body1">
+          A comprehensive guide to our typography system, showcasing how different text styles work together to create
+          clear visual hierarchy and improved readability.
+        </p>
+      </header>
+
+      <section class="section">
+        <h2 class="h2">Key Principles</h2>
+        <p class="body2">
+          Our typography system is built on three fundamental principles: hierarchy, readability, and consistency. Each
+          text style serves a specific purpose in our design language.
+        </p>
+
+        <div class="feature-grid">
+          <div>
+            <h3 class="h3">Visual Hierarchy</h3>
+            <p class="body3">
+              Strong typographic hierarchy guides users through content, making information easy to scan and understand
+              at a glance.
+            </p>
+          </div>
+          <div>
+            <h3 class="h3">Readability</h3>
+            <p class="body3">
+              Carefully chosen font sizes and line heights ensure comfortable reading experiences across all device
+              sizes.
+            </p>
+          </div>
+          <div>
+            <h3 class="h3">Consistency</h3>
+            <p class="body3">
+              A systematic approach to typography helps maintain visual consistency throughout the user interface.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="h2">Implementation</h2>
+        <p class="body2">
+          Our typography system uses the Inter font family, chosen for its excellent readability and modern character.
+        </p>
+        <p class="body3">
+          The system includes three header sizes and four text styles, providing flexibility for various content needs
+          while maintaining consistency.
+        </p>
+        <p class="note">
+          Note: All text styles are available as utility classes and can be easily applied to any element in your HTML.
+        </p>
+      </section>
+    </div>
+  </body>
+</html>

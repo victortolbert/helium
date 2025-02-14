@@ -1,0 +1,146 @@
+:root {
+  --button-background: #95004d;
+  --button-border-bottom: 1px solid #00000000;
+  --button-border-left: 1px solid #00000000;
+  --button-border-left: 2px solid #00000000;
+  --button-border-radius-bottom-left: 0px;
+  --button-border-radius-bottom-right: 0px;
+  --button-border-radius-top-left: 0px;
+  --button-border-radius-top-right: 0px;
+  --button-border-right: 1px solid #00000000;
+  --button-border-top: 1px solid #00000000;
+  --button-gap: 4px;
+  --button-letter-spacing: 0%;
+  --button-padding-bottom: 16px;
+  --button-padding-left: 16px;
+  --button-padding-right: 16px;
+  --button-padding-top: 16px;
+  --button-text-color: #ffffff;
+  --button-text: 400 12px "Avenir Next Condensed";
+}
+
+@layer components {
+  .btn-primary {
+    border-radius: calc(infinity * 1px);
+    background-color: var(--color-violet-500);
+    padding-inline: --spacing(5);
+    padding-block: --spacing(2);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-white);
+    box-shadow: var(--shadow-md);
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-violet-700);
+      }
+    }
+  }
+}
+
+.button {
+  .btn.btn-primary {
+    display: inline-flex;
+    flex-shrink: 0;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 32px;
+    font-family: var(--font-sans-condensed);
+    font-size: 9px;
+    font-weight: 700;
+    color: var(--button-text-color, white);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.02344rem;
+    background-color: var(--primary);
+    border: none;
+    border-radius: var(--rounded-full);
+    box-shadow: none;
+  }
+
+  .btn.btn-secondary {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    gap: 0;
+    align-items: center;
+    width: 120px;
+    padding: 12px 24px;
+
+    font-family: var(--font-sans-condensed);
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+
+    background: linear-gradient(90deg, #09a2e0 36.69%, #0076a6 95.84%);
+    filter: drop-shadow(0px 10px 15px rgba(223, 246, 255, 0.1));
+    border-radius: 8px;
+    box-shadow: none;
+  }
+
+  .btn.btn-secondary .icon {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+  }
+
+  .btn.btn-secondary span {
+    line-height: 1;
+    text-align: left;
+    padding-right: 38px;
+    margin-left: 24px;
+    display: block;
+    width: 135px;
+  }
+
+  .btn.btn-tertiary {
+    display: inline-flex;
+    flex-direction: row-reverse;
+    gap: 12px;
+    align-items: center;
+    padding: 12px 24px;
+    font-family: var(--font-sans-condensed);
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+
+    background: linear-gradient(90deg, #09a2e0 36.69%, #0076a6 95.84%);
+    filter: drop-shadow(0px 10px 15px rgba(223, 246, 255, 0.1));
+    border-radius: 8px;
+    box-shadow: none;
+  }
+
+  .btn.btn-tertiary .icon {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+.button .btn.btn-humira,
+.button .btn.btn-quaternary {
+  display: inline-flex;
+  flex-shrink: 0;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  font-family: var(--font-sans-condensed);
+  font-size: var(--button-font-size, 12px);
+  font-weight: var(--button-font-weight, 700);
+  line-height: 0.5625rem;
+  color: var(--button-text-color, white);
+  text-transform: uppercase;
+  letter-spacing: 0.03125rem;
+  background-color: var(--humira);
+  border: none;
+  border-radius: var(--rounded-full);
+}
+
+.cmp-button.footnote {
+  display: flex;
+  justify-content: center;
+
+  .icon {
+    width: 13px;
+  }
+}

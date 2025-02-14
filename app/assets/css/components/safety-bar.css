@@ -1,0 +1,221 @@
+:root {
+  --safety-bar-background: #ffffff;
+  --safety-bar-border-bottom: 1px solid #00000000;
+  --safety-bar-border-left: 1px solid #00000000;
+  --safety-bar-border-radius-bottom-left: 16px;
+  --safety-bar-border-radius-bottom-right: 16px;
+  --safety-bar-border-radius-top-left: 16px;
+  --safety-bar-border-radius-top-right: 16px;
+  --safety-bar-border-right: 1px solid #00000000;
+  --safety-bar-border-top: 1px solid #00000000;
+  --safety-bar-gap: 8px;
+  --safety-bar-padding-bottom: 8px;
+  --safety-bar-padding-left: 8px;
+  --safety-bar-padding-right: 8px;
+  --safety-bar-padding-top: 8px;
+  --safety-information-background: #ffffff;
+  --safety-information-border-bottom: 1px solid #00000000;
+  --safety-information-border-left: 1px solid #00000000;
+  --safety-information-border-right: 1px solid #00000000;
+  --safety-information-border-top: 1px solid #00000000;
+  --safety-information-bottom-text-background: #cccccc;
+  --safety-information-bottom-text-border-bottom: 1px solid #00000000;
+  --safety-information-bottom-text-border-left: 1px solid #00000000;
+  --safety-information-bottom-text-border-radius-bottom-left: 10px;
+  --safety-information-bottom-text-border-radius-bottom-right: 10px;
+  --safety-information-bottom-text-border-radius-top-left: 10px;
+  --safety-information-bottom-text-border-radius-top-right: 10px;
+  --safety-information-bottom-text-border-right: 1px solid #00000000;
+  --safety-information-bottom-text-border-top: 1px solid #00000000;
+  --safety-information-bottom-text-color: #222222;
+  --safety-information-bottom-text-letter-spacing: 0%;
+  --safety-information-bottom-text-padding-bottom: 8px;
+  --safety-information-bottom-text-padding-left: 8px;
+  --safety-information-bottom-text-padding-right: 8px;
+  --safety-information-bottom-text-padding-top: 8px;
+  --safety-information-bottom-text: 400 12px "Montserrat";
+  --safety-information-gap: 16px;
+  --safety-information-gap: 8px;
+  --safety-information-indication-content-letter-spacing: 0%;
+  --safety-information-indication-content-text-color: #00000000;
+  --safety-information-indication-content-text: 500 11px "Avenir Next Condensed";
+  --safety-information-indication-title-letter-spacing: 0%;
+  --safety-information-indication-title-text-color: #222222;
+  --safety-information-indication-title-text: 700 12px "Avenir Next Condensed";
+  --safety-information-isi-content-letter-spacing: 0%;
+  --safety-information-isi-content-text-color: #222222;
+  --safety-information-isi-content-text: 400 11px "Avenir Next Condensed";
+  --safety-information-isi-title-letter-spacing: 0%;
+  --safety-information-isi-title-text-case: capitalize;
+  --safety-information-isi-title-text-color: #1ba2da;
+  --safety-information-isi-title-text: 700 12px "Avenir Next Condensed";
+  --safety-information-padding-bottom: 8px;
+  --safety-information-padding-left: 8px;
+  --safety-information-padding-right: 8px;
+  --safety-information-padding-top: 8px;
+
+  /* Safety Bar */
+
+  --safety-bar-font-semibold: 600;
+  --safety-bar-skyrizi--line-height: 13px;
+  --safety-bar-skyrizi--font-size: 11px;
+}
+
+.safety-bar {
+  position: relative;
+}
+
+.safety-bar .cmp-safety-bar {
+  width: 543px;
+  border-radius: 8px;
+  display: flex;
+
+  .safety-bar-isi-wrapper {
+    border-radius: 8px;
+  }
+
+  .safety-bar-isi-wrapper.downwards::after {
+    content: '1';
+    position: absolute;
+    top: 40px;
+    padding-top: 0px;
+    left: 90px;
+    font-size: 9px;
+    text-align: center;
+    width: 11px;
+    height: 11px;
+    color: #fff;
+    border-radius: 50%;
+    background-color: #1ba2da;
+  }
+
+  .safety-bar-isi-wrapper.downwards.is-collapsed .safety-bar-scroll::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 22px;
+    border-radius: 0px 0px 5.5px 5.5px;
+    background: linear-gradient(0deg, #fff 0%, rgba(242, 242, 242, 0.5) 48.82%, rgba(242, 242, 242, 0) 100%);
+  }
+
+  .safety-bar-isi-wrapper.downwards::before {
+    content: 'Safety Considerations and Indications';
+    color: #1ba2da;
+    width: 80px;
+    font-family: var(--font-sans-condensed);
+    font-size: var(--button-font-size);
+    font-weight: var(--safety-bar-font-semibold);
+    line-height: var(--safety-bar-skyrizi--line-height);
+    padding: 18px 10px 18px 24px;
+  }
+  .safety-bar-isi-wrapper.is-collapsed.downwards {
+    height: 78px;
+    overflow-y: hidden;
+    border: none;
+    position: absolute;
+  }
+
+  .safety-bar-isi-wrapper.is-expanded.downwards {
+    height: 204px;
+    border: none;
+    z-index: 1;
+  }
+
+  .downwards .expand-icon,
+  .downwards .collapse-icon {
+    position: absolute;
+    left: -12px;
+    top: 45px;
+    width: 27px;
+    height: 27px;
+    z-index: 2;
+  }
+
+  .downwards .expand-icon {
+    background-image: url('/content/dam/skyrizihcpivy/isa/template-assets/derm/expand-plus.svg');
+  }
+
+  .downwards .collapse-icon {
+    background-image: url('/content/dam/skyrizihcpivy/isa/template-assets/derm/collapse-minus.svg');
+  }
+  .brand-isi-wrapper {
+    padding: 14px 45px 1px 16px;
+
+    /*
+        Override 25% width
+      */
+    .cmp-experiencefragment .aem-Grid.aem-Grid--default--48 > .aem-GridColumn.aem-GridColumn--default--12 {
+      width: auto;
+    }
+  }
+
+  .safety-bar-isi-wrapper.is-expanded .safety-bar-title,
+  .safety-bar-isi-wrapper.is-expanded .safety-bar-indication-title {
+    padding-left: 10px;
+  }
+
+  .safety-bar-isi-wrapper.is-expanded .safety-bar-indication-subtitle {
+    padding-left: 0;
+  }
+
+  .safety-bar-isi-wrapper {
+    .safety-bar-title {
+      font-family: var(--font-sans-condensed);
+      font-size: var(--button-font-size);
+      font-weight: var(--safety-bar-font-semibold);
+      line-height: var(--safety-bar-skyrizi--line-height);
+    }
+
+    .safety-bar-indication-title,
+    .safety-bar-collapsed-isi,
+    .safety-bar-expanded-isi,
+    .cmp-text {
+      font-family: var(--font-sans-condensed);
+      font-size: var(--safety-bar-skyrizi--font-size);
+      font-weight: var(--font-medium);
+      line-height: var(--safety-bar-skyrizi--line-height);
+    }
+
+    .safety-bar-collapsed-isi,
+    .safety-bar-expanded-isi,
+    .cmp-text {
+      color: #585858;
+    }
+  }
+
+  .brand-isi-wrapper.skyrizi {
+    .safety-bar-title,
+    .safety-bar-indication-title,
+    .safety-bar-indication-subtitle {
+      color: #1ba2da;
+    }
+  }
+
+  .brand-isi-wrapper.humira {
+    .safety-bar-title,
+    .safety-bar-indication-title,
+    .safety-bar-indication-subtitle {
+      color: #95004d;
+    }
+  }
+
+  .safety-bar-derm {
+    .safety-bar-indication {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  .safety-bar-derm-row-align {
+    .safety-bar-indication {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .safety-bar-indication .cmp-experiencefragment {
+      flex: 1;
+    }
+  }
+}

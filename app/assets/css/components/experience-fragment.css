@@ -1,0 +1,517 @@
+:root {
+  --experiencefragment-background: #ffffff;
+  --experiencefragment-border-bottom: 1px solid #00000000;
+  --experiencefragment-border-left: 1px solid #00000000;
+  --experiencefragment-border-radius-bottom-left: 0px;
+  --experiencefragment-border-radius-bottom-right: 0px;
+  --experiencefragment-border-radius-top-left: 0px;
+  --experiencefragment-border-radius-top-right: 0px;
+  --experiencefragment-border-right: 1px solid #00000000;
+  --experiencefragment-border-top: 1px solid #00000000;
+  --experiencefragment-height: auto;
+  --experiencefragment-overlay: #222222;
+  --experiencefragment-width: 556px;
+  --experiencefragment-width: 559px;
+  /* Experience Fragment */
+  --modal-1-opacity: 0.9;
+  --modal-1-width: 986px;
+  --modal-1-height: 470px;
+  --modal-1-background-color: rgba(255, 255, 255, 0.9);
+  --modal-1-top: 128px;
+  --modal-1-close-top: 26px;
+  --modal-1-close-right: 24px;
+
+  --modal-2-width: 879px;
+  --modal-2-height: 450px;
+  --modal-2-background-color: #ffffff;
+  --modal-2-top: 0;
+  --modal-2-left: 0;
+  --modal-2-close-top: 12px;
+  --modal-2-close-right: 20px;
+  --modal-3-width: 306px;
+  --modal-3-background-color: #f3fcff;
+
+  --modal-4-opacity: 1;
+  --modal-4-width: 100%;
+  --modal-4-height: 100%;
+  --modal-4-background-color: #21222699;
+  --modal-4-top: 150px;
+  --modal-4-close-top: 100px;
+  --modal-4-close-right: 94px;
+
+  --modal-5-width: 958px;
+  --modal-5-height: 478px;
+  --modal-5-background-color: #ffffff;
+  --modal-5-top: 24px;
+  --modal-5-left: 0;
+  --modal-5-close-top: 26px;
+  --modal-5-close-right: 24px;
+}
+
+.modal-1 {
+  &.cmp-image-overlay.active {
+    background-color: rgba(34, 24, 24, 0.6);
+    backdrop-filter: blur(4px);
+    display: block;
+    position: absolute;
+    top: var(--header-height);
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .xfpage.page.basicpage {
+    box-sizing: border-box;
+    background-color: var(--modal-1-background-color);
+    width: var(--modal-1-width);
+    height: var(--modal-1-height);
+    top: var(--modal-1-top);
+    opacity: var(--modal-1-opacity);
+    left: 0;
+    padding: 16px;
+    position: absolute;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    filter: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .cmp-button.btn-modal-close {
+    position: absolute;
+    top: var(--modal-1-close-top);
+    right: var(--modal-1-close-right);
+    cursor: pointer;
+    background-image: url('/content/dam/skyrizihcpivy/isa/template-assets/derm/modal-1-close.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 19px 19px;
+    width: 19px;
+    height: 19px;
+    color: transparent;
+    z-index: 1;
+  }
+}
+
+.modal-2 {
+  &.cmp-image-overlay.active {
+    background-color: rgba(34, 24, 24, 0.6);
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .xfpage.page.basicpage {
+    box-sizing: border-box;
+    background-color: var(--modal-2-background-color);
+    width: var(--modal-2-width);
+    height: var(--modal-2-height);
+    top: var(--modal-2-top);
+    left: var(--modal-2-left);
+    padding: 16px;
+    position: relative;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    overflow-y: auto;
+  }
+
+  .cmp-button.btn-modal-close {
+    position: absolute;
+    top: var(--modal-2-close-top);
+    right: var(--modal-2-close-right);
+    cursor: pointer;
+    background-image: url('/content/dam/skyrizihcpivy/isa/template-assets/derm/modal-2-close.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 23px 24px;
+    color: transparent;
+    z-index: 1;
+  }
+}
+
+.modal-3 {
+  &.cmp-image-overlay.active {
+    background-color: transparent;
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .xfpage.page.basicpage {
+    box-sizing: border-box;
+    background-color: var(--modal-3-background-color);
+    width: var(--modal-3-width);
+    top: var(--header-height);
+    padding: 16px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-height: 972px;
+    box-shadow: -15px 0px 15px 0px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+  }
+
+  .cmp-button.btn-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    cursor: pointer;
+    background-image: url('/content/dam/skyrizihcpivy/isa/template-assets/derm/modal-3-close.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 51px 51px;
+    width: 51px;
+    height: 51px;
+    color: transparent;
+    z-index: 1;
+  }
+}
+
+.modal-4 {
+  &.cmp-image-overlay.active {
+    background-color: rgba(34, 24, 24, 0.6);
+    backdrop-filter: blur(4px);
+    display: block;
+    position: absolute;
+    top: var(--header-height);
+    z-index: 3;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .xfpage.page.basicpage {
+    box-sizing: border-box;
+    background-color: var(--modal-4-background-color);
+    color: white;
+    width: var(--modal-4-width);
+    height: var(--modal-4-height);
+    top: 0;
+    left: 0;
+    padding: 16px 32px;
+    position: absolute;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    filter: none;
+    overflow-y: auto;
+  }
+
+  .cmp-button.btn-modal-close {
+    position: absolute;
+    top: var(--modal-4-close-top);
+    right: var(--modal-4-close-right);
+    cursor: pointer;
+    background-image: url('/content/dam/skyrizihcpivy/isa/template-assets/derm/modal-4-close.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 48px 48px;
+    width: 48px;
+    height: 48px;
+    color: transparent;
+    z-index: 3;
+  }
+}
+
+.modal-5 {
+  &.cmp-image-overlay.active {
+    background-color: rgba(34, 24, 24, 0.6);
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+  }
+
+  .xfpage.page.basicpage {
+    box-sizing: border-box;
+    background-image: linear-gradient(to right, #00a3df 0%, #85bde6 85%, #c3ae93 89%, #f39200 100%);
+    background-color: var(--modal-5-background-color);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 100% 6.75px;
+    box-shadow: 0 1px 37px 0 rgba(16, 164, 222, 0.5);
+
+    width: var(--modal-5-width);
+    height: var(--modal-5-height);
+    top: var(--modal-5-top);
+    left: var(--modal-5-left);
+    padding: 16px;
+    position: relative;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+
+  .cmp-button.btn-modal-close {
+    position: absolute;
+    top: var(--modal-5-close-top);
+    right: var(--modal-5-close-right);
+    cursor: pointer;
+    background-image: url('/content/dam/skyrizihcpivy/isa/template-assets/derm/modal-5-close.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 48px 48px;
+    width: 48px;
+    height: 48px;
+    color: transparent;
+    z-index: 1;
+  }
+}
+
+.modal-6 {
+  --modal-6-width: 95%;
+  --modal-6-height: 640px;
+  --modal-6-background-color: #ffffff;
+  --modal-6-top: 0;
+  --modal-6-left: 0;
+  --modal-6-close-top: 26px;
+  --modal-6-close-right: 24px;
+  &.cmp-image-overlay.active {
+    background-color: rgba(34, 24, 24, 0.6);
+    backdrop-filter: blur(4px);
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+  }
+
+  .xfpage.page.basicpage {
+    box-sizing: border-box;
+    background-image: linear-gradient(to right, #00a3df 0%, #85bde6 85%, #c3ae93 89%, #f39200 100%);
+    background-color: var(--modal-6-background-color);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 100% 6.75px;
+    box-shadow: 0 1px 37px 0 rgba(16, 164, 222, 0.5);
+
+    width: var(--modal-6-width);
+    height: var(--modal-6-height);
+    top: var(--modal-6-top);
+    left: var(--modal-6-left);
+    padding: 16px;
+    position: relative;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    overflow-y: auto;
+  }
+
+  .cmp-button.btn-modal-close {
+    position: absolute;
+    top: var(--modal-6-close-top);
+    right: var(--modal-6-close-right);
+    cursor: pointer;
+    background-image: url('/content/dam/skyrizihcpivy/isa/template-assets/derm/modal-6-close.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 48px 48px;
+    width: 48px;
+    height: 48px;
+    color: transparent;
+    z-index: 1;
+  }
+}
+
+.modal-7 {
+  --modal-7-width: 95%;
+  --modal-7-height: 640px;
+  --modal-7-background-color: #ffffff;
+  --modal-7-top: 24px;
+  --modal-7-right: 20px;
+  --modal-7-bottom: 0;
+  --modal-7-left: 10px;
+  --modal-7-close-top: 26px;
+  --modal-7-close-right: 24px;
+  &.cmp-image-overlay.active {
+    box-sizing: border-box;
+    background-color: rgba(34, 24, 24, 0.6);
+    backdrop-filter: blur(4px);
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+  }
+
+  .xfpage.page.basicpage {
+    box-sizing: border-box;
+    background-image: linear-gradient(-90deg, #b41955 0%, #eb4f97 50%, #b41955 100%);
+    background-color: var(--modal-7-background-color);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 100% 6.75px;
+    box-shadow: 0 1px 37px 0 rgba(16, 164, 222, 0.5);
+    width: var(--modal-7-width);
+    height: var(--modal-7-height);
+    padding: 16px;
+    position: relative;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    overflow-y: auto;
+  }
+
+  .cmp-button.btn-modal-close {
+    position: absolute;
+    top: var(--modal-7-close-top);
+    right: var(--modal-7-close-right);
+    cursor: pointer;
+    background-image: url('/content/dam/skyrizihcpivy/isa/template-assets/derm/modal-7-close.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 48px 48px;
+    width: 48px;
+    height: 48px;
+    color: transparent;
+    z-index: 1;
+  }
+}
+
+.modal-8 {
+  --modal-8-opacity: 1;
+  --modal-8-width: 100%;
+  --modal-8-height: 100%;
+  --modal-8-background-color: #ffffff80;
+  --modal-8-top: 150px;
+  --modal-8-close-top: 16px;
+  --modal-8-close-right: 24px;
+
+  &.cmp-image-overlay.active {
+    background-color: rgba(34, 24, 24, 0.6);
+    backdrop-filter: blur(4px);
+    display: block;
+    position: absolute;
+    top: var(--header-height);
+    z-index: 3;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .xfpage.page.basicpage {
+    box-sizing: border-box;
+    background: linear-gradient(180deg, #fff 0%, #e7f9ff 97.83%);
+    box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.5);
+    width: var(--modal-8-width);
+    height: var(--modal-8-height);
+    top: 0;
+    left: 0;
+    padding: 16px;
+    position: absolute;
+    filter: none;
+  }
+
+  .cmp-button.btn-modal-close {
+    position: absolute;
+    top: var(--modal-8-close-top);
+    right: var(--modal-8-close-right);
+    cursor: pointer;
+    background-image: url('/content/dam/skyrizihcpivy/isa/template-assets/derm/modal-8-close.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 48px 48px;
+    width: 48px;
+    height: 48px;
+    color: transparent;
+    z-index: 3;
+  }
+}
+
+.modal-9 {
+  --modal-9-width: 956px;
+  --modal-9-height: 560px;
+  --modal-9-background-color: #ffffff;
+  --modal-9-top: 48px;
+  --modal-9-left: 0;
+  --modal-9-close-top: 12px;
+  --modal-9-close-right: 20px;
+
+  &.cmp-image-overlay.active {
+    background-color: rgba(34, 24, 24, 0.6);
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .xfpage.page.basicpage {
+    box-sizing: border-box;
+    background-color: var(--modal-9-background-color);
+    width: var(--modal-9-width);
+    height: var(--modal-9-height);
+    top: var(--modal-9-top);
+    left: var(--modal-9-left);
+    padding: 16px;
+    position: relative;
+
+    overflow-y: auto;
+
+    background-image: linear-gradient(180deg, #fff 26.34%, #b6ecff 165.31%);
+    filter: drop-shadow(0px 5px 15px rgba(16, 164, 222, 0.3));
+    border: 1px solid #b6ecff;
+    border-radius: 8px;
+  }
+
+  .cmp-button.btn-modal-close {
+    position: absolute;
+    top: var(--modal-9-close-top);
+    right: var(--modal-9-close-right);
+    cursor: pointer;
+    background-image: url('/content/dam/skyrizihcpivy/isa/template-assets/derm/modal-9-close.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 23px 24px;
+    color: transparent;
+    z-index: 1;
+  }
+}
+
+.cmp-image-overlay.active {
+  z-index: 2;
+  background-color: inherit;
+}
+
+.cmp-button.btn-modal-close {
+  position: absolute;
+  top: 6px;
+  right: 9px;
+  cursor: pointer;
+  background-image: url('/content/dam/skyrizihcpivy/isa/template-assets/modal-close.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 48px 48px;
+  width: 48px;
+  height: 48px;
+  color: transparent;
+  z-index: 1;
+}
+
+.cmp-experiencefragment.forced-modal.cmp-image-overlay.active.fullOverlay {
+  z-index: 3;
+
+  .cmp-button.btn-modal-close {
+    width: 24px;
+    height: 24px;
+  }
+}

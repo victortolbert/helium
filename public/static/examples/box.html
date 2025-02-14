@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Box Style Interface</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        width: 300px;
+        margin: auto;
+      }
+
+      .section-header {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+
+      .css-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+
+      .controls {
+        display: flex;
+        justify-content: space-between;
+        margin: 5px 0;
+      }
+
+      .controls input[type='number'] {
+        width: 50px;
+        text-align: center;
+      }
+
+      .properties {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .property {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .property label {
+        flex: 1;
+      }
+
+      .property select,
+      .property input[type='color'] {
+        flex: 1;
+      }
+
+      .preview {
+        width: 50px;
+        height: 50px;
+        background-color: #ccc;
+        margin: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="section-header">CSS Box</div>
+      <div class="css-box">
+        <div class="controls">
+          <label for="margin-top">Margin</label>
+          <input type="number" id="margin-top" placeholder="0px" />
+        </div>
+        <div class="controls">
+          <label for="padding-top">Padding</label>
+          <input type="number" id="padding-top" placeholder="0px" />
+        </div>
+        <div class="preview"></div>
+        <div class="controls">
+          <input type="number" id="padding-bottom" placeholder="0px" />
+          <label for="padding-bottom">Padding</label>
+        </div>
+        <div class="controls">
+          <input type="number" id="margin-bottom" placeholder="0px" />
+          <label for="margin-bottom">Margin</label>
+        </div>
+      </div>
+
+      <div class="section-header">Design Options</div>
+      <div class="properties">
+        <div class="property">
+          <label for="border-color">Border color</label>
+          <input type="color" id="border-color" />
+        </div>
+        <div class="property">
+          <label for="border-style">Border style</label>
+          <select id="border-style">
+            <option value="none">None</option>
+            <option value="solid">Solid</option>
+            <option value="dashed">Dashed</option>
+            <option value="dotted">Dotted</option>
+          </select>
+        </div>
+        <div class="property">
+          <label for="border-radius">Border radius</label>
+          <select id="border-radius">
+            <option value="none">None</option>
+            <option value="5px">5px</option>
+            <option value="10px">10px</option>
+            <option value="15px">15px</option>
+          </select>
+        </div>
+        <div class="property">
+          <label for="background-color">Background</label>
+          <input type="color" id="background-color" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

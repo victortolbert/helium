@@ -1,0 +1,50 @@
+<div>
+  <h2>NOVA</h2>
+
+  <button id="generateTokens">Generate Tokens</button>
+  <button id="exportThemes">Export Themes</button>
+</div>
+
+<script>
+  function downloadTokenFile(filename, content) {
+    // Create a blob from the CSS content
+    const blob = new Blob([content], {
+      type: 'application/design-tokens+json'
+    })
+
+    // Create a link element
+    const link = document.createElement('a')
+
+    // Set the href to the blob URL
+    link.href = URL.createObjectURL(blob)
+
+    // Set the download attribute with the desired file name
+    link.download = filename
+
+    // Programmatically trigger the download
+    link.click()
+
+    // Clean up the URL object after download
+    URL.revokeObjectURL(link.href)
+  }
+
+  document.getElementById('generateTokens').onclick = () => {
+    parent.postMessage({
+      pluginMessage: {
+        type: 'generate-tokens'
+      }
+    }, '*')
+  }
+
+  // Listen for messages from the code
+  window.onmessage = (event) => {
+    let pluginMessage = event.data.pluginMessage
+
+    if (pluginMessage.type == 'tokens-generated') {
+      console.log('tokens-generated')
+
+      // Trigger the download with a specific filename
+      downloadTokenFile('tokens.json', JSON.stringify(pluginMessage.data))
+    }
+  }
+</script>

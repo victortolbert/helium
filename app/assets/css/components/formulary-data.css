@@ -1,0 +1,405 @@
+:root {
+  --formulary-background: #ffffff;
+  --formulary-border-bottom: 1px solid #00000000;
+  --formulary-border-left: 1px solid #00000000;
+  --formulary-border-radius-bottom-left: 0px;
+  --formulary-border-radius-bottom-right: 0px;
+  --formulary-border-radius-top-left: 0px;
+  --formulary-border-radius-top-left: 15px;
+  --formulary-border-radius-top-right: 0px;
+  --formulary-border-radius-top-right: 15px;
+  --formulary-border-right: 1px solid #00000000;
+  --formulary-border-top: 1px solid #00000000;
+  --formulary-bottom-text-background: #00000000;
+  --formulary-bottom-text-border-bottom: 1px solid #00000000;
+  --formulary-bottom-text-border-left: 1px solid #00000000;
+  --formulary-bottom-text-border-right: 1px solid #00000000;
+  --formulary-bottom-text-border-top: 1px solid #00000000;
+  --formulary-bottom-text-padding-bottom: 0px;
+  --formulary-bottom-text-padding-left: 0px;
+  --formulary-bottom-text-padding-right: 0px;
+  --formulary-bottom-text-padding-top: 0px;
+  --formulary-bottom-text-text-case: capitalize;
+  --formulary-bottom-text-text-color: #50535a;
+  --formulary-change-location-border-bottom: 1px solid #00000000;
+  --formulary-change-location-border-left: 1px solid #00000000;
+  --formulary-change-location-border-radius-bottom-left: 3px;
+  --formulary-change-location-border-radius-bottom-right: 3px;
+  --formulary-change-location-border-radius-top-left: 3px;
+  --formulary-change-location-border-radius-top-right: 3px;
+  --formulary-change-location-border-right: 1px solid #00000000;
+  --formulary-change-location-border-top: 1px solid #00000000;
+  --formulary-change-location-letter-spacing: 0%;
+  --formulary-change-location-text-background: #00000000;
+  --formulary-change-location-text-color: #222222;
+  --formulary-change-location-text: 700 16px "Montserrat";
+  --formulary-item-subtitle-letter-spacing: 0.550000011920929px;
+  --formulary-item-subtitle-letter-spacing: 0%;
+  --formulary-item-subtitle-text-case: capitalize;
+  --formulary-item-subtitle-text-color: #000000;
+  --formulary-item-subtitle-text-color: #50535a;
+  --formulary-item-subtitle-text: 500 19px/25px "Avenir Next Condensed";
+  --formulary-item-subtitle-text: 700 20px "Avenir Next Condensed";
+  --formulary-item-title-background: #95004d;
+  --formulary-item-title-background: #ffffff;
+  --formulary-item-title-letter-spacing: 0%;
+  --formulary-item-title-letter-spacing: 0px;
+  --formulary-item-title-text-case: capitalize;
+  --formulary-item-title-text-color: #1ba2da;
+  --formulary-item-title-text-color: #ffffff;
+  --formulary-item-title-text: 700 33px "Avenir Next Condensed";
+  --formulary-item-title-text: 900 32px "Avenir Next Condensed";
+  --formulary-overlay-city-dropdown-background: #00000000;
+  --formulary-overlay-city-dropdown-border-bottom: 1px solid #000000;
+  --formulary-overlay-city-dropdown-border-left: 1px solid #000000;
+  --formulary-overlay-city-dropdown-border-radius-bottom-left: 3px;
+  --formulary-overlay-city-dropdown-border-radius-bottom-right: 3px;
+  --formulary-overlay-city-dropdown-border-radius-top-left: 3px;
+  --formulary-overlay-city-dropdown-border-radius-top-right: 3px;
+  --formulary-overlay-city-dropdown-border-right: 1px solid #000000;
+  --formulary-overlay-city-dropdown-border-top: 1px solid #000000;
+  --formulary-overlay-city-dropdown-icon-color: #1ba2da;
+  --formulary-overlay-city-dropdown-letter-spacing: 0%;
+  --formulary-overlay-city-dropdown-text-color: #1ba2da;
+  --formulary-overlay-city-dropdown-text: 700 12px "Montserrat";
+  --formulary-overlay-city-label-border-bottom: 1px solid #00000000;
+  --formulary-overlay-city-label-border-left: 1px solid #00000000;
+  --formulary-overlay-city-label-border-right: 1px solid #00000000;
+  --formulary-overlay-city-label-border-top: 1px solid #00000000;
+  --formulary-overlay-city-label-letter-spacing: 0%;
+  --formulary-overlay-city-label-text-case: capitalize;
+  --formulary-overlay-city-label-text-color: #1ba2da;
+  --formulary-overlay-city-label-text: 700 16px "Montserrat";
+  --formulary-overlay-close-icon-color: #ffffff;
+  --formulary-overlay-county-dropdown-background: #00000000;
+  --formulary-overlay-county-dropdown-border-bottom: 1px solid #000000;
+  --formulary-overlay-county-dropdown-border-left: 1px solid #000000;
+  --formulary-overlay-county-dropdown-border-radius-bottom-left: 3px;
+  --formulary-overlay-county-dropdown-border-radius-bottom-right: 3px;
+  --formulary-overlay-county-dropdown-border-radius-top-left: 3px;
+  --formulary-overlay-county-dropdown-border-radius-top-right: 3px;
+  --formulary-overlay-county-dropdown-border-right: 1px solid #000000;
+  --formulary-overlay-county-dropdown-border-top: 1px solid #000000;
+  --formulary-overlay-county-dropdown-icon-color: #1ba2da;
+  --formulary-overlay-county-dropdown-letter-spacing: 0%;
+  --formulary-overlay-county-dropdown-text-color: #1ba2da;
+  --formulary-overlay-county-dropdown-text: 700 12px "Montserrat";
+  --formulary-overlay-county-label-border-bottom: 1px solid #00000000;
+  --formulary-overlay-county-label-border-left: 1px solid #00000000;
+  --formulary-overlay-county-label-border-right: 1px solid #00000000;
+  --formulary-overlay-county-label-border-top: 1px solid #00000000;
+  --formulary-overlay-county-label-letter-spacing: 0%;
+  --formulary-overlay-county-label-text-case: capitalize;
+  --formulary-overlay-county-label-text-color: #1ba2da;
+  --formulary-overlay-county-label-text: 700 16px "Montserrat";
+  --formulary-overlay-submit-background: #ffffff;
+  --formulary-overlay-submit-border-bottom: 1px solid #00000000;
+  --formulary-overlay-submit-border-left: 1px solid #00000000;
+  --formulary-overlay-submit-border-radius-bottom-left: 0px;
+  --formulary-overlay-submit-border-radius-bottom-right: 0px;
+  --formulary-overlay-submit-border-radius-top-left: 0px;
+  --formulary-overlay-submit-border-radius-top-right: 0px;
+  --formulary-overlay-submit-border-right: 1px solid #00000000;
+  --formulary-overlay-submit-border-top: 1px solid #00000000;
+  --formulary-overlay-title-background: #1ba2da;
+  --formulary-overlay-title-border-bottom: 1px solid #00000000;
+  --formulary-overlay-title-border-left: 1px solid #00000000;
+  --formulary-overlay-title-border-radius-bottom-left: 0px;
+  --formulary-overlay-title-border-radius-bottom-right: 0px;
+  --formulary-overlay-title-border-radius-top-left: 0px;
+  --formulary-overlay-title-border-radius-top-right: 0px;
+  --formulary-overlay-title-border-right: 1px solid #00000000;
+  --formulary-overlay-title-border-top: 1px solid #00000000;
+  --formulary-overlay-title-letter-spacing: 0%;
+  --formulary-overlay-title-text-case: capitalize;
+  --formulary-overlay-title-text-color: #ffffff;
+  --formulary-overlay-title-text: 700 24px "Montserrat";
+  --formulary-table-header-background: #00000000;
+  --formulary-table-header-border-bottom: 1px solid #00000000;
+  --formulary-table-header-border-left: 1px solid #00000000;
+  --formulary-table-header-border-right: 1px solid #00000000;
+  --formulary-table-header-border-top: 1px solid #00000000;
+  --formulary-table-header-letter-spacing: 0%;
+  --formulary-table-header-text-case: capitalize;
+  --formulary-table-header-text-color: #00a3df;
+  --formulary-table-header-text-color: #95004d;
+  --formulary-table-header-text: 700 16px "Avenir Next Condensed";
+  --formulary-table-item-border-bottom: 1px solid #00000000;
+  --formulary-table-item-border-left: 1px solid #00000000;
+  --formulary-table-item-border-right: 1px solid #00000000;
+  --formulary-table-item-border-top: 1px solid #00000000;
+  --formulary-table-item-letter-spacing: 0%;
+  --formulary-table-item-padding-bottom: 8px;
+  --formulary-table-item-padding-left: 16px;
+  --formulary-table-item-padding-right: 16px;
+  --formulary-table-item-padding-top: 8px;
+  --formulary-table-item-text-case: capitalize;
+  --formulary-table-item-text-color: #000000;
+  --formulary-table-item-text: 400 12px "Avenir Next Condensed";
+  --formulary-table-item-text: 400 12px "Helvetica Neue";
+  /* Formulary Data */
+  --formulary-data-font-semibold: 600;
+  --formulary-data-skyrizi--title: #10a4de;
+  --formulary-data-skyrizi--sub-title: #00a3df;
+  --formulary-data-skyrizi--font-size: 17px;
+  --formulary-data-humira--font-size: 17px;
+  --formulary-data-humira-theme-color: #910045;
+}
+
+#root-container .cmp-container .formulary-data.aem-GridColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container .formulary-data main {
+  width: 100%;
+  position: relative;
+  padding: 25px;
+  .formulary-data-buttons .print-plans {
+    display: none;
+  }
+  .change-location {
+    position: absolute;
+    bottom: 0;
+    color: black;
+    font-family: var(--font-sans-condensed);
+    font-size: var(--formulary-data-skyrizi--font-size);
+    font-weight: var(--formulary-data-font-semibold);
+    text-decoration-line: underline;
+    background: none;
+  }
+
+  .email-plans {
+    height: 25px;
+    margin-right: 25px;
+    border-radius: 10px;
+    background: #193052;
+    color: #fff;
+    text-align: center;
+    font-family: var(--font-sans-condensed);
+    font-size: 9px;
+    font-weight: var(--button-font-weight);
+    line-height: 10px;
+    letter-spacing: 0.375px;
+    text-transform: uppercase;
+  }
+  .table-wrapper {
+    .title {
+      font-family: var(--font-sans-condensed);
+      font-size: 20px;
+      font-weight: var(--button-font-weight);
+      line-height: 22px;
+      padding-left: 5px;
+      text-transform: uppercase;
+    }
+
+    .formulary-data-table tr th {
+      padding: 5px 0 0 16px;
+      font-family: var(--font-sans-condensed);
+      font-size: var(--formulary-data-skyrizi--font-size);
+      font-weight: var(--formulary-data-font-semibold);
+      line-height: 24px;
+      border-bottom: 1px solid #dfdfdf;
+    }
+    .formulary-data-table tr td {
+      padding: 5px 0 0 16px;
+      color: #6c6c6c;
+      font-family: var(--font-sans-condensed);
+      font-size: var(--formulary-data-skyrizi--font-size);
+      font-weight: var(--font-regular);
+      line-height: 32px;
+      border-bottom: 1px solid #dfdfdf;
+    }
+  }
+
+  .formulary-data-modal.show {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--formulary-data-modal-backdrop);
+  }
+
+  .formulary-data-modal {
+    .change-location-form-section {
+      display: grid;
+      grid-template-columns: 50% 50%;
+    }
+    .modal-body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 40px;
+      border-radius: 6px 6px 0 0;
+      background-color: black;
+    }
+
+    #change-location-state {
+      width: 75%;
+      border: 2px solid #dfdfdf;
+    }
+
+    #change-location-county {
+      width: 85%;
+      border: 2px solid #dfdfdf;
+    }
+
+    .modal-body .change-location-form-section .form-section-row label,
+    #change-location-state,
+    #change-location-county {
+      text-align: left;
+      font-family: var(--font-sans-condensed);
+      font-size: var(--formulary-data-skyrizi--font-size);
+      font-weight: var(--formulary-data-font-semibold);
+      line-height: 24px;
+    }
+
+    .modal-body {
+      .modal-title {
+        position: absolute;
+        top: 0;
+        color: #fff;
+        font-family: var(--font-sans-condensed);
+        font-size: var(--formulary-data-skyrizi--font-size);
+        letter-spacing: 3px;
+        font-weight: var(--button-font-weight);
+        line-height: 22px;
+        margin-top: 7px;
+        text-transform: uppercase;
+      }
+
+      .modal-close {
+        background-image: url(/content/dam/skyrizihcpivy/isa/template-assets/derm/modal-close.svg);
+      }
+
+      .change-location-form-section {
+        padding-top: 30px;
+      }
+
+      .change-location-form-section .change-location-submit {
+        border-radius: 15px;
+        padding: 5px;
+        margin-top: 30px;
+        background: #193052;
+        color: #fff;
+        text-align: center;
+        font-family: var(--font-sans-condensed);
+        font-size: var(--formulary-data-skyrizi--font-size);
+        font-weight: var(--button-font-weight);
+        letter-spacing: 0.375px;
+        line-height: 13px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.container .formulary-data main.formulary-data-skyrizi {
+  .change-location {
+    color: var(--formulary-data-skyrizi--sub-title);
+  }
+  .table-wrapper {
+    .title {
+      color: var(--formulary-data-skyrizi--title);
+    }
+    .formulary-data-table tr th {
+      color: var(--formulary-data-skyrizi--sub-title);
+      padding: 45px 0 0 16px;
+    }
+    .formulary-data-table {
+      position: relative;
+      margin-top: 0;
+      border: 2px solid black;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 15px;
+      fill: #fff;
+      border: 2px solid #1ba2da;
+      box-shadow: 0px 2px 11px rgba(0, 163, 223, 0.43);
+    }
+    .formulary-data-table::before {
+      height: 39px;
+      position: absolute;
+      width: 100%;
+      display: flex;
+      content: '';
+      color: black;
+      background-color: #1ba2da;
+      border-radius: 10px 10px 0 0;
+    }
+  }
+  .formulary-data-modal {
+    .modal-body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 40px;
+      border-radius: 6px 6px 0 0;
+      background-color: var(--formulary-data-skyrizi--sub-title);
+    }
+    .modal-body .change-location-form-section .form-section-row label,
+    #change-location-state,
+    #change-location-county {
+      color: var(--formulary-data-skyrizi--sub-title);
+    }
+  }
+}
+
+.container .formulary-data main.formulary-data-humira {
+  .change-location {
+    display: none;
+  }
+  .table-wrapper .formulary-data-table tr th {
+    color: var(--formulary-data-humira-theme-color);
+    font-weight: var(--formulary-data-title-font-weight);
+  }
+
+  .table-wrapper {
+    border-color: #fff;
+    border-radius: 16px;
+    background: var(--Basics-WHITE, #fff);
+    box-shadow: 3px 2px 22px 0px #979797;
+    margin-bottom: 15px;
+  }
+  .email-plans {
+    height: 32px;
+    border-radius: 25px;
+    background: var(--formulary-data-humira-theme-color);
+    font-size: 12px;
+  }
+  .table-wrapper .formulary-data-table {
+    border: none;
+    box-shadow: none;
+    margin-top: 0;
+  }
+
+  .table-wrapper .table-section .title {
+    display: flex;
+    font-family: var(--font-sans-condensed);
+    font-size: 18px;
+    font-weight: var(--formulary-data-title-font-weight);
+    background: var(--formulary-data-humira-theme-color);
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+    padding: 5px 5px 5px 15px;
+    align-items: center;
+  }
+
+  .table-wrapper .table-section .subtitle {
+    padding: 10px 10px 15px 15px;
+    font-family: var(--font-sans-condensed);
+    font-size: 12px;
+    color: #50535a;
+  }
+  .table-wrapper .formulary-data-table tr td {
+    color: #868889;
+    font-size: var(--formulary-data-humira--font-size);
+  }
+}

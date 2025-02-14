@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>World Clocks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .clock-container {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .clock {
+      margin: 20px 0;
+    }
+
+    .clock span {
+      display: block;
+      font-size: 1.5em;
+      margin: 10px 0;
+    }
+
+    .clock-label {
+      font-weight: bold;
+      color: #333;
+    }
+
+    .time {
+      font-size: 2em;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="clock-container">
+    <div class="clock" id="clock-ist">
+      <span class="clock-label">India (IST)</span>
+      <span class="time" id="time-ist"></span>
+    </div>
+    <div class="clock" id="clock-est">
+      <span class="clock-label">Atlanta (EST)</span>
+      <span class="time" id="time-est"></span>
+    </div>
+    <div class="clock" id="clock-cst">
+      <span class="clock-label">Chicago (CST)</span>
+      <span class="time" id="time-cst"></span>
+    </div>
+    <div class="clock" id="clock-pst">
+      <span class="clock-label">California (PST)</span>
+      <span class="time" id="time-pst"></span>
+    </div>
+  </div>
+
+  <script>
+    function updateTime() {
+      const now = new Date();
+
+      const optionsIST = { timeZone: 'Asia/Kolkata', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+      const timeIST = new Intl.DateTimeFormat('en-US', optionsIST).format(now);
+      document.getElementById('time-ist').textContent = timeIST;
+
+      const optionsEST = { timeZone: 'America/New_York', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+      const timeEST = new Intl.DateTimeFormat('en-US', optionsEST).format(now);
+      document.getElementById('time-est').textContent = timeEST;
+
+      const optionsCST = { timeZone: 'America/Chicago', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+      const timeCST = new Intl.DateTimeFormat('en-US', optionsCST).format(now);
+      document.getElementById('time-cst').textContent = timeCST;
+
+      const optionsPST = { timeZone: 'America/Los_Angeles', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+      const timePST = new Intl.DateTimeFormat('en-US', optionsPST).format(now);
+      document.getElementById('time-pst').textContent = timePST;
+    }
+
+    setInterval(updateTime, 1000);
+    updateTime();
+  </script>
+</body>
+
+</html>

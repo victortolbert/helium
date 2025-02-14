@@ -1,0 +1,52 @@
+#footer-container {
+  font-family: var(--font-sans-condensed);
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: --skyrizi-dark-navy-blue;
+  border-radius: 4px;
+  height: 28px;
+
+  .cmp-button,
+  .cmp-button:visited {
+    color: #ffffff;
+  }
+
+  .cmp-button {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: transparent;
+    text-decoration-thickness: 2px;
+  }
+
+  .cmp-button.btn-active {
+    color: #ffffff;
+    text-decoration-color: var(--skyrizi-blue);
+  }
+
+  a {
+    font-size: 11px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  u {
+    text-underline-offset: 4px;
+    text-decoration-color: var(--skyrizi-blue);
+    text-decoration-thickness: 2px;
+  }
+
+  .column-1 .cmp-container > div {
+    display: flex;
+  }
+
+  .column-2 .cmp-button span {
+    display: block;
+    width: 100%;
+  }
+}
+
+.container:has(> #footer-container.publish) {
+  position: absolute;
+  bottom: 15px;
+}

@@ -1,0 +1,50 @@
+:root {
+  --primary: #193052;
+  --secondary: #193052;
+  --humira: #95004d;
+  --quaternary: #95004d;
+
+  --skyrizi-blue: #00a3df;
+  --skyrizi-blue-60: #66c8ec;
+  --skyrizi-blue-30: #b2e3f5;
+  --skyrizi-plum: #b41955;
+  --skyrizi-slate-gray: #50535a;
+  --skyrizi-slate-gray-55: #9fa0a4;
+  --skyrizi-slate-gray-25: #d3d4d5;
+  --skyrizi-gray: #e9eae8;
+  --skyrizi-royal-blue: #004c97;
+  --skyrizi-dark-navy-blue: #0e1d34;
+  --skyrizi-mint-green: #6abc8d;
+  --skyrizi-pine-green: #248a6b;
+  --skyrizi-sandy-yellow: #f39200;
+  --skyrizi-vermillion: #e84127;
+  --skyrizi-fortify-green: #4dabb0;
+  --skyrizi-motivate-blue: #0074bb;
+  --skyrizi-advance-purple: #5f6dd1;
+
+  --white: #fff;
+  --black: #000;
+  --orange: #e87200;
+  --merlot: #a8224f;
+  --dk-merlot: #7c0435;
+  --lt-gray: #5e5e5e;
+  --gray: #dbdada;
+  --slate: #6d6e70;
+  --font-sans: 'AvenirNext-Regular';
+  --font-sans-condensed: 'Avenir Condensed';
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-demibold: 600;
+  --font-bold: 700;
+
+  --tabs-header-background: #d9d9d9;
+  --tabs-header-border-radius: 4px;
+  --tabs-header-height: 35px;
+  --rounded-full: 9999px;
+
+  --button-text-color: white;
+  --button-font-size: 12px;
+  --button-font-weight: 700;
+
+  --header-height: 52px;
+}

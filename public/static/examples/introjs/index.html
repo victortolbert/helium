@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./introjs/intro.js" />
+  <link rel="stylesheet" href="./introjs/themes/introjs-nazanin.css" />
+  <script src="./introjs/intro.js"></script>
+  <script src="./tailwindcss.global.js"></script>
+  <style type="text/tailwindcss">
+    [v-cloak] {
+        display: none;
+      }
+      @theme {
+        --color-dark-blue: #0e1d34;
+        --color-primary: #00a3df;
+        --color-secondary: #b41955;
+        /* '192': '48rem', // 768px */
+        /* '256': '64rem', // 1024px */
+      }
+    </style>
+  <title>Intro.js</title>
+</head>
+
+<body>
+  <a href='http://example.com/' data-intro='Hello step one!'>Example</a>
+  <!-- <a href='http://example.com/' data-hint='Hello step one!'>Example </a> -->
+  <div
+    id="first"
+    data-step='5'
+    data-title="This is Step 5"
+    data-position="right"
+    data-scroll-to="tooltip"
+  >Step 5</div>
+  <div id="second" data-step='9'>Step 9</div>
+
+  <div class="card-demo" data-step='2'>
+    <div class="card shadow--md">
+      <div class="card__image">
+        <img src="..." alt="Image alt text" title="Logo Title Text 1" />
+      </div>
+      <div class="card__body">
+        <h4 data-hint="Hello! 👋 Click on this link" data-hint-position="bottom-middle">
+          Quaco Lighthouse
+        </h4>
+        <small data-hint="You can select the text" data-hint-position="top-right">
+          The Quaco Head Lighthouse is a well maintained lighthouse close to St.
+          Martins. It is a short, beautiful walk to the lighthouse along the
+          seashore.
+        </small>
+      </div>
+    </div>
+  </div>
+  <script>
+    introJs().start();
+    introJs().addHints();
+    introJs().setOption("nextLabel", " > ");
+    introJs().goToStepNumber(9);
+    introJs().addStep({
+        element: document.querySelectorAll('#step2')[0],
+        intro: "Ok, wasn't that fun?",
+        position: 'right'
+      });
+  </script>
+</body>
+
+</html>

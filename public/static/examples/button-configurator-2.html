@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Button Configurator</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 p-6">
+    <div x-data="buttonConfigurator()" class="max-w-4xl mx-auto">
+      <h1 class="text-3xl font-bold mb-4">Button Configurator</h1>
+
+      <div class="flex space-x-6">
+        <!-- Configuration Form -->
+        <div class="w-1/2 bg-white p-6 rounded shadow">
+          <div class="mb-4">
+            <label class="block text-gray-700">Button Type</label>
+            <select x-model="type" class="border p-2 rounded w-full">
+              <option value="button">Button</option>
+              <option value="submit">Submit</option>
+            </select>
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-700">Button Text</label>
+            <input x-model="text" type="text" class="border p-2 rounded w-full">
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-700">Border Radius</label>
+            <input x-model="borderRadius" type="number" class="border p-2 rounded w-full" min="0" max="50">
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-700">Style Variation</label>
+            <select x-model="style" class="border p-2 rounded w-full">
+              <option value="primary">Primary</option>
+              <option value="secondary">Secondary</option>
+              <option value="neutral">Neutral</option>
+              <option value="success">Success</option>
+            </select>
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-700">Size</label>
+            <select x-model="size" class="border p-2 rounded w-full">
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+            </select>
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-700">Leading Icon (optional)</label>
+            <input x-model="leadingIcon" type="text" class="border p-2 rounded w-full" placeholder="e.g., 🔍">
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-700">Trailing Icon (optional)</label>
+            <input x-model="trailingIcon" type="text" class="border p-2 rounded w-full" placeholder="e.g., ➡️">
+          </div>
+        </div>
+
+        <!-- Button Preview -->
+        <div class="w-1/2 flex items-center justify-center">
+          <button :type="type" :class="buttonClass" :style="buttonStyle" class="flex items-center space-x-2">
+            <span x-show="leadingIcon" x-text="leadingIcon"></span>
+            <span x-text="text"></span>
+            <span x-show="trailingIcon" x-text="trailingIcon"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function buttonConfigurator() {
+        return {
+          type: 'button',
+          text: 'Click Me',
+          borderRadius: 4,
+          style: 'primary',
+          size: 'medium',
+          leadingIcon: '',
+          trailingIcon: '',
+          get buttonClass() {
+            const styles = {
+              primary: 'bg-blue-500 text-white',
+              secondary: 'bg-gray-500 text-white',
+              neutral: 'bg-gray-200 text-black',
+              success: 'bg-green-500 text-white'
+            };
+            const sizes = {
+              small: 'px-2 py-1 text-sm',
+              medium: 'px-4 py-2 text-base',
+              large: 'px-6 py-3 text-lg'
+            };
+            return `${styles[this.style]} ${sizes[this.size]} rounded transition-transform transform hover:scale-105 active:scale-95`;
+          },
+          get buttonStyle() {
+            return `border-radius: ${this.borderRadius}px;`;
+          }
+        };
+      }
+    </script>
+  </body>
+</html>

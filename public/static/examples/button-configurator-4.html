@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Button Configurator</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 p-6">
+    <div x-data="buttonConfigurator()" class="max-w-4xl mx-auto">
+      <h1 class="text-3xl font-bold mb-4">Button Configurator</h1>
+
+      <div class="flex space-x-6">
+        <!-- Configuration Form -->
+        <div class="w-1/2 bg-white p-6 rounded shadow">
+          <div class="mb-4">
+            <label class="block text-gray-700">Button Type</label>
+            <select x-model="type" class="border p-2 rounded w-full">
+              <option value="button">Button</option>
+              <option value="submit">Submit</option>
+            </select>
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-700">Button Text</label>
+            <input x-model="text" type="text" class="border p-2 rounded w-full">
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-700">Border Radius</label>
+            <select x-model="borderRadius" class="border p-2 rounded w-full">
+              <option value="rounded-sm">Small</option>
+              <option value="rounded">Default</option>
+              <option value="rounded-md">Medium</option>
+              <option value="rounded-lg">Large</option>
+              <option value="rounded-full">Full</option>
+            </select>
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-700">Style Variation</label>
+            <select x-model="style" class="border p-2 rounded w-full">
+              <option value="primary">Primary</option>
+              <option value="secondary">Secondary</option>
+              <option value="neutral">Neutral</option>
+              <option value="success">Success</option>
+            </select>
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-700">Size</label>
+            <select x-model="size" class="border p-2 rounded w-full">
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+            </select>
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-700">Vertical Padding</label>
+            <select x-model="paddingY" class="border p-2 rounded w-full">
+              <option value="py-1">Small</option>
+              <option value="py-2">Medium</option>
+              <option value="py-3">Large</option>
+            </select>
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-700">Horizontal Padding</label>
+            <select x-model="paddingX" class="border p-2 rounded w-full">
+              <option value="px-2">Small</option>
+              <option value="px-4">Medium</option>
+              <option value="px-6">Large</option>
+            </select>
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-700">Leading Icon (optional)</label>
+            <input x-model="leadingIcon" type="text" class="border p-2 rounded w-full" placeholder="e.g., 🔍">
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-700">Trailing Icon (optional)</label>
+            <input x-model="trailingIcon" type="text" class="border p-2 rounded w-full" placeholder="e.g., ➡️">
+          </div>
+        </div>
+
+        <!-- Button Preview -->
+        <div class="w-1/2 flex flex-col items-center justify-center space-y-4">
+          <button :type="type" :class="buttonClass" class="flex items-center space-x-2">
+            <span x-show="leadingIcon" x-text="leadingIcon"></span>
+            <span x-text="text"></span>
+            <span x-show="trailingIcon" x-text="trailingIcon"></span>
+          </button>
+
+          <!-- Generated Tailwind HTML -->
+          <div class="w-full bg-white p-4 rounded shadow">
+            <h2 class="text-xl font-bold mb-2">Generated Tailwind HTML</h2>
+            <pre class="bg-gray-100 p-2 rounded"><code x-text="generatedTailwindHTML"></code></pre>
+            <button @click="copyToClipboard(generatedTailwindHTML)" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Copy HTML</button>
+          </div>
+
+          <!-- Generated Non-Tailwind HTML and CSS -->
+          <div class="w-full bg-white p-4 rounded shadow">
+            <h2 class="text-xl font-bold mb-2">Generated Non-Tailwind HTML & CSS</h2>
+            <pre class="bg-gray-100 p-2 rounded"><code x-text="generatedNonTailwindHTML"></code></pre>
+            <pre class="bg-gray-100 p-2 rounded mt-2"><code x-text="generatedNonTailwindCSS"></code></pre>
+            <button @click="copyToClipboard(generatedNonTailwindHTML + '\n\n' + generatedNonTailwindCSS)" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Copy HTML & CSS</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function buttonConfigurator() {
+        return {
+          type: 'button',
+          text: 'Click Me',
+          borderRadius: 'rounded',
+          style: 'primary',
+          size: 'medium',
+          paddingY: 'py-2',
+          paddingX: 'px-4',
+          leadingIcon: '',
+          trailingIcon: '',
+          get buttonClass() {
+            const styles = {
+              primary: 'bg-blue-500 text-white',
+              secondary: 'bg-gray-500 text-white',
+              neutral: 'bg-gray-200 text-black',
+              success: 'bg-green-500 text-white'
+            };
+            const sizes = {
+              small: 'text-sm',
+              medium: 'text-base',
+              large: 'text-lg'
+            };
+            return `${styles[this.style]} ${sizes[this.size]} ${this.borderRadius} ${this.paddingY} ${this.paddingX} transition-transform transform hover:scale-105 active:scale-95`;
+          },
+          get generatedTailwindHTML() {
+            return `<button type="${this.type}" class="${this.buttonClass}">
+  ${this.leadingIcon ? `<span>${this.leadingIcon}</span>` : ''}<span>${this.text}</span>${this.trailingIcon ? `<span>${this.trailingIcon}</span>` : ''}
+</button>`;
+          },
+          get generatedNonTailwindHTML() {
+            return `<button type="${this.type}" class="custom-button">${this.leadingIcon ? `<span>${this.leadingIcon}</span>` : ''}<span>${this.text}</span>${this.trailingIcon ? `<span>${this.trailingIcon}</span>` : ''}</button>`;
+          },
+          get generatedNonTailwindCSS() {
+            const styles = {
+              primary: 'background-color: #3b82f6; color: white;',
+              secondary: 'background-color: #6b7280; color: white;',
+              neutral: 'background-color: #e5e7eb; color: black;',
+              success: 'background-color: #10b981; color: white;'
+            };
+            const sizes = {
+              small: 'font-size: 0.875rem;',
+              medium: 'font-size: 1rem;',
+              large: 'font-size: 1.125rem;'
+            };
+            const paddings = {
+              'py-1': 'padding-top: 0.25rem; padding-bottom: 0.25rem;',
+              'py-2': 'padding-top: 0.5rem; padding-bottom: 0.5rem;',
+              'py-3': 'padding-top: 0.75rem; padding-bottom: 0.75rem;',
+              'px-2': 'padding-left: 0.5rem; padding-right: 0.5rem;',
+              'px-4': 'padding-left: 1rem; padding-right: 1rem;',
+              'px-6': 'padding-left: 1.5rem; padding-right: 1.5rem;'
+            };
+            return `.custom-button { ${styles[this.style]} ${sizes[this.size]} ${paddings[this.paddingY]} ${paddings[this.paddingX]} border-radius: ${this.borderRadius.replace('rounded-', '')}; transition: transform 0.2s; }
+.custom-button:hover { transform: scale(1.05); }
+.custom-button:active { transform: scale(0.95); }`;
+          },
+          copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+              alert('Copied to clipboard');
+            });
+          }
+        };
+      }
+    </script>
+  </body>
+</html>

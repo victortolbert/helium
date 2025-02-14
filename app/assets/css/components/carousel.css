@@ -1,0 +1,221 @@
+:root {
+  --carousel-carousel-dot-color-active: #ffffff;
+  --carousel-carousel-dot-color: #f1f1f1;
+}
+.carousel.variation-1 {
+  .cmp-carousel {
+    border-radius: 4px;
+  }
+
+  .cmp-carousel__content {
+    position: relative;
+    width: 963px;
+    height: 434px;
+    border-radius: 0.25rem;
+    border-width: 1px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .cmp-carousel__content > .cmp-carousel__actions {
+    position: absolute;
+    width: 100%;
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .cmp-carousel__actions {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cmp-carousel__actions button {
+    display: block;
+  }
+
+  .cmp-carousel__actions .cmp-carousel__actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .cmp-carousel__action-icon {
+    display: block;
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .cmp-carousel__action-text {
+    font-size: 0;
+  }
+
+  .cmp-carousel__action {
+    appearance: auto;
+    font-size: 0px;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 0em;
+    padding-block: 0px;
+    padding-inline: 0px;
+    border-width: 0px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+    height: auto;
+  }
+
+  .cmp-carousel__action--previous {
+    order: 1;
+  }
+
+  .cmp-carousel__action--previous .cmp-carousel__action-icon {
+    background: url('/content/dam/skyrizihcpivy/isa/template-assets/derm/modal-2-prev.png') no-repeat top left;
+  }
+
+  .cmp-carousel__action--next .cmp-carousel__action-icon {
+    background: url('/content/dam/skyrizihcpivy/isa/template-assets/derm/modal-2-next.png') no-repeat top left;
+  }
+
+  .cmp-carousel__action--pause {
+    display: none;
+  }
+
+  .cmp-carousel__action--play {
+    display: none;
+  }
+
+  .cmp-carousel__indicators {
+    display: none;
+  }
+}
+
+.carousel.variation-2 {
+  .cmp-carousel__content {
+    position: relative;
+    width: 880px;
+    height: 450px;
+    border-radius: 0.25rem;
+    border-width: 1px;
+    padding: 0;
+  }
+
+  .cmp-carousel__content > .cmp-carousel__actions {
+    position: absolute;
+    width: 100%;
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .cmp-carousel__actions {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cmp-carousel__actions button {
+    display: block;
+  }
+
+  .cmp-carousel__actions .cmp-carousel__actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .cmp-carousel__action-icon {
+    display: block;
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .cmp-carousel__action-text {
+    font-size: 0;
+  }
+
+  .cmp-carousel__action {
+    appearance: auto;
+    font-size: 0px;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 0em;
+    padding-block: 0px;
+    padding-inline: 0px;
+    border-width: 0px;
+    border-style: outset;
+    border-color: buttonborder;
+    border-image: initial;
+    height: auto;
+  }
+
+  .cmp-carousel__action--previous {
+    order: 1;
+  }
+
+  .cmp-carousel__action--previous .cmp-carousel__action-icon {
+    background: url('/content/dam/skyrizihcpivy/isa/template-assets/derm/modal-1-prev.png') no-repeat top left;
+  }
+
+  .cmp-carousel__action--next .cmp-carousel__action-icon {
+    background: url('/content/dam/skyrizihcpivy/isa/template-assets/derm/modal-1-next.png') no-repeat top left;
+  }
+
+  .cmp-carousel__action--pause {
+    display: none;
+  }
+
+  .cmp-carousel__action--play {
+    display: none;
+  }
+
+  .cmp-carousel__indicators {
+    margin: 0px;
+    margin-left: 244px;
+    display: flex;
+    list-style-type: none;
+    align-items: stretch;
+    gap: 11px;
+    padding: 0px;
+  }
+
+  .cmp-carousel__indicator {
+    height: 9px;
+    width: 9px;
+    border-radius: 9999px;
+    border-width: 1px;
+    background-color: #23385b33;
+    font-size: 0px;
+  }
+
+  .cmp-carousel__indicator--active {
+    background-color: #23385b;
+  }
+}

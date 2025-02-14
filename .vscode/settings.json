@@ -1,0 +1,41 @@
+{
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html",
+    "markdown": "html"
+  },
+
+  "tailwindCSS.experimental.classRegex": [
+    ["ui:\\s*{([^)]*)\\s*}", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["/\\*\\s?ui\\s?\\*/\\s*{([^;]*)}", ":\\s*[\"'`]([^\"'`]*).*?[\"'`]"]
+  ],
+
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className",
+    "ngClass",
+    "ui",
+    "active-class",
+    "inactive-class"
+  ],
+
+  "nuxtr.vueFiles.firstTag": "script",
+  "nuxtr.vueFiles.script.type": "setup",
+  "nuxtr.vueFiles.script.defaultLanguage": "ts",
+  "nuxtr.vueFiles.style.addStyleTag": false,
+  "nuxtr.vueFiles.style.alwaysScoped": false,
+  "nuxtr.openItemsAfterCreation": true,
+  "nuxtr.defaultPackageManager": "pnpm",
+  "nuxtr.vueFiles.pages.defaultTemplate": "default.page-template",
+  "nuxtr.vueFiles.layouts.defaultTemplate": "default.layout-template",
+
+  "eslint.useFlatConfig": true,
+  "prettier.enable": false,
+}

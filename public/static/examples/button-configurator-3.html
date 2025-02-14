@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Button Configurator</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-100 p-6">
+    <div x-data="buttonConfigurator()" class="max-w-4xl mx-auto">
+      <h1 class="text-3xl font-bold mb-4">Button Configurator</h1>
+
+      <div class="flex space-x-6">
+        <!-- Configuration Form -->
+        <div class="w-1/2 bg-white p-6 rounded shadow">
+          <div class="mb-4">
+            <label class="block text-gray-700">Button Type</label>
+            <select x-model="type" class="border p-2 rounded w-full">
+              <option value="button">Button</option>
+              <option value="submit">Submit</option>
+            </select>
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-700">Button Text</label>
+            <input x-model="text" type="text" class="border p-2 rounded w-full">
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-700">Border Radius</label>
+            <input x-model="borderRadius" type="number" class="border p-2 rounded w-full" min="0" max="50">
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-700">Style Variation</label>
+            <select x-model="style" class="border p-2 rounded w-full">
+              <option value="primary">Primary</option>
+              <option value="secondary">Secondary</option>
+              <option value="neutral">Neutral</option>
+              <option value="success">Success</option>
+            </select>
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-700">Size</label>
+            <select x-model="size" class="border p-2 rounded w-full">
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+            </select>
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-700">Vertical Padding</label>
+            <input x-model="paddingY" type="number" class="border p-2 rounded w-full" min="0">
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-700">Horizontal Padding</label>
+            <input x-model="paddingX" type="number" class="border p-2 rounded w-full" min="0">
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-700">Leading Icon (optional)</label>
+            <input x-model="leadingIcon" type="text" class="border p-2 rounded w-full" placeholder="e.g., 🔍">
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-700">Trailing Icon (optional)</label>
+            <input x-model="trailingIcon" type="text" class="border p-2 rounded w-full" placeholder="e.g., ➡️">
+          </div>
+        </div>
+
+        <!-- Button Preview -->
+        <div class="w-1/2 flex flex-col items-center justify-center space-y-4">
+          <button :type="type" :class="buttonClass" :style="buttonStyle" class="flex items-center space-x-2">
+            <span x-show="leadingIcon" x-text="leadingIcon"></span>
+            <span x-text="text"></span>
+            <span x-show="trailingIcon" x-text="trailingIcon"></span>
+          </button>
+
+          <!-- Generated Tailwind HTML -->
+          <div class="w-full bg-white p-4 rounded shadow">
+            <h2 class="text-xl font-bold mb-2">Generated Tailwind HTML</h2>
+            <pre class="bg-gray-100 p-2 rounded"><code x-text="generatedTailwindHTML"></code></pre>
+            <button @click="copyToClipboard(generatedTailwindHTML)" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Copy HTML</button>
+          </div>
+
+          <!-- Generated Non-Tailwind HTML and CSS -->
+          <div class="w-full bg-white p-4 rounded shadow">
+            <h2 class="text-xl font-bold mb-2">Generated Non-Tailwind HTML & CSS</h2>
+            <pre class="bg-gray-100 p-2 rounded"><code x-text="generatedNonTailwindHTML"></code></pre>
+            <pre class="bg-gray-100 p-2 rounded mt-2"><code x-text="generatedNonTailwindCSS"></code></pre>
+            <button @click="copyToClipboard(generatedNonTailwindHTML + '\n\n' + generatedNonTailwindCSS)" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded">Copy HTML & CSS</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function buttonConfigurator() {
+        return {
+          type: 'button',
+          text: 'Click Me',
+          borderRadius: 4,
+          style: 'primary',
+          size: 'medium',
+          paddingY: 2,
+          paddingX: 4,
+          leadingIcon: '',
+          trailingIcon: '',
+          get buttonClass() {
+            const styles = {
+              primary: 'bg-blue-500 text-white',
+              secondary: 'bg-gray-500 text-white',
+              neutral: 'bg-gray-200 text-black',
+              success: 'bg-green-500 text-white'
+            };
+            const sizes = {
+              small: 'text-sm',
+              medium: 'text-base',
+              large: 'text-lg'
+            };
+            return `${styles[this.style]} ${sizes[this.size]} rounded transition-transform transform hover:scale-105 active:scale-95`;
+          },
+          get buttonStyle() {
+            return `border-radius: ${this.borderRadius}px; padding: ${this.paddingY}px ${this.paddingX}px;`;
+          },
+          get generatedTailwindHTML() {
+            return `<button type="${this.type}" class="${this.buttonClass}" style="${this.buttonStyle}">${this.leadingIcon ? `<span>${this.leadingIcon}</span>` : ''}<span>${this.text}</span>${this.trailingIcon ? `<span>${this.trailingIcon}</span>` : ''}</button>`;
+          },
+          get generatedNonTailwindHTML() {
+            return `<button type="${this.type}" class="custom-button">${this.leadingIcon ? `<span>${this.leadingIcon}</span>` : ''}<span>${this.text}</span>${this.trailingIcon ? `<span>${this.trailingIcon}</span>` : ''}</button>`;
+          },
+          get generatedNonTailwindCSS() {
+            const styles = {
+              primary: 'background-color: #3b82f6; color: white;',
+              secondary: 'background-color: #6b7280; color: white;',
+              neutral: 'background-color: #e5e7eb; color: black;',
+              success: 'background-color: #10b981; color: white;'
+            };
+            const sizes = {
+              small: 'font-size: 0.875rem;',
+              medium: 'font-size: 1rem;',
+              large: 'font-size: 1.125rem;'
+            };
+            return `.custom-button { ${styles[this.style]} ${sizes[this.size]} border-radius: ${this.borderRadius}px; padding: ${this.paddingY}px ${this.paddingX}px; transition: transform 0.2s; }
+.custom-button:hover { transform: scale(1.05); }
+.custom-button:active { transform: scale(0.95); }`;
+          },
+          copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+              alert('Copied to clipboard');
+            });
+          }
+        };
+      }
+    </script>
+  </body>
+</html>

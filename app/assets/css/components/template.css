@@ -1,0 +1,31 @@
+.root {
+  height: 100%;
+}
+
+/* add id to root */
+#root-container {
+  height: 100%;
+}
+
+#root-container > .aem-Grid {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.container:has(> #content-container) {
+  flex-grow: 1;
+}
+
+#content-container {
+  height: 100%;
+}
+
+.cmp-image.cmp-image-brand-logo {
+  z-index: 3;
+  position: relative;
+}
+
+div.button:has(.cmp-button.footnote span:empty) {
+  display: none;
+}

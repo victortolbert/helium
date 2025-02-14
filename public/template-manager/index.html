@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>AEM Component Generator</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.3.4/vue.global.js"></script>
+  <!-- <script module type="importmap">
+    {
+      "imports": {
+        "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+      }
+    }
+  </script> -->
+  <style>
+    [v-cloak] {
+      display: none;
+    }
+
+    .container {
+      max-width: 64rem;
+      margin: 1rem auto;
+      padding: 1rem;
+    }
+
+    .input-group {
+      margin-bottom: 1rem;
+    }
+
+    .label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    .input,
+    .select,
+    .textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 2fr 2fr 1fr;
+      gap: 0.5rem;
+    }
+
+    .btn {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: #3b82f6;
+      color: white;
+    }
+
+    .btn-danger {
+      background: #ef4444;
+      color: white;
+    }
+
+    .tabs {
+      display: flex;
+      border-bottom: 1px solid #e5e7eb;
+      margin-bottom: 1rem;
+    }
+
+    .tab {
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+    }
+
+    .tab.active {
+      border-bottom-color: #3b82f6;
+      color: #3b82f6;
+    }
+
+    .textarea {
+      font-family: monospace;
+      height: 300px;
+    }
+
+    /* Add these styles to your existing CSS */
+    .status-bar {
+      background: #f8f9fa;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border-radius: 4px;
+      border: 1px solid #e9ecef;
+    }
+
+    .status-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.875rem;
+    }
+
+    .error-count {
+      color: #dc3545;
+      font-weight: 500;
+    }
+
+    .error-list {
+      margin-top: 0.5rem;
+      padding-top: 0.5rem;
+      border-top: 1px solid #e9ecef;
+    }
+
+    .error-item {
+      color: #dc3545;
+      font-size: 0.875rem;
+      padding: 0.25rem 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app" class="container" v-cloak>
+
+    <!-- Status Bar and Errors -->
+    <div class="status-bar">
+      <div class="status-info">
+        Templates: {{ templateStatus.loaded }}/{{ templateStatus.registered }} loaded
+        <span v-if="templateStatus.errors.length" class="error-count">
+          ({{ templateStatus.errors.length }} errors)
+        </span>
+      </div>
+      <div v-if="templateStatus.errors.length" class="error-list">
+        <div v-for="(error, index) in templateStatus.errors" :key="index" class="error-item">
+          {{ error.template }}: {{ error.error }}
+        </div>
+      </div>
+    </div>
+
+    <h1>AEM Component Generator</h1>
+
+    <div class="input-group">
+      <label class="label">Component Name</label>
+      <input v-model="state.componentName" class="input" placeholder="MyComponent">
+    </div>
+
+    <div class="input-group">
+      <label class="label">Description</label>
+      <input v-model="state.description" class="input" placeholder="A brief description of the component">
+    </div>
+
+    <div class="input-group">
+      <label class="label">Properties</label>
+      <div v-for="(prop, index) in state.props" :key="index" class="grid">
+        <input v-model="prop.name" class="input" placeholder="Property name">
+        <select v-model="prop.type" class="select">
+          <option v-for="type in availableTypes" :key="type" :value="type">
+            {{ type }}
+          </option>
+        </select>
+        <button @click="removeProp(index)" class="btn btn-danger">
+          Remove
+        </button>
+      </div>
+      <button @click="addProp" class="btn btn-primary">
+        Add Property
+      </button>
+    </div>
+
+    <!-- Template Output -->
+    <div class="input-group">
+      <div class="tabs">
+        <div v-for="tab in tabs" :key="tab" @click="state.currentTab = tab"
+          :class="['tab', { active: state.currentTab === tab }]">
+          {{ tab }}
+        </div>
+      </div>
+      <textarea :value="currentCode" readonly class="textarea"></textarea>
+    </div>
+  </div>
+
+  <script type="module">
+    // import { createApp, ref, watch } from 'vue'
+    // import { createApp, ref } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+    import { initializeApp } from './template-manager.js'
+
+    const { createApp, ref, watch } = Vue;
+
+    // Initialize the app with template management
+    try {
+      const app = await initializeApp();
+
+      app.config.errorHandler = (err, instance, info) => {
+        console.error('Global error:', err);
+        instance.renderError = `Error: ${err.message}`;
+      };
+
+      app.mixin({
+        data() {
+          return {
+            renderError: null,
+            availableTypes: ['String', 'Number', 'Boolean', 'Array', 'Object'],
+            tabs: ['HTL Template', 'Policy', 'Vue Prototype']
+          };
+        },
+        methods: {
+          addProp() {
+            this.state.props.push({
+              name: '',
+              type: 'String',
+              required: false
+            });
+          },
+          removeProp(index) {
+            this.state.props.splice(index, 1);
+          }
+        }
+      });
+
+      // Mount the app
+      app.mount('#app');
+
+    } catch (error) {
+      console.error('Failed to initialize application:', error);
+      document.querySelector('#app').innerHTML = `
+                <div class="error">
+                    Failed to initialize application: ${error.message}
+                </div>
+            `;
+    }
+  </script>
+</body>
+
+</html>

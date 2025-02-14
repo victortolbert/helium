@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Alpine</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/auto-animate/0.8.0/index.mjs" defer></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/auto-animate/0.8.2/index.min.js"></script>
+  </head>
+  <body class="bg-gray-100 p-6">
+    <h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message" class="text-3xl font-bold mb-4"></h1>
+
+    <ul x-auto-animate>
+      <li>Lorem</li>
+      <li>Ipsum</li>
+      <li>Ipsum</li>
+      <li>Ipsum</li>
+      <li>Ipsum</li>
+      <li>Ipsum</li>
+      <li>Ipsum</li>
+      <li>Ipsum</li>
+      <li>Ipsum</li>
+      <li>Ipsum</li>
+      <li>Ipsum</li>
+      <li>Ipsum</li>
+      <li>Ipsum</li>
+      <li>Ipsum</li>
+      <li>Ipsum</li>
+      <li>Ipsum</li>
+      <li>Ipsum</li>
+      <li>Ipsum</li>
+      <li>Ipsum</li>
+      <li>Ipsum</li>
+      <li>Ipsum</li>
+      <li>Ipsum</li>
+      <li>Ipsum</li>
+      <li>Ipsum</li>
+      <li>Ipsum</li>
+      <li>Ipsum</li>
+    </ul>
+
+<div id="dropdown" class="dropdown">
+  <strong class="dropdown-label" onclick="toggle">
+    Click me to open!
+  </strong>
+</div>
+    <div x-data="{ count: 0 }" class="mb-4">
+      <button x-on:click="count++" class="bg-blue-500 text-white px-4 py-2 rounded">Increment</button>
+      <span x-text="count" class="ml-2 buttonl"></span>
+    </div>
+
+    <div x-data="{ open: false }" class="mb-4">
+      <button @click="open = ! open" class="bg-green-500 text-white px-4 py-2 rounded">Toggle</button>
+      <div x-show="open" @click.outside="open = false" class="mt-2 p-4 bg-white shadow rounded">Contents...</div>
+    </div>
+
+    <div x-data="{ items: ['Item 1', 'Item 2', 'Item 3'] }" class="mb-4">
+      <template x-for="item in items" :key="item">
+        <div class="p-2 bg-gray-200 mb-2 rounded" x-text="item"></div>
+      </template>
+    </div>
+
+    <div x-data="{ text: '' }" class="mb-4">
+      <input x-model="text" type="text" placeholder="Type something..." class="border p-2 rounded w-full">
+      <p x-text="text" class="mt-2 text-lg"></p>
+    </div>
+
+    <div x-data="{ isVisible: true }" class="mb-4">
+      <button @click="isVisible = ! isVisible" class="bg-red-500 text-white px-4 py-2 rounded">Toggle Visibility</button>
+      <div x-show="isVisible" class="mt-2 p-4 bg-white shadow rounded">This is visible</div>
+    </div>
+
+    <div x-data="{ tab: 'first' }" class="mb-4">
+      <nav class="flex space-x-4">
+        <button @click="tab = 'first'" :class="{ 'bg-blue-500 text-white': tab === 'first' }" class="px-4 py-2 rounded">First Tab</button>
+        <button @click="tab = 'second'" :class="{ 'bg-blue-500 text-white': tab === 'second' }" class="px-4 py-2 rounded">Second Tab</button>
+      </nav>
+      <div x-show="tab === 'first'" class="mt-4 p-4 bg-white shadow rounded">First tab content</div>
+      <div x-show="tab === 'second'" class="mt-4 p-4 bg-white shadow rounded">Second tab content</div>
+    </div>
+
+    <div x-data="{ progress: 50 }" class="mb-4">
+      <input x-model="progress" type="range" min="0" max="100" class="w-full">
+      <div class="mt-2 h-4 bg-gray-200 rounded">
+        <div :style="{ width: progress + '%' }" class="h-full bg-blue-500 rounded"></div>
+      </div>
+    </div>
+
+    <div x-data="{ isLoading: false }" class="mb-4">
+      <button @click="isLoading = true; setTimeout(() => isLoading = false, 2000)" class="bg-purple-500 text-white px-4 py-2 rounded">Load</button>
+      <div x-show="isLoading" class="mt-2 p-4 bg-white shadow rounded">Loading...</div>
+    </div>
+
+    <script type="module">
+      import autoAnimate from './autoAnimate.js'
+      const dropdown = document.getElementById('dropdown')
+      autoAnimate(dropdown,{})
+
+      const p = document.createElement('p')
+      p.innerText = "Sea of Tranquility a mote of dust suspended in a sunbeam hundreds of thousands concept of the number one realm of the galaxies radio telescope. As a patch of light descended from astronomers two ghostly white figures in coveralls and helmets are softly dancing emerged into consciousness Orion's sword encyclopaedia galactica. Another world bits of moving fluff network of wormholes muse about network of wormholes with pretty stories for which there's little good evidence and billions upon billions upon billions upon billions upon billions upon billions upon billions."
+
+      function toggle() {
+        dropdown.contains(p) ? p.remove() : dropdown.appendChild(p)
+      }
+    </script>
+  </body>
+</html>

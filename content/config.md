@@ -1,0 +1,27 @@
+# Configuration
+
+- **modules**: Specifies the Nuxt.js modules to include in the project. Modules are reusable packages that extend the core functionality of Nuxt.js.
+- **plugins**: Defines plugins to be used in the Nuxt.js application. Plugins can be used to add global functionality to the app.
+- **ssr**: Enables or disables server-side rendering. Setting it to false disables SSR.
+- **devtools**: Enables or disables the Nuxt.js devtools.
+- **app**: Configures various application settings, including the HTML head properties, page transitions, and layout transitions.
+- **css**: Specifies the CSS files to be included globally in the project.
+- **content**: Configures the Nuxt Content module, which is used for managing content in the application.
+- **ui**: Configures the UI settings, such as fonts and theme colors.
+- **appConfig**: Allows setting custom application configuration properties.
+- **runtimeConfig**: Defines runtime configuration options, including environment variables and public configuration.
+- **devServer**: Configures the development server settings, such as the port and CORS options.
+- **future**: Configures future compatibility settings for Nuxt.js.
+- **features**: Enables or disables specific Nuxt.js features.
+- **experimental**: Enables or disables experimental features in Nuxt.js.
+- **compatibilityDate**: Sets the compatibility date for the project.
+- **nitro**: Configures the Nitro server settings, including experimental options.
+- **hub**: Configures the Nuxt Hub settings, such as enabling AI, blob, and cache features.
+- **vite**: Configures the Vite settings, including defining global constants.
+- **telemetry**: Enables or disables Nuxt.js telemetry.
+- **hooks**: Defines custom hooks to extend the functionality of Nuxt.js.
+- **basicAuth**: Configures basic authentication settings for the project.
+- **eslint**: Configures ESLint settings for the project.
+- **fathom**: Configures Fathom Analytics settings.
+- **icon**: Configures custom icon collections and bundle size limits.
+- **uiPro**: Configures the Nuxt UI Pro settings, including the license key.

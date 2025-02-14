@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Play/Pause Button</title>
+  </head>
+  <body>
+    <!-- Audio element (hidden) -->
+    <audio id="audio" src="../resources/sound/skyrizi.mp3" style="display: none"></audio>
+
+    <!-- Play/Pause Button -->
+    <button id="playPauseBtn" style="padding: 10px 20px; font-size: 16px; cursor: pointer" onclick="togglePlayPause()">
+      Play
+    </button>
+
+    <script>
+      // Inline JavaScript
+      var audioElement = document.getElementById('audio')
+      var playPauseButton = document.getElementById('playPauseBtn')
+
+      // Play/Pause toggle function
+      function togglePlayPause() {
+        if (audioElement.paused) {
+          audioElement.play()
+          playPauseButton.textContent = 'Pause'
+        } else {
+          audioElement.pause()
+          playPauseButton.textContent = 'Play'
+        }
+      }
+
+      // Event listener to reset button text when audio ends
+      audioElement.onended = function () {
+        playPauseButton.textContent = 'Play'
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+#header-container,
+#flex-adjust {
+  font-family: 'Helvetica Neue';
+  background-color: var(--skyrizi-dark-navy-blue);
+  color: var(--white);
+  font-size: 8px;
+  height: var(--header-height);
+
+  a {
+    color: var(--white);
+    text-decoration: underline;
+  }
+
+  .column.column-5:has(~ .column-6 .container .cmp-container .container #flex-adjust) {
+    flex-basis: 80%;
+  }
+
+  .column.column-6:has(> .container .cmp-container .container #flex-adjust) {
+    flex-basis: 0%;
+  }
+
+  #vertical-line {
+    margin-top: 2px;
+    height: 42px;
+    border-left: 1px #606060 solid;
+  }
+}
+
+.container:has(> div#content-container.publish) {
+  padding: 50px 0 0 0;
+}
+.container:has(> div#header-container.publish) {
+  position: absolute;
+}

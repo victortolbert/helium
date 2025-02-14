@@ -1,0 +1,227 @@
+:root {
+  --vertical-navigation-border-bottom: 1px solid #00000000;
+--vertical-navigation-border-left: 1px solid #00000000;
+--vertical-navigation-border-radius-bottom-left: 0px;
+--vertical-navigation-border-radius-bottom-right: 0px;
+--vertical-navigation-border-radius-top-left: 0px;
+--vertical-navigation-border-radius-top-right: 0px;
+--vertical-navigation-border-right: 1px solid #00000000;
+--vertical-navigation-border-top: 1px solid #00000000;
+--vertical-navigation-call-flow-background: #00a7e0;
+--vertical-navigation-call-flow-border-bottom: 0px solid #000000;
+--vertical-navigation-call-flow-border-left: 0px solid #000000;
+--vertical-navigation-call-flow-border-right: 0px solid #000000;
+--vertical-navigation-call-flow-border-top: 1px solid #000000;
+--vertical-navigation-call-flow-letter-spacing: 0%;
+--vertical-navigation-call-flow-text-case: capitalize;
+--vertical-navigation-call-flow-text-color: #ffffff;
+--vertical-navigation-call-flow-text: 400 12px "Montserrat";
+--vertical-navigation-close-background: #071d49;
+--vertical-navigation-close-border-bottom: 0px solid #000000;
+--vertical-navigation-close-border-left: 0px solid #000000;
+--vertical-navigation-close-border-right: 0px solid #000000;
+--vertical-navigation-close-border-top: 1px solid #000000;
+--vertical-navigation-close-letter-spacing: 0%;
+--vertical-navigation-close-text-case: capitalize;
+--vertical-navigation-close-text-color: #000000;
+--vertical-navigation-close-text: 400 12px "Montserrat";
+--vertical-navigation-help-background: #192f53;
+--vertical-navigation-help-border-bottom: 0px solid #000000;
+--vertical-navigation-help-border-left: 0px solid #000000;
+--vertical-navigation-help-border-right: 0px solid #000000;
+--vertical-navigation-help-border-top: 1px solid #000000;
+--vertical-navigation-help-letter-spacing: 0%;
+--vertical-navigation-help-note-background: #00000000;
+--vertical-navigation-help-note-border-bottom: 1px solid #00000000;
+--vertical-navigation-help-note-border-left: 1px solid #00000000;
+--vertical-navigation-help-note-border-right: 1px solid #00000000;
+--vertical-navigation-help-note-border-top: 1px solid #00000000;
+--vertical-navigation-help-note-letter-spacing: 0%;
+--vertical-navigation-help-note-text-case: lowercase;
+--vertical-navigation-help-note-text-color: #ffffff;
+--vertical-navigation-help-note-text: 400 12px "Montserrat";
+--vertical-navigation-help-text-case: capitalize;
+--vertical-navigation-help-text-color: #ffffff;
+--vertical-navigation-help-text: 400 12px "Montserrat";
+--vertical-navigation-home-background: #000000;
+--vertical-navigation-home-border-bottom: 0px solid #000000;
+--vertical-navigation-home-border-left: 0px solid #000000;
+--vertical-navigation-home-border-right: 0px solid #000000;
+--vertical-navigation-home-border-top: 1px solid #000000;
+--vertical-navigation-home-letter-spacing: 0%;
+--vertical-navigation-home-text-case: capitalize;
+--vertical-navigation-home-text-color: #000000;
+--vertical-navigation-home-text: 400 12px "Montserrat";
+--vertical-navigation-link-background: #192f53;
+--vertical-navigation-link-border-bottom: 0px solid #000000;
+--vertical-navigation-link-border-left: 0px solid #000000;
+--vertical-navigation-link-border-right: 0px solid #000000;
+--vertical-navigation-link-border-top: 1px solid #000000;
+--vertical-navigation-link-letter-spacing: 0%;
+--vertical-navigation-link-text-case: capitalize;
+--vertical-navigation-link-text-color: #ffffff;
+--vertical-navigation-link-text: 400 12px "Montserrat";
+--vertical-navigation-navigation-card-background: #ffffff;
+--vertical-navigation-navigation-card-border-bottom: 1px solid #00000000;
+--vertical-navigation-navigation-card-border-left: 1px solid #00000000;
+--vertical-navigation-navigation-card-border-radius-bottom-left: 0px;
+--vertical-navigation-navigation-card-border-radius-bottom-right: 0px;
+--vertical-navigation-navigation-card-border-radius-top-left: 0px;
+--vertical-navigation-navigation-card-border-radius-top-right: 0px;
+--vertical-navigation-navigation-card-border-right: 1px solid #00000000;
+--vertical-navigation-navigation-card-border-top: 1px solid #00000000;
+--vertical-navigation-navigation-card-gap: 24px;
+--vertical-navigation-navigation-card-title-letter-spacing: 0%;
+--vertical-navigation-navigation-card-title-padding-bottom: 8px;
+--vertical-navigation-navigation-card-title-padding-left: 8px;
+--vertical-navigation-navigation-card-title-padding-right: 8px;
+--vertical-navigation-navigation-card-title-padding-top: 8px;
+--vertical-navigation-navigation-card-title-text-color: #ffffff;
+--vertical-navigation-navigation-card-title-text: 400 14px "Avenir Next Condensed";
+--vertical-navigation-overlay: #00000080;
+--vertical-navigation-slide-navigation-title-letter-spacing: 0%;
+--vertical-navigation-slide-navigation-title-text-color: #ffffff;
+--vertical-navigation-slide-navigation-title-text: 700 24px "Avenir Next Condensed";
+--vertical-navigation-width: 60px;
+
+  /* Vertical Navigation */
+  --vertical-navigation-backdrop: rgba(0, 0, 0, 0.478);
+  --vertical-navigation-sections-h3-margin: 8px 0;
+  --vertical-navigation-sections-h3-font: var(--font-sans-condensed);
+  --vertical-navigation-sections-h3-size: 20px;
+  --vertical-navigation-sections-h3-color: white;
+  --vertical-navigation-sections-a-background: var(--skyrizi-dark-navy-blue);
+  --vertical-navigation-sections-section-border: none;
+  --vertical-navigation-sections-p-color: white;
+  --vertical-navigation-sections-p-family: var(--font-sans-condensed);
+  --vertical-navigation-aside-width: 64px;
+  --vertical-navigation-aside-a-height: 50px;
+  --vertical-navigation-aside-title-color: white;
+  --vertical-navigation-aside-title-font: var(--font-sans-condensed);
+  --vertical-navigation-aside-title-size: 12px;
+  --vertical-navigation-aside-help-text-width: var(--vertical-navigation-aside-width);
+  --vertical-navigation-aside-help-text-height: var(--vertical-navigation-aside-a-height);
+  --vertical-navigation-callflows-background: #0e1c34;
+  --vertical-navigation-links-background: #0e1c34;
+  --vertical-navigation-help-background: var(--vertical-navigation-links-background);
+}
+
+.vertical-navigation main.vertical-navigation aside a,
+.vertical-navigation main.vertical-navigation aside a.close,
+.vertical-navigation main.vertical-navigation aside a.home {
+  background-color: var(--vertical-navigation-callflows-background);
+}
+
+.vertical-navigation main.vertical-navigation aside a.open {
+  position: absolute;
+  right: 0;
+  width: 64px;
+  top: 0px;
+}
+
+#header-container {
+  div.vertical-navigation {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    pointer-events: none;
+  }
+
+  main.vertical-navigation {
+    box-sizing: border-box;
+    top: 0;
+  }
+
+  main.vertical-navigation.opened {
+    top: 0;
+    height: 100vh;
+    z-index: 4;
+  }
+
+  main.vertical-navigation .backdrop {
+    top: var(--header-height);
+    height: 100vh;
+  }
+
+  main.vertical-navigation aside a {
+    pointer-events: all;
+  }
+
+  main.vertical-navigation.opened aside a {
+    text-decoration: none;
+    width: 64px;
+    background-color: var(--vertical-navigation-callflows-background);
+    pointer-events: all;
+  }
+
+  main.vertical-navigation aside a.open {
+    text-decoration: none;
+    width: 64px;
+    background-image: url(/content/dam/skyrizihcpivy/isa/template-assets/derm/menu.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-origin: content-box;
+    align-items: center;
+  }
+
+  main.vertical-navigation aside a.open > p {
+    color: transparent;
+  }
+
+  main.vertical-navigation aside a.close {
+    width: 64px;
+    background-color: #0e1c34;
+    background-image: url(/content/dam/skyrizihcpivy/isa/template-assets/derm/close.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-origin: content-box;
+    align-items: center;
+  }
+
+  main.vertical-navigation aside a.close > p {
+    color: transparent;
+  }
+
+  main.vertical-navigation aside a.home {
+    background-color: black;
+    align-items: center;
+  }
+
+  main.vertical-navigation aside a.home > p {
+    color: white;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: var(--font-medium);
+    margin-top: 6px;
+  }
+
+  main.vertical-navigation aside a.home img {
+    transform: scale(0.75);
+    margin-top: -8px;
+  }
+
+  main.vertical-navigation aside a:not(:first-child):not(:last-child) {
+    border-bottom: 1px solid white;
+  }
+
+  main.vertical-navigation .sections {
+    top: var(--header-height);
+    z-index: 4;
+    height: 100vh;
+    overflow: hidden;
+    background: url(/content/dam/skyrizihcpivy/isa/template-assets/derm/skyrizi-derm-background-dosing.jpg) no-repeat
+      top left;
+    background-size: cover;
+  }
+
+  main.vertical-navigation .sections > .section p {
+    padding: 16px;
+  }
+
+  main.vertical-navigation .sections > .section a {
+    text-decoration: none;
+  }
+}
