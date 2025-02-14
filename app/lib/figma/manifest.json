@@ -1,0 +1,19 @@
+{
+  "name": "POC_NOVA-export",
+  "id": "1413268023623040299",
+  "api": "1.0.0",
+  "main": "dist/main.js",
+  "capabilities": [],
+  "enableProposedApi": false,
+  "enablePrivatePluginApi": true,
+  "documentAccess": "dynamic-page",
+  "editorType": [
+    "figma"
+  ],
+  "ui": "ui.html",
+  "networkAccess": {
+    "allowedDomains": [
+      "none"
+    ]
+  }
+}
