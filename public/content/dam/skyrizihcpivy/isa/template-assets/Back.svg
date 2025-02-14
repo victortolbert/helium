@@ -1,0 +1,19 @@
+<svg width="51" height="35" viewBox="0 0 51 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Back" clip-path="url(#clip0_0_140)">
+<rect id="Rectangle 2 Copy" x="49.6475" width="1.01122" height="34.9658" fill="white" fill-opacity="0.15"/>
+<g id="Back Icon">
+<path id="Mask" fill-rule="evenodd" clip-rule="evenodd" d="M19.836 19.2268H36.0447V14.7802L19.836 14.7802V10.5029L12.2832 17.0029L19.836 23.5029" fill="#C4C4C4"/>
+<mask id="mask0_0_140" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="12" y="10" width="25" height="14">
+<path id="Mask_2" fill-rule="evenodd" clip-rule="evenodd" d="M19.836 19.2268H36.0447V14.7802L19.836 14.7802V10.5029L12.2832 17.0029L19.836 23.5029" fill="white"/>
+</mask>
+<g mask="url(#mask0_0_140)">
+</g>
+</g>
+<rect id="Rectangle 2 Copy_2" x="0.138672" width="1.01122" height="34.9658" fill="white" fill-opacity="0.15"/>
+</g>
+<defs>
+<clipPath id="clip0_0_140">
+<rect width="50.52" height="34.9658" fill="white" transform="translate(0.138672)"/>
+</clipPath>
+</defs>
+</svg>

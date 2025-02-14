@@ -1,0 +1,10 @@
+issueKey: ISAAP-458
+summary: Image IVA - Cannot browse path to add image
+status: Open
+created: 07/Feb/25 3:51 PM
+updated: 07/Feb/25 3:54 PM
+assignee: TOLBEVX
+components:
+  - Image
+labels: No-QA
+sprint: NOVA - S25

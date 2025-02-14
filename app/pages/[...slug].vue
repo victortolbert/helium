@@ -1,12 +1,14 @@
 <!--  A catch-all page to fetch contents based on route path. -->
 <script lang="ts" setup>
+import type { ContentNavigationItem } from '@nuxt/content'
+import { findPageBreadcrumb, findPageHeadline, mapContentNavigation } from '#ui-pro/utils/content'
+
 defineProps<{
   title?: string
 }>()
 
 definePageMeta({
   title: 'Catch all page',
-  layout: 'default',
 })
 
 const route = useRoute()
@@ -14,6 +16,9 @@ const route = useRoute()
 const { data: page } = await useAsyncData(route.path, () => {
   return queryCollection('content').path(route.path).first()
 })
+if (!page.value) {
+  throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
+}
 
 function enableCustomLayout() {
   setPageLayout('catalog')
@@ -67,7 +72,7 @@ const items = ref([
   },
   {
     label: 'Examples',
-    to: '/examples',
+    to: '/image-compare',
   },
   // {
   //   label: 'Typography',
@@ -78,26 +83,55 @@ const items = ref([
   //   to: '/blog',
   // },
 ])
+// Find a single issue
+// const { data: issue } = await useAsyncData('issues', () => {
+//   return queryCollection('issues')
+//     .path('issues')
+//     .first()
+// })
+
+// Get all issues
+const { data: issues } = await useAsyncData('issues', () => {
+  return queryCollection('issues')
+    .order('summary', 'ASC')
+    .all()
+})
+
+const { data: issue } = await useAsyncData('issue', () => {
+  return queryCollection('issues')
+    .where('stem', '=', 'issues/458')
+    .first()
+})
+
+const headline = computed(() => findPageHeadline(page.value))
+const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
+const breadcrumb = computed(() => mapContentNavigation(findPageBreadcrumb(navigation?.value, page.value)).map(({ icon, ...link }) => link))
+
+console.log({ headline, navigation, breadcrumb })
 </script>
 
 <template>
-  <UContainer>
-    <header>
-      <UBreadcrumb :items="items">
-        <template #separator>
-          <span class="mx-2 text-[var(--ui-text-muted)]">•</span>
-        </template>
-      </UBreadcrumb>
-    </header>
+  <UPage v-if="page" :title="page.title" class="w-full mt-8">
+    <UPageHeader v-bind="page" :headline="headline">
+      <template #headline>
+        <UBreadcrumb :items="breadcrumb">
+          <!-- <template #separator>
+                <span class="mx-2 text-[var(--ui-text-muted)]">•</span>
+              </template> -->
+        </UBreadcrumb>
+      </template>
+    </UPageHeader>
 
-    <div class="w-full">
-      <section v-if="page" class="w-full mt-8 max-w-[65ch]">
-        <ContentRenderer :value="page" />
-      </section>
+    <UPageBody>
+      <ContentRenderer v-if="page.body" :value="page" />
 
-      <section v-else class="w-full">
-        <ImageCompare />
-      </section>
-    </div>
-  </UContainer>
+      <USeparator v-if="surround?.filter(Boolean).length" />
+
+      <UContentSurround :surround="(surround as any)" />
+    </UPageBody>
+
+    <template v-if="page?.body?.toc?.links?.length" #right>
+      <UContentToc :links="page.body.toc.links" />
+    </template>
+  </UPage>
 </template>

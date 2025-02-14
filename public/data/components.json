@@ -1,0 +1,22 @@
+{
+  "items": [
+    {
+      "id": 1,
+      "name": "Component 1",
+      "description": "This is the first component",
+      "price": 100
+    },
+    {
+      "id": 2,
+      "name": "Component 2",
+      "description": "This is the second component",
+      "price": 200
+    },
+    {
+      "id": 3,
+      "name": "Component 3",
+      "description": "This is the third component",
+      "price": 300
+    }
+  ]
+}

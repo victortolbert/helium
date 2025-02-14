@@ -1,0 +1,1027 @@
+Issue key,Issue id,Parent id,Status,Created,Updated,Assignee,Labels,Labels,Labels,Labels,Labels,Labels,Component/s,Component/s,Description
+ISAAP-572,624324,,Open,10/Jan/25 2:35 PM,31/Jan/25 1:33 PM,TOLBEVX,,,,,,,IVA Button,,"Button text needs to be same size as other text and all on one line, but it is a different size that cannot be altered and takes up 3 lines. Despite the button container being wide enough to support text and icon, it would not align to one line.
+
+
+Interim solution is to use IVA text component then button next to it."
+ISAAP-672,640106,,Open,07/Feb/25 3:51 PM,07/Feb/25 3:54 PM,TOLBEVX,No-QA,,,,,,,,
+MCS-4385,637898,,Backlog,05/Feb/25 6:46 AM,07/Feb/25 3:53 PM,TOLBEVX,category:content,slide:dosing,,,,,,,"h1. Site
+ !screenshot-1.png|thumbnail! "
+MCS-4393,638954,,Backlog,07/Feb/25 1:27 AM,07/Feb/25 3:35 PM,BARKEJX3,category:css,overlay:indications,slide:dosing,,,,,,"||#||Issue||Site||XD||
+|1|Indications headline line-height is not matching as per XD| | |
+|2|Indication content comes with single paragraph with bullet points in XD. In site, bullet point looks different color and size|  !screenshot-2.png|thumbnail! |  !screenshot-3.png|thumbnail!|
+|3| 1-6 text width and Height is not matching as per the XD.|  !screenshot-4.png|thumbnail! |  !screenshot-5.png|thumbnail! |
+|4| 1-6 font family, line-height, Background color is not matching as per the XD.| | |
+|5|Spacing is not matching as per the XD.|  !screenshot-7.png|thumbnail! |  !screenshot-8.png|thumbnail! |
+|6|Indication overlay width and height is not matching as per the XD.| | |"
+MCS-4367,636519,,Reopened,03/Feb/25 6:57 AM,07/Feb/25 3:28 PM,TOLBEVX,category:css,overlay:references,slide:overview,,,,,,"# Numbers starting point is not matching as per the XD.
+ # Numbers text-align is not matching as per the XD.
+||XD||Site||
+|!Overview XD.png|thumbnail!|!Overview Site.png|thumbnail!|
+ # Space mismatch between one point to another point.
+||XD||Site||
+|!XD Line Height.png|thumbnail!|!Site Line Height.png|thumbnail!|
+ # Numbers starting line is not matching as per the XD
+||XD||Site||
+|!Line Start XD.png|thumbnail!|!Line Start Site.png|thumbnail!|
+
+||Slide||Initial Build Ticket||
+|Overview|MCS-3048|
+|Dosing|MCS-3416|
+|Safety|MCS-3415|
+|Access|MCS-3414|
+ "
+ISAAP-505,606302,,Done,02/Dec/24 10:59 AM,07/Feb/25 1:18 PM,TEDESSX,slide:access,slide:dosing,slide:overview,slide:safety,,,,,"The Full Prescribing links are authored pointing to a pdf file, but the URL opened is html
+
+# Skyrizi
+## Link Target: /content/dam/skyrizihcpivy/isa/lab-11561lab-07914-skyrizi-uc-rxabbvie.com-uspimgifus-20086179-r2-6-2024.pdf
+## Page Template: https://cwcm.abbvie.com/editor.html/conf/xpomnichannel/settings/wcm/templates/skyrizi-derm/structure.html
+!Authored Target.png|thumbnail!
+## URL opened: https://cwcm.abbvie.com/content/dam/skyrizihcpivy/isa/lab-11561lab-07914-skyrizi-uc-rxabbvie.com-uspimgifus-20086179-r2-6-2024.html
+!Rendered Target.png|thumbnail!
+## Which results in a blank page.
+!Blank Page.png|thumbnail!
+##The document loads after changing the URL to pdf
+!Document Loaded.png|thumbnail!
+# Humira
+## Link Target: /content/dam/skyrizihcpivy/isa/64h-1880512-humira-professional-isi-october-2016.pdf
+## Pages
+### Safety: https://cwcm.abbvie.com/editor.html/content/nova/isa/mcs-iae/nova-skyrizi-derm-binder/safety.html
+### Access: https://cwcm.abbvie.com/editor.html/content/nova/isa/mcs-iae/nova-skyrizi-derm-binder/access.html
+## URL Opened: https://cwcm.abbvie.com/content/dam/skyrizihcpivy/isa/64h-1880512-humira-professional-isi-october-2016.html
+## Valid URL: https://cwcm.abbvie.com/content/dam/skyrizihcpivy/isa/64h-1880512-humira-professional-isi-october-2016.pdf"
+MCS-4389,638691,,Done,06/Feb/25 9:28 AM,07/Feb/25 9:08 AM,BARKEJX3,category:css,overlay:references,slide:overview,,,,,,"Space above the references headline is not matching as per the XD
+||Slide||Initial Build Ticket||XD||Site||
+|Overview|MCS-3048| !Overview XD.png|thumbnail! | !Overview Site.png|thumbnail! |
+|Dosing|MCS-3416| !Dosing XD.png|thumbnail! |!Dosing Site.png|thumbnail!  |
+"
+MCS-4391,639045,,Incident Raised,06/Feb/25 11:32 AM,07/Feb/25 8:33 AM,BARKEJX3,category:css,overlay:references,slide:overview,,,,,,"Blue line width and height is not matching as per XD.
+||Slide||Initial Build Ticket||XD||Site||
+|Overview|MCS-3048|!Overview XD.png|thumbnail!  |!Overview Site.png|thumbnail! |
+|Dosing|MCS-3416|!Dosing XD.png|thumbnail!  |!Dosing Site.png|thumbnail!  |
+|Safety|MCS-3415| |
+|Access|MCS-3414| |
+"
+MCS-3416,590807,573641,BLOCKED,05/Nov/24 9:25 AM,07/Feb/25 1:28 AM,TEDESSX,DOR,,,,,,,,"h1. Useful Testing Links
+* Published Page: [https://cwcm.abbvie.com/content/nova/isa/mcs-iae/nova-skyrizi-derm-binder/dosing.html?wcmmode=disabled]
+* XD: [https://xd.adobe.com/view/0868e49b-aebf-4bdf-afc9-2894660a43ae-5d3b/]
+* FRD: [FRDvSkyrizi Derm ISA.xlsm|https://abbvie.sharepoint.com/:x:/r/sites/NOVA/Shared%20Documents/General/Requirements/FRD%20Skyrizi%20Derm%20ISA.xlsm?d=wa21b6e6d39c34c85a506ed1e057cc416&csf=1&web=1&e=bPOTa0]
+* Open Blockers: [Jira Filter|https://btsjira.abbvie.com/issues/?jql=issue%20IN%20linkedIssues(MCS-3416%2C%20%22is%20blocked%20by%22)%20AND%20statusCategory%20!%3D%20Done]
+
+h1. Functional Testing
+* Tested on tablet (11 and 13 in iPad)
+* [Web Developer|https://chromewebstore.google.com/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm?pli=1] Chrome Browser Extension
+
+h1. Known Differences
+||#||Summary||Notes||
+|1|ISI Onload|There is a requirement to show the ISA when loaded; therefore, all ISA pages are configured to show ISI on load to fulfill this requirement no matter which page is loaded first|
+|2|Home Dots|Dots are visible when viewing in Veeva app|
+|3|Home Icon|Home Icon is in the Nav Bar|
+|4|Icons Removed|The 9 dots and rectangular icons are not present|
+|5|Full Prescribing Link|The Full Prescribing link is adjacent to the ISI link|
+|6|Safety Bar|The Safety Bar is collapsed on load|
+|7|Veeva Number|The Veeva number is centered between the Tile Tabs and the right edge|
+|8|References|Reference numbers are not actual links. The space between the left edge and the Tile Tabs is equally divided between the Indications and References overlay links|
+|9|Hamburger Menu|Hamburger Menu is not depicted in XD|
+|10|Dosing Schedules|The dosing schedules for IL inhibitors (slides 4 and 6) has been removed (see [^RE_ NOVA Weekly Core Team Meeting.msg])| 
+|11|Indications Overlay|Indications Overlay has a close icon|
+|12|Safety Content|Safety Bar and ISI content detailed in parent ticket, MCS-3047|
+ !Dosing Differences.png|thumbnail! 
+
+h1. Useful Authoring Links
+* Experience Fragments: 
+** https://cwcm-q.abbvie.com/aem/experience-fragments.html/content/experience-fragments/nova/isa/iae/skyrizi-derm
+* Pages: 
+** Classic: https://cwcm-q.abbvie.com/siteadmin#/content/nova/isa/mcs-iae/nova-skyrizi-derm-binder
+** Touch: https://cwcm-q.abbvie.com/sites.html/content/nova/isa/mcs-iae/nova-skyrizi-derm-binder
+* DAM
+** Classic: 
+*** https://cwcm-q.abbvie.com/damadmin#/content/dam/skyrizihcpivy/isa
+*** https://cwcm-q.abbvie.com/damadmin#/content/dam/skyrizihcpivy/isa/template-assets
+** Touch: 
+*** https://cwcm-q.abbvie.com/assets.html/content/dam/skyrizihcpivy/isa
+*** https://cwcm-q.abbvie.com/assets.html/content/dam/skyrizihcpivy/isa/template-assets
+** Assets
+*** PDF for reference attached to ticket
+*** Individual Assets: [skyrizi-dosing|https://abbvie.sharepoint.com/:f:/r/sites/NOVA/Shared%20Documents/General/IAE%20Pilot/Derm%20Sky/US-SKZD-230596_CP/skyrizi-dosing?csf=1&web=1&e=94rQp4]
+*** XD file: [https://xd.adobe.com/view/0868e49b-aebf-4bdf-afc9-2894660a43ae-5d3b/] 
+*** PDF: [Core ISA 2.8 Dosing Tile.pdf|https://abbvie.sharepoint.com/:b:/r/sites/DSS/Shared%20Documents/Enterprise%20Services/MarTech%20Content%20Services/ISAs/US-SKZD-230142-%20Sky%20Derm%20IAE%20ISA/Core%20ISA%202.8%20Dosing%20Tile.pdf?csf=1&web=1&e=b7zFlq]
+"
+ISAAP-472,595491,,Done,12/Nov/24 3:28 PM,06/Feb/25 3:28 PM,TOLBEVX,category:authoring-assitance,slide:dosing,,,,,,,"Update the page template to include the Back Button
+https://cwcm-q.abbvie.com/editor.html/conf/xpomnichannel/settings/wcm/templates/skyrizi-derm/structure.html
+ !Add Back Button.png|thumbnail! "
+ISAAP-501,603823,,Done,26/Nov/24 1:40 PM,06/Feb/25 3:28 PM,TOLBEVX,No-QA,NotForMVP,slide:dosing,,,,IVA Text,,"Font of numbered elements doesn't match the font of the text:
+ !Rendered Output.png|thumbnail! 
+
+Need to manually place the list item tag in the span
+ !Updated Authoring.png|thumbnail! 
+"
+MCS-4370,636481,,Backlog,03/Feb/25 9:31 AM,06/Feb/25 3:28 PM,TOLBEVX,category:requirements-clarification,overlay:indications,overlay:references,slide:dosing,,,,,"The following scenario's Indications and References overlay's were getting closed.
+
+1) By clicking on close icon.
+2) By clicking on anywhere outside of the overlay.
+3) By clicking on inside overlay empty spaces.
+
+Kindly confirm the 3 scenario.
+
+*+_NOTE_+* This is not limited to the References or Indications overlay; see FRD for expected behavior [FRD Skyrizi  Derm ISA.xlsm|https://abbvie.sharepoint.com/sites/NOVA/Shared%20Documents/General/Requirements/FRD%20Skyrizi%20Derm%20ISA.xlsm?web=1]"
+ISAAP-529,617230,,Open,20/Dec/24 9:32 AM,06/Feb/25 3:26 PM,BARKEJX3,No-QA,slide:overview,,,,,,,"There are a couple issues with the navigation on the iPad
+
+h1.Open Issues
+||#||Summary||Notes||
+|1|Hamburger Menu - The Close Icon doesn't appear to be styled| |
+|2|Hamburger Menu - The menu options are neither readable nor clickable
+ !iPad Navigation Issues.png|thumbnail! |They are clickable on desktop |
+|3|The Back button doesn't take you to the previous slide| |
+|4|The Home link doesn't take you to the Overview slide| |"
+MCS-4283,632308,,Done,26/Jan/25 6:31 PM,06/Feb/25 3:26 PM,TOLBEVX,category:css,slide:overview,,,,,,,"h1. XD
+
+
+h1. Site
+ !site.png|thumbnail! "
+MCS-4263,632085,,Done,26/Jan/25 4:20 PM,06/Feb/25 3:26 PM,BARKEJX3,category:css,slide:overview,,,,,,,"h1. XD
+
+h1. Site
+ !site.png|thumbnail! "
+MCS-4246,631586,,Done,24/Jan/25 1:55 PM,06/Feb/25 3:26 PM,TOLBEVX,category:content,slide:overview,,,,,,,"h1. XD
+
+
+h1. Site
+ !Site.png|thumbnail! "
+ISAAP-508,606678,,Done,02/Dec/24 8:44 PM,06/Feb/25 3:26 PM,TOLBEVX,category:authoring-assitance,No-QA,slide:overview,,,,,,"The ""3 Cell Overlay"" has some unique characteristics
+# User can still interact with the Safety Bar
+# The background image is different
+# The opacity is different
+ !3 Cell Overlay.png|thumbnail! 
+
+In addition to these unique characteristics, and, if these should be Callouts, styles are not currently available.
+ !No Style Options for Overlay.png|thumbnail! 
+"
+ISAAP-509,606679,,Done,02/Dec/24 9:06 PM,06/Feb/25 3:25 PM,TOLBEVX,category:authoring-assitance,No-QA,slide:overview,,,,,,"The Overview page has 3 Overlays:
+# Ps: https://cwcm.abbvie.com/editor.html/content/experience-fragments/nova/isa/iae/skyrizi-derm/modals/callouts/overview-ps-callout.html
+# PsA: https://cwcm.abbvie.com/editor.html/content/experience-fragments/nova/isa/iae/skyrizi-derm/modals/callouts/overview-psa-callout.html
+# ""Three Cell"": https://cwcm.abbvie.com/editor.html/content/experience-fragments/nova/isa/iae/skyrizi-derm/modals/callouts/overview-three-image-callout.html
+
+Common Issues Include:
+# Safety Bar Expand icon is visible on the overlay
+# Close Icon not visible
+_NOTE:_ Close Icon also not on the References Overlay
+ !Rendered Output.png|thumbnail! 
+ !Author View.png|thumbnail! "
+MCS-4260,632082,,In Progress,26/Jan/25 4:05 PM,06/Feb/25 3:25 PM,TOLBEVX,category:css,slide:overview,,,,,,,"h1. XD
+ !xd.png|thumbnail! 
+
+h1. Site
+ !site.png|thumbnail! "
+MCS-4285,632310,,In Progress,26/Jan/25 6:49 PM,06/Feb/25 3:25 PM,TOLBEVX,category:css,slide:overview,,,,,,,"h1. XD
+ !xd.png|thumbnail! 
+
+h1. Site
+ !site.png|thumbnail! "
+MCS-4259,632081,,Incident Raised,26/Jan/25 4:03 PM,06/Feb/25 3:25 PM,TOLBEVX,category:css,slide:overview,,,,,,,"h1. XD
+
+
+h1. Site
+ !site.png|thumbnail! "
+ISAAP-503,604331,,Done,27/Nov/24 8:48 AM,06/Feb/25 3:25 PM,TOLBEVX,category:authoring-assitance,No-QA,slide:overview,,,,,,"[https://cwcm.abbvie.com/editor.html/content/nova/isa/mcs-iae/nova-skyrizi-derm-binder/overview0.html]
+
+h1. Open Items
+||#||Summary||Comments||
+h1. In Progress Items
+||#||Summary||Comments||
+h1. Closed Items
+||#||Summary||Comments||
+|1|PsA Callout|{color:#de350b}Issue:{color} Authored like Ps Callout, but not left aligned.
+{color:#00875a}Resolution:{color} Victor helped address in Dev 2 connect,|
+|2|Right, Blue Column - Sizing|{color:#de350b}Issue:{color} How to get the right column to match the with in the XD file?
+{color:#00875a}Resolution:{color} Victor helped address in Dev 2 connect.|
+|3|Right, Blue Column - Overlay Button|{color:#de350b}Issue:{color} How to add overlay button on the column?
+{color:#00875a}Resolution:{color} Victor helped address in Dev 2 connect.|
+|4|3 cell overlay - Background|[https://cwcm.abbvie.com/editor.html/content/experience-fragments/nova/isa/iae/skyrizi-derm/modals/callouts/overview-three-image-callout.html]
+{color:#de350b}Issue:{color} How to set the proper background color / opacity?
+{color:#00875a}Resolution:{color} Split to ISAAP-508|
+|5|3 cell overlay - Borders|{color:#de350b}Issue:{color} The containers are configured the same, but the borders differ.
+{color:#00875a}Resolution:{color} Corrected configuration in Dec 2 connect.|
+|6|3 cell overlay - Text / Images|{color:#de350b}Issue:{color} Neither the text nor the image in the cell containers is visible.
+{color:#00875a}Resolution:{color} Corrected configuration in Dec 2 connect.|
+|7|3 cell overlay - Safety Bar Expansion|{color:#de350b}Issue:{color} The icon to expand the Safety Bar appears over the overlay.
+{color:#00875a}Resolution:{color} Split to ISAAP-509|
+|8|NOTHING IS EVERYTHING ""text""|{color:#de350b}Issue:{color} The text is a series of individual letters. What size font should be used? Currently authored as Heading 1
+{color:#00875a}Resolution:{color} Victor added as an image.|
+|9|Ps Callout - Cannot Close|{color:#de350b}Issue:{color} Close icon is not visible on the Ps Callout PS Callout: [https://cwcm.abbvie.com/editor.html/content/experience-fragments/nova/isa/iae/skyrizi-derm/modals/callouts/overview-ps-callout.html]
+{color:#00875a}Resolution:{color} Split to ISAAP-509|
+|10|Ps Callout - Change Carousel Items|{color:#de350b}Issue:{color} How to author carousel such that user can move between items via cue on image
+!image-2024-12-02-13-52-03-066.png|thumbnail!
+{color:#00875a}Resolution:{color} Split to ISAAP-510|
+|11|PsA Callout - Cannot Close|{color:#de350b}Issue:{color} Close icon is not visible on the PsA Callout PS Callout: [https://cwcm.abbvie.com/editor.html/content/experience-fragments/nova/isa/iae/skyrizi-derm/modals/callouts/overview-psa-callout.html]
+{color:#00875a}Resolution:{color} Split to ISAAP-509|
+|12|Tabs Component|The References and Footnotes buttons are creating additional space between the bottom of the Tabs component and the bottom of the page. This was a contributing factor in why the ""Not a real patient text"" was blocked. The References and Footnotes button are creating vertical space:
+!image-2024-12-03-10-16-35-692.png|thumbnail!
+I added Top Margin to the containers for both 1) the whole row (buttons, tabs, and Veeva #) and 2) the tabs component, but cannot seam to get them closer to the bottom of the page:
+!image-2024-12-03-10-16-05-691.png|thumbnail!|
+|13|Full Prescribing PDF not opening|{color:#de350b}Issue: {color}Full Prescribing Link Opens as HTML, not PDF
+{color:#00875a}Resolution:{color} Split to ISAAP-505|"
+MCS-4272,632096,,Done,26/Jan/25 5:47 PM,06/Feb/25 3:25 PM,BARKEJX3,category:css,slide:overview,,,,,,,"Tile tabs background is not matching as per XD. In XD black color background is there behind the tile tabs.
+
+h1. XD
+ !xd.png|thumbnail! 
+
+h1. Site
+ !site.png|thumbnail! "
+MCS-4261,632083,,Done,26/Jan/25 4:11 PM,06/Feb/25 3:25 PM,BARKEJX3,category:css,slide:overview,,,,,,,"h1. XD
+ !xd.png|thumbnail! 
+
+
+h1. Site
+ !site.png|thumbnail! 
+"
+MCS-4262,632084,,Done,26/Jan/25 4:15 PM,06/Feb/25 3:25 PM,BARKEJX3,category:css,slide:overview,,,,,,,"h1. XD
+ !xd.png|thumbnail! 
+
+h1. Site
+ !site.png|thumbnail! "
+MCS-4269,632093,,Backlog,26/Jan/25 5:22 PM,06/Feb/25 3:25 PM,TOLBEVX,category:css,slide:overview,,,,,,,"# In PS and PSA content - font and size and not matching as per the XD
+# The starting space is mismatch for the below content
+##  HIGH LEVELS OF SKIN CLEARANCE
+## POWERFUL JOINT SYMPTOM IMPROVEMENT
+# Circled plus icon is not matching as per the XD.
+
+h1. XD
+ !xd.png|thumbnail! 
+
+h1. Site
+ !site.png|thumbnail! 
+
+"
+MCS-4271,632095,,In Progress,26/Jan/25 5:42 PM,06/Feb/25 3:25 PM,TOLBEVX,category:css,slide:overview,,,,,,,"# Tile tabs colour, width is not matching as per XD
+# Except overview tab, remaining tabs font color is not matching as per xD
+
+h1. XD
+ !xd.png|thumbnail! 
+
+h1. Site
+ !site.png|thumbnail! "
+ISAAP-522,614606,,Open,16/Dec/24 2:50 PM,06/Feb/25 3:25 PM,TOLBEVX,No-QA,slide:overview,,,,,,,"When the ISA is opened
+ # the Full Prescribing Information is displayed, without a close icon
+ # after ~3 seconds, the close icon on appears on the Full Prescribing Modal
+[^Full Prescribing Information Shown When Launching ISA.MP4]
+
+h1. Open Items:
+||#||Summary||Notes||
+|3|How do we control the time period before the close icon appears| |
+|4|User cannot scroll the modal to see all the content
+!Modal Not Scrollable.png|thumbnail!| |
+|5|Close icon not styled
+!Modal Not Scrollable.png|thumbnail!| |
+|6|The requirement is that the first slide opened shows the forced modal (slides can be rearranged in other presentations). All pages are authored to show the forced modal to satisfy this requirement. There are a couple items:
+ # The Overview slide always shows the modal.
+ # The modal does not appear when launch other slides first; e.g., Humira Access.| |
+h1. Closed Items:
+||#||Summary||Notes||
+|1|How is the forced modal authored|It's in page properties:
+!Forced Modal Page Property.png|thumbnail!|
+|2|How do we control the overlay style? Text appears to be styled, but the background is not white.
+!Forced Modal.png|thumbnail!| |"
+MCS-4275,632099,,Done,26/Jan/25 5:55 PM,06/Feb/25 3:25 PM,BARKEJX3,category:css,slide:overview,,,,,,,"Height and width are not matching as per the XD.
+
+h1. XD
+ !xd.png|thumbnail! 
+
+h1. Site
+ !site.png|thumbnail! 
+"
+ISAAP-510,606680,,Done,02/Dec/24 9:14 PM,06/Feb/25 3:25 PM,TOLBEVX,category:authoring-assitance,No-QA,slide:overview,,,,,,"The Ps Callout on the Overview page has a carousel with users changing slides based on images within the slide, instead of the default circles below
+# Ps: https://cwcm.abbvie.com/editor.html/content/experience-fragments/nova/isa/iae/skyrizi-derm/modals/callouts/overview-ps-callout.html
+ !Slide Toggle.png|thumbnail! "
+MCS-4390,639000,,Backlog,06/Feb/25 10:40 AM,06/Feb/25 3:25 PM,BARKEJX3,category:css,overlay:references,slide:overview,,,,,,"References overlay width and height is not matching as per the XD.
+||Slide||Initial Build Ticket||XD Size||Site Size||
+|Overview|MCS-3048|337.34 x 731
+ !Overview XD.png|thumbnail! | |
+|Dosing|MCS-3416|337.34 x 768.37
+ !Dosing XD.png|thumbnail!  | |
+|Safety|MCS-3415|368 x 768.37
+ !Safety XD.png|thumbnail! | |
+|Access|MCS-3414|337 x 768.37
+ !Access XD.png|thumbnail! | |"
+MCS-4255,632077,,In Progress,26/Jan/25 3:38 PM,06/Feb/25 3:25 PM,TOLBEVX,category:content,slide:overview,,,,,,,"h1. XD
+US-SKZD-230601
+ !xd.png|thumbnail! 
+
+h1. Site
+US-SKZD-230597
+ !site.png|thumbnail! "
+MCS-4249,631592,,Ready for Testing,24/Jan/25 2:10 PM,06/Feb/25 3:25 PM,TOLBEVX,category:content,slide:overview,,,,,,,"h1. XD
+ !xd.png|thumbnail! 
+
+h1. Site
+ !site.png|thumbnail!  "
+MCS-4258,632080,,In Progress,26/Jan/25 4:00 PM,06/Feb/25 3:25 PM,TOLBEVX,category:css,slide:overview,,,,,,,"h1. XD
+
+
+h1. Site:
+ !site.png|thumbnail! 
+"
+MCS-4284,632309,,Done,26/Jan/25 6:36 PM,06/Feb/25 3:25 PM,TOLBEVX,category:css,slide:overview,,,,,,,"||Indication||XD||Site||
+|PS|!PS XD.png|thumbnail! | !PS Site.png|thumbnail! |
+|PsA| !PsA XD.png|thumbnail! | !PsA Site.png|thumbnail! |"
+MCS-4256,632078,,In Progress,26/Jan/25 3:43 PM,06/Feb/25 3:25 PM,TOLBEVX,category:content,slide:overview,,,,,,,"Description: Height of violet rectangular area in top page is mismatching between site and XD.
+
+h1. XD
+
+
+h1. Site
+ !site.png|thumbnail! "
+MCS-4276,632300,,Done,26/Jan/25 5:59 PM,06/Feb/25 3:25 PM,BARKEJX3,category:css,slide:overview,,,,,,,"Height and width are not matching as per the XD.
+
+h1. XD
+ !xd.png|thumbnail! 
+
+h1. Site
+ !site.png|thumbnail! "
+MCS-4267,632091,,Done,26/Jan/25 5:18 PM,06/Feb/25 3:25 PM,BARKEJX3,category:css,slide:overview,,,,,,,"h1. XD
+ !xd.png|thumbnail! 
+
+h1. Site
+ !site.png|thumbnail! "
+ISAAP-557,623921,,Done,09/Jan/25 3:27 PM,06/Feb/25 3:25 PM,TOLBEVX,No-QA,slide:overview,,,,,,,"The Skyrizi logo is not blurred like other slide content:
+# Ps Overlay
+ !Ps Overlay.png|thumbnail! 
+# PsA Overlay
+ !PsA Overlay.png|thumbnail! 
+"
+MCS-4270,632094,,Done,26/Jan/25 5:39 PM,06/Feb/25 3:25 PM,BARKEJX3,category:css,slide:overview,,,,,,,"In PS and PSA content – Placement is not matching as per the XD.
+
+h1. XD
+ !xd.png|thumbnail! 
+
+h1. Site
+ !site.png|thumbnail! "
+MCS-4282,632307,,Done,26/Jan/25 6:23 PM,06/Feb/25 3:25 PM,TOLBEVX,category:css,slide:overview,,,,,,,"# Background image is not visible like XD.
+# Placement of modal is not matching as per XD.
+
+h1. XD
+ !xd.png|thumbnail! 
+
+h1. Site
+ !site.png|thumbnail! "
+MCS-4252,632074,,In Progress,26/Jan/25 3:03 PM,06/Feb/25 3:25 PM,TOLBEVX,category:content,slide:overview,,,,,,,"# Mismatch of bulleting point as highlighted. Same issue in After Week 16 modal
+# Extra space is there between “maintained” and “at” text in point 1 as highlighted. Same issue in After Week 16 modal
+# Highlighted numbers should be in superscript as per XD file. Same issue in After Week 16 modal
+
+
+h1. XD
+ !xd.png|thumbnail! 
+
+h1. Site
+  !site.png|thumbnail! "
+MCS-4273,632097,,In Progress,26/Jan/25 5:50 PM,06/Feb/25 3:25 PM,TOLBEVX,category:css,slide:overview,,,,,,,"Overview button/tab and VEEVA number - font name, size is not matching as per XD
+
+h1. XD
+ !xd.png|thumbnail! 
+
+h1. Author
+https://cwcm.abbvie.com/editor.html/conf/xpomnichannel/settings/wcm/templates/skyrizi-derm/structure.html
+ !author.png|thumbnail! 
+
+h1. Site
+ !site.png|thumbnail! 
+"
+ISAAP-507,606380,,Open,02/Dec/24 12:59 PM,06/Feb/25 3:25 PM,TOLBEVX,NotForMVP,slide:overview,,,,,,,"This is similar to the bug whereby components are not automatically consuming the full width (ISAAP-462). In this case, the author cannot extend the width to take the full size of the parent.
+||Page||Comment||
+|Overview|Cannot widen the text; image shows parent container using full width
+[^Cannot Widen Component.mp4]
+[^Cannot Widen Container.mp4]|"
+ISAAP-462,595099,,Open,12/Nov/24 8:45 AM,06/Feb/25 3:25 PM,TOLBEVX,NotForMVP,slide:overview,,,,,Columns,Container,"Structure components such as Containers and Columns don't default to 100% width. 
+
+Must manually drag component for layout to override narrow default. ( Sometimes a refreshing will resolve, sometimes not)
+
+# Overview: https://cwcm.abbvie.com/editor.html/content/nova/isa/mcs-iae/nova-skyrizi-derm-binder/overview0.html
+
+ "
+ISAAP-530,617910,,Open,23/Dec/24 10:48 AM,06/Feb/25 3:25 PM,TOLBEVX,No-QA,slide:overview,,,,,,,"The user should be able scroll the Safety Bar after expanding to read all the safety content. However, the page slides down, showing whitespace at the bottom after initially scrolling"
+ISAAP-490,597750,,Done,15/Nov/24 5:28 PM,06/Feb/25 3:23 PM,TOLBEVX,category:authoring-assitance,No-QA,slide:access,,,,,,"# How does the columns component need to be authored so the columns widths are
+## Left 688
+## Right 39
+ !Overview Column Widths.png|thumbnail! "
+ISAAP-506,606331,,Done,02/Dec/24 11:26 AM,06/Feb/25 3:21 PM,TOLBEVX,category:authoring-assitance,No-QA,slide:dosing,,,,,,"h1. Open Items
+||#||Summary||Comments||
+
+h1. In Progress Items
+||#||Summary||Comments||
+ 
+h1. Closed Items
+||#||Summary||Comments||
+|1|Main Content Area|{color:#de350b}Issue:{color} Would it be more efficient to 1) apply template updates to the dosing page so that the there's room for the Tab Headings and main content area or 2) recreate the dosing page?
+{color:#00875a}Resolution:{color} Victor took care of positioningi.|
+|2|Image Size|Once the Main Content Area is set, need to determine size of image for each tab
+ # Skyrizi Dosing:
+ ## [https://cwcm.abbvie.com/damadmin#/content/dam/skyrizihcpivy/isa/derm/skyrizi/1-dosage-for-all-patients.jpg]
+ ## Image Size: 1870w x 1012h
+ ## XD: 934w x 475h
+ ## Current Authoring: 825w x 400h|
+|3|Indications|{color:#de350b}Issue:{color} Citation text is sub script; should be superscript
+{color:#00875a}Resolution:{color} Corrected authoring in Dec 3 connect.|
+|4|Overlays Missing Close Icon|Probable Duplicate of: ISAAP-509
+Indications: [https://cwcm.abbvie.com/editor.html/content/experience-fragments/nova/isa/iae/skyrizi-derm/modals/indications/dosing.html]|
+|6|Indications Overlay|The Indications modal on the XD screenshot does not consume the full width. Tried adding padding to overlay, but that has no impact|
+|5|Indications Text|{color:#de350b}Issue:{color} Update the Dosing Experience Fragment to match XD
+{color:#00875a}Resolution:{color} Updated.|
+|7|Full Prescribing PDF not opening|{color:#de350b}Issue: {color}Full Prescribing Link Opens as HTML, not PDF
+{color:#00875a}Resolution:{color} Split to ISAAP-505|
+|8|Dosing Schedules - PS|Tab Heading is using the References style, but needs white, not blue background
+ !PS Tab Header.png|thumbnail!|
+|9|Dosing Schedules - PsA|Tab Heading is using the References style, but needs white, not blue background
+ !PS Tab Header.png|thumbnail!|
+|10|Center Tabs| |"
+ISAAP-477,595968,,Done,12/Nov/24 8:20 PM,06/Feb/25 3:21 PM,TOLBEVX,category:authoring-assitance,slide:dosing,,,,,,,"The XD file (https://xd.adobe.com/view/0868e49b-aebf-4bdf-afc9-2894660a43ae-5d3b/screen/0271f419-ae4f-4ccb-a6f5-714a956ce201/specs/) shows mountains by a lake; however
+
+|XD File| ssss|
+|XD Background| !XD Background.png|thumbnail! |
+|Template Page Background| !Template Background.png|thumbnail! 
+
+h1.Resolution
+# Select Root Container
+# Click configure
+# Change the image on the Advanced tab"
+MCS-4380,637589,,Backlog,04/Feb/25 11:07 AM,06/Feb/25 3:05 PM,TOLBEVX,category:css,overlay:isi,slide:access,slide:dosing,slide:overview,slide:safety,,,"| Two scroll bar is displaying on ""Tap here"" ISI Overlay.| |  !screenshot-13.png|thumbnail! "
+MCS-4382,637999,,Backlog,05/Feb/25 3:38 AM,06/Feb/25 2:57 PM,TOLBEVX,category:css,slide:dosing,,,,,,,"Font Size, Text align and line height is not matching as per XD.
+"
+MCS-3048,573642,573641,BLOCKED,08/Oct/24 3:30 PM,06/Feb/25 11:32 AM,TEDESSX,DOR,,,,,,,,"h1. Useful Testing Links
+* Published Page: [https://cwcm.abbvie.com/content/nova/isa/mcs-iae/nova-skyrizi-derm-binder/overview0.html?wcmmode=disabled]
+* XD: [https://xd.adobe.com/view/2d2b0376-cd1c-4686-a221-73d00d3bdf64-7878/]
+* FRD: [FRDvSkyrizi Derm ISA.xlsm|https://abbvie.sharepoint.com/:x:/r/sites/NOVA/Shared%20Documents/General/Requirements/FRD%20Skyrizi%20Derm%20ISA.xlsm?d=wa21b6e6d39c34c85a506ed1e057cc416&csf=1&web=1&e=bPOTa0]
+* Open Blockers: [Jira Filter|https://btsjira.abbvie.com/issues/?jql=issue%20IN%20linkedIssues(MCS-3048%2C%20%22is%20blocked%20by%22)%20AND%20statusCategory%20!%3D%20Done]
+
+h1. Functional Testing
+* Tested on tablet (11 and 13 in iPad)
+* [Web Developer|https://chromewebstore.google.com/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm?pli=1] Chrome Browser Extension
+
+h1. Known Differences
+||#||Summary||Notes||
+|1|ISI Onload|There is a requirement to show the ISA when loaded; therefore, all ISA pages are configured to show ISI on load to fulfill this requirement no matter which page is loaded first|
+|2|Home Dots|Dots are visible when viewing in Veeva app|
+|3|Home Icon|Home Icon is in the Nav Bar|
+|4|Icons Removed|The 9 dots and rectangular icons are not present|
+|5|Full Prescribing Link|The Full Prescribing link is adjacent to the ISI link|
+|6|References|Reference numbers are not actual links. The overlay link is centered in the space between the Tile Tabs and the left edge. The link's font should match the font used for the Veeva #|
+|7|Tile Tabs|The ISA includes 4 slides: Overview, Dosing, Safety, and Access|
+|8|Veeva Number|The Veeva number is centered between the Tile Tabs and the right edge|
+|9|Safety Bar Expanded| # Safety Bar is collapsed on load
+ # Indications are displayed in one, not two, columns|
+|10|Prescribed Overlay (slide 3)| # Only the Nav Bar is visible (logo, Safety Bar, etc.) are not visible
+ # All Overview slide contents are visible (only background visible in XD)|
+|11|Ps Modal| # Carousel navigation at bottom, left; arrows are not on images
+ # Week # is not cut off
+ # Modal Background color|
+|12|PsA Modal|Modal Background color|
+|13|Hamburger Menu|Hamburger Menu is not depicted in XD|
+|14|Safety Content|Safety Bar and ISI content detailed in parent ticket, MCS-3047|
+!Overview Differences.png|thumbnail! 
+
+h1. Useful Authoring Links
+ * Experience Fragments:* [https://cwcm-q.abbvie.com/aem/experience-fragments.html/content/experience-fragments/nova/isa/iae/skyrizi-derm]
+ * Pages:
+ ** Classic: [https://cwcm-q.abbvie.com/siteadmin#/content/nova/isa/mcs-iae/nova-skyrizi-derm-binder]
+ ** Touch: [https://cwcm-q.abbvie.com/sites.html/content/nova/isa/mcs-iae/nova-skyrizi-derm-binder]
+ * DAM
+ ** Classic:
+ *** [https://cwcm-q.abbvie.com/damadmin#/content/dam/skyrizihcpivy/isa]
+ *** [https://cwcm-q.abbvie.com/damadmin#/content/dam/skyrizihcpivy/isa/template-assets]
+ ** Touch:
+ *** [https://cwcm-q.abbvie.com/assets.html/content/dam/skyrizihcpivy/isa]
+ *** [https://cwcm-q.abbvie.com/assets.html/content/dam/skyrizihcpivy/isa/template-assets]
+ * Assets
+ ** PDF for reference attached to ticket
+ ** Individual Assets: [Skyrizi-Overview|https://abbvie.sharepoint.com/sites/NOVA/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FNOVA%2FShared%20Documents%2FGeneral%2FIAE%20Pilot%2FDerm%20Sky%2FUS%2DSKZD%2D230596%5FCP%2Foverview&viewid=bf235f71%2D50d0%2D4fd4%2Db751%2D6211a8a371b7]
+ * XD file: [https://xd.adobe.com/view/2d2b0376-cd1c-4686-a221-73d00d3bdf64-7878/] 
+ * /content/dam/skyrizihcpivy/isa"
+ISAAP-563,624270,,In Progress,10/Jan/25 10:48 AM,06/Feb/25 10:01 AM,TOLBEVX,category:platform-product,,,,,,,,"I am unable to change the font size for the IVA text in the experience fragment. In the example, I creating a modal for a button."
+ISAAP-567,624274,,Open,10/Jan/25 10:51 AM,04/Feb/25 12:58 PM,TOLBEVX,category:platform-product,No-QA,,,,,TabsHeader,,"On the Ribbon for Tabs header in Skyrizi Derm slides, there is a feature called ""select panel"" that is available to quickly toggle between tabs for a single slide. That feature is missing on the ribbon for Skyrizi Gastro, [https://cwcm.abbvie.com/editor.html/content/nova/isa/mcs-iae/nova-skyrizi-gastro-binder/overview.html]
+
+It works fine here [https://cwcm.abbvie.com/editor.html/content/nova/isa/mcs-iae/nova-skyrizi-gastro-binder/dosing.html]
+
+ "
+MCS-3414,590805,573641,BLOCKED,05/Nov/24 9:21 AM,04/Feb/25 11:10 AM,TEDESSX,DOR,,,,,,,,"h1. Useful Testing Links
+* Published Page: [https://cwcm.abbvie.com/content/nova/isa/mcs-iae/nova-skyrizi-derm-binder/access.html?wcmmode=disabled]
+* Humira Access Page: [https://cwcm.abbvie.com/content/nova/isa/mcs-iae/nova-skyrizi-derm-binder/humira-access.html?wcmmode=disabled]
+* XD: [https://xd.adobe.com/view/e7f16f57-1546-4fab-bcef-14e6dde86cb0-b2a2/]
+* FRD: [FRDvSkyrizi Derm ISA.xlsm|https://abbvie.sharepoint.com/:x:/r/sites/NOVA/Shared%20Documents/General/Requirements/FRD%20Skyrizi%20Derm%20ISA.xlsm?d=wa21b6e6d39c34c85a506ed1e057cc416&csf=1&web=1&e=bPOTa0]
+* Open Blockers: [Jira Filter|https://btsjira.abbvie.com/issues/?jql=issue%20IN%20linkedIssues(MCS-3414%2C%20%22is%20blocked%20by%22)%20AND%20statusCategory%20!%3D%20Done]
+
+h1. Functional Testing
+* Tested on tablet (11 and 13 in iPad)
+* [Web Developer|https://chromewebstore.google.com/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm?pli=1] Chrome Browser Extension
+
+h1. Known Differences
+||#||Summary||Notes||
+|1|ISI Onload|There is a requirement to show the ISA when loaded; therefore, all ISA pages are configured to show ISI on load to fulfill this requirement no matter which page is loaded first|
+|2|Home Dots|Dots are visible when viewing in Veeva app|
+|3|Home Icon|Home Icon is in the Nav Bar|
+|4|Icons Removed|The 9 dots and rectangular icons are not present|
+|5|Nav Bar|The Full Prescribing link is adjacent to the ISI link. The two brands are side by side; they are not stacked|
+|6|Hamburger Menu|Hamburger Menu is not depicted in XD|
+|7|Safety Bar|The Safety Bar is collapsed on load|
+|8|Veeva Number|The Veeva number is centered between the Tile Tabs and the right edge|
+|9|Footnotes / References|Reference numbers are not actual links. The space between the left edge and the Tile Tabs is equally divided between the Footnotes and References overlay links|
+|10|Button Styling|Buttons cannot be styled as depicted in the wireframes; e.g.,  Humira Access|
+|11|Formulary Component - Change Location|Formulary Component has the ""Change Location"" in different location|
+|12|Formulary Component - Email|Correcting location and ability to change text covered in ISAAP-533|
+|13|Formulary Component - Change Location|Formulary Component has the ""Humira Access"" in different location|
+|14|Humira Access - Button Text|Ability to change text covered in ISAAP-533. Content height covered in ISAAP-608|
+|15|Main Tab Colors|The background color of ""Main Tab"". Overview, Dosing, Safety, and Access is slightly different. This was originally noted and accepted in MCS-4272|
+|16|Safety Content|Safety Bar and ISI content detailed in parent ticket, MCS-3047|
+ !Access Known Differences.png|thumbnail! 
+ !Access Known Differences - Overview.png|thumbnail! 
+
+h1. Useful Authoring Links
+* Experience Fragments: * [https://cwcm-q.abbvie.com/aem/experience-fragments.html/content/experience-fragments/nova/isa/iae/skyrizi-derm]
+* Pages:
+** Classic: [https://cwcm-q.abbvie.com/siteadmin#/content/nova/isa/mcs-iae/nova-skyrizi-derm-binder]
+** Touch: [https://cwcm-q.abbvie.com/sites.html/content/nova/isa/mcs-iae/nova-skyrizi-derm-binder]
+* DAM
+** Classic:
+*** [https://cwcm-q.abbvie.com/damadmin#/content/dam/skyrizihcpivy/isa]
+*** [https://cwcm-q.abbvie.com/damadmin#/content/dam/skyrizihcpivy/isa/template-assets]
+** Touch:
+*** [https://cwcm-q.abbvie.com/assets.html/content/dam/skyrizihcpivy/isa]
+*** [https://cwcm-q.abbvie.com/assets.html/content/dam/skyrizihcpivy/isa/template-assets]
+* Assets
+** PDF for reference attached to ticket
+** Individual Assets: [Skyrizi-Access|https://abbvie.sharepoint.com/sites/NOVA/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FNOVA%2FShared%20Documents%2FGeneral%2FIAE%20Pilot%2FDerm%20Sky%2FUS%2DSKZD%2D230596%5FCP%2Faccess&viewid=bf235f71%2D50d0%2D4fd4%2Db751%2D6211a8a371b7]
+
+
+
+"
+MCS-3415,590806,573641,BLOCKED,05/Nov/24 9:25 AM,04/Feb/25 11:10 AM,TEDESSX,DOR,,,,,,,,"h1. Useful Testing Links
+ * Published Page: [https://cwcm.abbvie.com/content/nova/isa/mcs-iae/nova-skyrizi-derm-binder/safety.html?wcmmode=disabled]
+ * XD: [https://xd.adobe.com/view/5d0615b1-0abf-42a2-8602-0f878392b11f-0855/]
+ * FRD: [FRDvSkyrizi Derm ISA.xlsm|https://abbvie.sharepoint.com/:x:/r/sites/NOVA/Shared%20Documents/General/Requirements/FRD%20Skyrizi%20Derm%20ISA.xlsm?d=wa21b6e6d39c34c85a506ed1e057cc416&csf=1&web=1&e=bPOTa0]
+ * Open Blockers: [Jira Filter|https://btsjira.abbvie.com/issues/?jql=issue%20IN%20linkedIssues(MCS-3415%2C%20%22is%20blocked%20by%22)%20AND%20statusCategory%20!%3D%20Done]
+
+h1. Functional Testing
+ * Tested on tablet (11 and 13 in iPad)
+ * [Web Developer|https://chromewebstore.google.com/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm?pli=1] Chrome Browser Extension
+
+h1. Known Differences
+||#||Summary||Notes||
+|1|ISI Onload|There is a requirement to show the ISA when loaded; therefore, all ISA pages are configured to show ISI on load to fulfill this requirement no matter which page is loaded first|
+|2|Home Dots|Dots are visible when viewing in Veeva app|
+|3|Home Icon|Home Icon is in the Nav Bar|
+|4|Icons Removed|The 9 dots and rectangular icons are not present|
+|5|Nav Bar|The Full Prescribing link is adjacent to the ISI link. The two brands are side by side; they are not stacked|
+|6|Hamburger Menu|Hamburger Menu is not depicted in XD|
+|7|Safety Bar|The Safety Bar is collapsed on load|
+|8|Veeva Number|The Veeva number is centered between the Tile Tabs and the right edge|
+|9|Footnotes / References|Reference numbers are not actual links. The space between the left edge and the Tile Tabs is equally divided between the Footnotes and References overlay links|
+|10|Button Styling|Buttons cannot be styled as depicted in the wireframes; e.g.,  Study Design and Characteristics on Overview tab|
+|11|Footnotes Overlay|XD does not in include a Close icon|
+|12|Main Tab Colors|The background color of ""Main Tab"". Overview, Dosing, Safety, and Access is slightly different. This was originally noted and accepted in MCS-4272|
+|13|Safety Content|Safety Bar and ISI content detailed in parent ticket, MCS-3047|
+ !Safety Differences.png|thumbnail! 
+
+h1. Useful Authoring Links
+ * Experience Fragments: * [https://cwcm-q.abbvie.com/aem/experience-fragments.html/content/experience-fragments/nova/isa/iae/skyrizi-derm]
+ * Pages:
+ ** Classic: [https://cwcm-q.abbvie.com/siteadmin#/content/nova/isa/mcs-iae/nova-skyrizi-derm-binder]
+ ** Touch: [https://cwcm-q.abbvie.com/sites.html/content/nova/isa/mcs-iae/nova-skyrizi-derm-binder]
+ * DAM
+ ** Classic:
+ *** [https://cwcm-q.abbvie.com/damadmin#/content/dam/skyrizihcpivy/isa]
+ *** [https://cwcm-q.abbvie.com/damadmin#/content/dam/skyrizihcpivy/isa/template-assets]
+ ** Touch:
+ *** [https://cwcm-q.abbvie.com/assets.html/content/dam/skyrizihcpivy/isa]
+ *** [https://cwcm-q.abbvie.com/assets.html/content/dam/skyrizihcpivy/isa/template-assets]
+ ** Assets
+ *** PDF for reference attached to ticket
+ *** Individual Assets: [Skyrizi-Safety|https://abbvie.sharepoint.com/sites/NOVA/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FNOVA%2FShared%20Documents%2FGeneral%2FIAE%20Pilot%2FDerm%20Sky%2FUS%2DSKZD%2D230596%5FCP%2Fsafety&viewid=bf235f71%2D50d0%2D4fd4%2Db751%2D6211a8a371b7]
+ *** /content/dam/skyrizihcpivy/isa"
+ISAAP-564,624271,,Open,10/Jan/25 10:48 AM,04/Feb/25 8:50 AM,BARKEJX3,category:platform-product,,,,,,,,"While trying to size each container to fit content, the layout feature has stopped responding to any movements. Even after refreshing, logging in and out, no change in container widths."
+ISAAP-569,624276,,Done,10/Jan/25 10:51 AM,04/Feb/25 8:14 AM,TOLBEVX,category:template-styles,No-QA,,,,,IVA Button,,"Study Design & Baseline Characteristics button needs to be aligned to the lower right of the slide, images below. https://cwcm.abbvie.com/editor.html/content/nova/isa/mcs-iae/nova-skyrizi-gastro-binder/overview.html on the ""Clinical Experience"" Tab. I have tried making multiple adjustments and the Container seems to be big enough to support, but there seems to be something in the way of it moving to that location."
+ISAAP-608,629572,,Done,21/Jan/25 9:28 PM,30/Jan/25 12:55 PM,TOLBEVX,category:authoring-assitance,No-QA,,,,,,,"h1. Open Items
+||#||Summary||Comments||
+|1|Content Height|The content is too tall on iPad, but correctly on desktop
+ !Desktop.png|thumbnail! 
+ !Humira Access - iPad.png|thumbnail! 
+|
+h1. In Progress Items
+||#||Summary||Comments||
+
+ 
+h1. Closed Items
+||#||Summary||Comments||
+|1| | |"
+ISAAP-610,630094,,Open,22/Jan/25 1:00 PM,24/Jan/25 2:05 PM,TOLBEVX,No-QA,,,,,,,,"While authoring modal-4 for Access and support slide on the Patient Experience tab, I am unable to create a table similar to the one provided. Current work around is to use an image. This removes the availability of updating small text boxes in the future when needed."
+ISAAP-570,624277,,Done,10/Jan/25 10:51 AM,24/Jan/25 1:04 PM,TOLBEVX,No-QA,,,,,,,,"IVA Title does not have an option for alignment, so if the title is more than one line the default is left align which does not work. Also, there is no option for styling the text, such as bold, Italicized, or underlined."
+ISAAP-568,624275,,Open,10/Jan/25 10:51 AM,24/Jan/25 12:36 PM,TOLBEVX,category:platform-product,No-QA,,,,,,,"I am trying to create an ISI Experience Fragment but cannot edit the template that is provided. It will not allow me to add any components. I emailed AEM Support and followed their recommendations, but still cannot edit that template. They said to re-check if it is a valid page template to use. I don't know how to validate that. I tried to create a new template, but was not able to associate it with properly and it wasn't available for me to use in Skyrizi Gastro."
+ISAAP-609,629999,,Open,22/Jan/25 12:44 PM,24/Jan/25 9:29 AM,BARKEJX3,No-QA,,,,,,,,"Guidance needed to properly configure the Formulary Component on both the Humira and Skyrizi Access pages. An error is thrown when clicking on either button.
+
+h2. Authoring Window
+ !Formulary Lookup Component Configuration.png|thumbnail! 
+# [Skyrizi] Access: https://cwcm.abbvie.com/editor.html/content/nova/isa/mcs-iae/nova-skyrizi-derm-binder/access.html
+# Humira Access: https://cwcm.abbvie.com/editor.html/content/nova/isa/mcs-iae/nova-skyrizi-derm-binder/humira-access.html
+
+h2. Current Errors
+ !Formulary Lookup Component - Humira Error.png|thumbnail! 
+ !Formulary Lookup Component - Skyrizi Error.png|thumbnail! 
+"
+ISAAP-458,595093,,Open,12/Nov/24 8:34 AM,23/Jan/25 11:48 AM,TOLBEVX,NotForMVP,,,,,,Image,,
+ISAAP-459,595095,,Open,12/Nov/24 8:35 AM,23/Jan/25 11:48 AM,TOLBEVX,NotForMVP,,,,,,Image,,"1) Component requires you to provide Alt Text, but also includes an option to retrieve from DAM
+
+2) DAM doesn't allow you to enter Alt Text"
+ISAAP-571,624278,,Open,10/Jan/25 10:51 AM,23/Jan/25 11:42 AM,TOLBEVX,No-QA,,,,,,,,"While making adjustments to the IVA text to match the creative, the more edits that get made the worse the text becomes. In this example, I have before and after images of the code that changes when I adjusted the font size from 20 to 24. It retains both in the code and makes the outcome variable. The goal would be that it only has one font size associated with it and the previous ones disappear."
+ISAAP-512,607694,,Done,04/Dec/24 8:28 AM,22/Jan/25 4:02 PM,TOLBEVX,category:authoring-assitance,No-QA,,,,,,,"h1. Open Items
+||#||Summary||Comments||
+|2|Overview Tab: Study Design and Baseline Characteristics button| * How to author the button to match the text line break?
+ * How match font size?
+ * How match button width?
+!Study Design & Baseline Button.png|thumbnail!|
+|3|Overlay Close Icon|Close Icon Missing on
+ # References
+ # Footnotes
+_NOTE:_ Possibly covered in ISAAP-509|
+|6|Select AEs Tab|Similar to #2, limitations styling the buttons|
+|9|Study Design & Baseline Characteristics Modal|Which modal style should be used? Modal 2 appears closest, but more than just Safety Bar available
+ * Modal 2: 
+!Modal 2.png|thumbnail!
+ * XD:
+!Study Design & Baseline Characteristics Design.png|thumbnail!|
+|10|Safety: Additional Ps Safety Data Overlay|8 modals will be available with Dec 11 deployment. However, none of them seem to match Additional PsA Safety Data design:
+!Additional Ps Safety Data.png|thumbnail!
+Modal 2 is the closest, but
+ # Doesn't appear tall enough
+ # hides the Tab Header (""GENERALLY CONSISTENT SAFETY PROFILE IN Ps AND PsA"")
+ # background is greyed out
+ # footer is covered
+!Modal 2.png|thumbnail!|
+|11|Safety: IMMprint Safety Data|8 modals will be available with Dec 11 deployment. However, none of them seem to match IMMprint Safety Data design. Modal 2 is the closest, but
+ # Doesn't appear tall enough
+ # background is greyed out
+ # footer is covered
+!image-2024-12-11-10-02-18-441.png|thumbnail!|
+
+h1. In Progress Items
+||#||Summary||Comments||
+h1. Closed Items
+||#||Summary||Comments||
+|1|Main Content Area|{color:#de350b}Issue: {color}_Same as Dosing ISAAP-506_ Would it be more efficient to 1) apply template updates to the dosing page so that the there's room for the Tab Headings and main content area or 2) recreate the dosing page?
+{color:#00875a}Resolution:{color} Victor took care of sizing|
+|4|Full Prescribing PDF not opening|{color:#de350b}Issue: {color}Full Prescribing Link Opens as HTML, not PDF
+{color:#00875a}Resolution:{color} Split to ISAAP-505|
+|5|Tab Heading Reference|{color:#de350b}Issue: {color}What Style should be used for the citation in the Tab Header
+!Tab Citation.png|thumbnail! 
+Styles not available 
+!Style Not Available.png|thumbnail!  
+_NOTE:_ Previously reported as ISAAP-500, but that has been closed
+{color:#00875a}Resolution:{color} Manually configured using combination of superscript and XD specification.|
+|7|Button Styles Not Available|{color:#de350b}Issue: {color}Cannot select button styles on Experience Fragments
+[https://cwcm.abbvie.com/editor.html/content/experience-fragments/nova/isa/iae/skyrizi-derm/modals/callouts/safety-additional-ps-safety-data.html]
+  !Button Styles Not Available.png|thumbnail!
+{color:#00875a}Resolution:{color} Styles now available.|
+|8|""Study Design & Baseline Characteristics"" overlay|{color:#de350b}Issue: {color}Cannot style overlay with tab components 
+[https://cwcm.abbvie.com/editor.html/content/experience-fragments/nova/isa/iae/skyrizi-derm/modals/callouts/safety-study-designs-baseline-characteristics.html]
+{color:#00875a}Resolution:{color} Split to ISAAP-498|
+
+ "
+ISAAP-488,597726,,Done,15/Nov/24 1:34 PM,22/Jan/25 4:02 PM,TOLBEVX,category:authoring-assitance,No-QA,,,,,,,"The Local tab has the Formulary Lookup Component
+ !Formulary Lookup Component.png|thumbnail! 
+Need to know how the component should be configured:
+ !Formulary Lookup Component Configuration.png|thumbnail! "
+ISAAP-404,579176,,Done,17/Oct/24 11:15 AM,22/Jan/25 4:02 PM,TOLBEVX,DOR,No-QA,NOVA-Figma-Setup,,,,,,"h1. {color:#172b4d}Description{color}
+
+Initial Figma setup for Columns
+h1. References
+||Name||Link||
+|Initiative|[ _{color:#ff8b00}insert Initiative Link{color}_ ]|
+|Epic|[ ISAAP-263 ]|
+h1. Acceptance Criteria
+ * *General*
+ ** Create Columns Component in our [NOVA Enterprise Design System|https://www.figma.com/design/qFQ3LVJ4kkWkPwJwqhr11n/NOVA-Enterprise-Design-System?node-id=163-334&t=a5RtO4ya28pjGmCa-1] under section Layout with the following properties:
+ *** 1-12 column count selection
+ *** each column should display a container component
+ ** Publish Updated Library
+ *** Validate that component is now visible in the exported library from our [Test Brand Design System|https://www.figma.com/design/MjhKojTUqcWjC8YA71WXe7/Test-Brand?m=auto&node-id=0-1&t=Mk2Q19Lr0zOPvnOZ-1] file in Figma
+
+ "
+ISAAP-533,617921,,Done,23/Dec/24 11:31 AM,22/Jan/25 12:44 PM,TOLBEVX,No-QA,,,,,,,,"h1. Open Items
+||#||Summary||Comments||
+|1|The email button is below the tabs component
+  !Email button blocked.png|thumbnail! | |
+h1. In Progress Items
+||#||Summary||Comments||
+
+ 
+h1. Closed Items
+||#||Summary||Comments||"
+ISAAP-514,608465,,Done,04/Dec/24 8:10 PM,21/Jan/25 9:37 PM,TOLBEVX,category:authoring-assitance,No-QA,,,,,,,"h1. Open Items
+||#||Summary||Comments||
+h1. In Progress Items
+||#||Summary||Comments||
+
+ 
+h1. Closed Items
+||#||Summary||Comments||
+|1|Center Tabs|Tabs slightly left of center. Is this a misconfiguration? Why is this the only page in error?
+  !Tabs Off Center.png|thumbnail!|
+|2|National Tab|color:#de350b}Issue: {color}Why do the Ps / PsA text and image appear below the container
+{color:#00875a}Resolution:{color} Addressed via authoring. The Tab Header is in one column; the tabs in adjacent column|
+|3|Local Tab|{color:#de350b}Issue: {color}Cannot get the columns with the Formulary component to resize
+{color:#00875a}Resolution:{color} Victor corrected column width|
+"
+ISAAP-532,617920,,Done,23/Dec/24 11:27 AM,21/Jan/25 9:11 AM,TOLBEVX,category:authoring-assitance,No-QA,,,,,,,"The National tab on the Access tab is missing text below the graphic and the Humira Access button
+ !Design v Actual.png|thumbnail! "
+ISAAP-562,624269,,Done,10/Jan/25 10:48 AM,21/Jan/25 8:54 AM,TOLBEVX,,,,,,,,,Attempted to adjust the line height so that there was less gap between lines and there was no response. I verified the the source code was correct and still no adjustment. Need to have the ability to close the distance between lines.
+ISAAP-559,624266,,Done,10/Jan/25 10:48 AM,21/Jan/25 8:54 AM,TOLBEVX,,,,,,,,,"The bottom two corners on the safety bar need to be rounded while the top two corners need to be square. Once the corners become rounded the background should be transparent, but instead are white. Recommend ability to round specific or all corners and for the background to be transparent."
+ISAAP-492,599342,,Done,19/Nov/24 9:02 AM,10/Jan/25 11:17 AM,TOLBEVX,category:authoring-assitance,No-QA,,,,,Formulary,,"Please advise how to styles buttons as ""Tic Tacs""
+ !Missing Button Styles.png|thumbnail! "
+ISAAP-483,596167,,Done,13/Nov/24 11:07 AM,10/Jan/25 11:17 AM,TOLBEVX,No-QA,,,,,,Safety Bar,,"The Expanded Safety Bar is not tall enough to show all the content. The XD shows a scroll bar (screenshot below).
+
+This is similar to Overlay - needs to be scrollable  (ISAAP-465). Created separate ticket because this is related to the Safety Bar component.
+ !image-2024-11-13-11-09-19-619.png|thumbnail! 
+"
+ISAAP-461,595097,,Done,12/Nov/24 8:44 AM,10/Jan/25 11:17 AM,TOLBEVX,No-QA,,,,,,Experience Fragment (Modal),,Modal Experience Fragment should be vertically centered. Currently it's anchored to the bottom
+MCS-2175,504778,504774,Done,10/Jun/24 8:16 AM,10/Dec/24 4:40 AM,TEDESSX,Brand:Infed,DOR,WS:Doug_Vojtko,,,,,,"Preview link: [https://infed1.p.cwcm-admp.com/]
+
+ 
+
+After handoff, create an Applitools baseline which includes all of the Initial Build work. It will be used to regression test the first round of BR feedback to ensure the changes are isolated and do not impact other sections of the website. If no BR feedback is reported, this baseline will be used to validate accuracy of the Content Matrix after publishing."
+MCS-2666,541735,,Done,14/Aug/24 2:50 PM,10/Dec/24 4:38 AM,TEDESSX,DOR,,,,,,,,"[https://savella1.p.cwcm-admp.com/]
+
+Update the screenshots already taken - [US-SAV-240001 Screenshot Package _FINAL_Feedback.pdf|https://abbvie.sharepoint.com/:b:/r/teams/Ext_adlwebdocs/Established/Savella/US-SAV-240001%20savella.com%20DTC%20Phase%201%20Update/Editor%20Final%20and%20BTS%20Feedback/US-SAV-240001%20Screenshot%20Package%20_FINAL_Feedback.pdf?csf=1&web=1&e=brbau9].
+
+The submission package is assembled as follows:
+ # {*}Page 1{*}: SubmissionReference​
+ # {*}Page 2{*}: Sitemap​ or Scope Table from Channel Brief (See US-SAV-240001)
+ # {*}Pages 3+{*}: Yellow highlighted pages from sitemap (desktop)​
+ # Followed by yellow highlighted pages from sitemap (mobile)
+
+Agency update - ""{_}Please use the last version we uploaded to MRP for pagination continuity and rendering states – and as a reminder, Per 8/8/24 live discussion with PM and Regulatory, do not show the content of the dynamic ISI. Instead, use the ""<INSERT DYNAMIC ISI HERE>"" statement as shown on other pages in desktop and mobile, including error states, system pages, etc.{_}""
+
+{*}NOTE{*}: When complete, attach the submission package to this ticket and move to testing.  All submission packages must go through UAT before they are handed off to the creative agency."
+ISAAP-498,601984,,Done,22/Nov/24 1:47 PM,06/Dec/24 12:48 PM,TEDESSX,,,,,,,,,"The Safety tab has an overlay with tabs. The ""Primary"" tab toggles through 5 items on the left, each with two tabs (Study Design and Baseline Characteristics).
+ !Overlay Design.png|thumbnail! 
+
+Tab styles can be applied to pages
+ !Page Authoring.png|thumbnail! 
+
+Cannot apply style to Experience Fragments
+ !Experience Fragment Authoring.png|thumbnail! "
+ISAAP-465,595505,,Done,12/Nov/24 8:53 AM,06/Dec/24 8:20 AM,TOLBEVX,No-QA,,,,,,Experience Fragment (Modal),,"Overlay - The References content is taller than the screen
+
+e.g., Safety, needs to be scrollable"
+ISAAP-463,595500,,Done,12/Nov/24 8:46 AM,06/Dec/24 8:20 AM,TOLBEVX,No-QA,,,,,,Callout,,The callout link image bleeds through modals. Z Index issue
+ISAAP-422,579647,,Done,17/Oct/24 12:40 PM,06/Dec/24 8:19 AM,TOLBEVX,No-QA,NOVA-Figma-Token,,,,,,,"h1. {color:#172b4d}Description{color}
+
+Initial Figma Token work for IVA Text
+h1. References
+||Name||Link||
+|Initiative|[ _{color:#ff8b00}insert Initiative Link{color}_ ]|
+|Epic|[ ISAAP-264 ]|
+h1. Acceptance Criteria
+ * {*}General{*}{*}{{*}}
+ ** Write the text.ts config/mapping file that should scrape the following tokens from a Figma Styles (Text). Each text type should define these tokens
+ *** typography token (weight, font size, line height, font family)
+ *** letter spacing
+ *** color
+ *** text transform
+ ** The tokens should still fall under components group in token file with component name ""Text""
+ ** Within the [Test Brand Design System|https://www.figma.com/design/MjhKojTUqcWjC8YA71WXe7/Test-Brand?m=auto&node-id=0-1&t=Mk2Q19Lr0zOPvnOZ-1] figma file, using the NOVA plugin, validate that the tokens are properly being included in the exported token file
+ ** CSS Export should not prefix a base to these output styles. ex:
+ *** 
+{code:java}
+// code placeholder
+""text"": {
+      ""heading 1"" : {
+              ""$type"": ""typography"",
+                  ""$value"": {
+                      ""fontFamily"": ""Montserrat"",
+                      ""fontSize"": ""16"",
+                      ""fontWeight"": ""Regular"",
+                      ""lineHeight"": ""100%""
+                  }
+              },
+              ""letter spacing"": {
+                  ""$type"": ""dimension"",
+                  ""$value"": ""0%""
+              },
+              ""text case"": {
+                   ""$type"": ""textcase"",
+                   ""$value"": ""uppercase""
+               }
+      },
+      ""heading 2"" : ...
+}{code}
+Should output just:
+
+ *** 
+{code:java}
+// code placeholder
+.heading-1{
+  font: Regular 16/100% Montserrat;
+  letter-spacing: 0;
+  text-transform: uppercase
+}{code}
+
+ * 
+ ** Run the token file through Style Dictionary build to create the CSS
+ *  "
+ISAAP-486,596321,,Done,13/Nov/24 9:21 PM,05/Dec/24 2:08 PM,TOLBEVX,category:authoring-assitance,,,,,,,,"# The Main Tabs are left, not center aligned
+# The Main Content is not centered
+ !Safety Alignment Issues.png|thumbnail! "
+ISAAP-496,600878,,Done,20/Nov/24 5:53 PM,25/Nov/24 4:02 PM,TOLBEVX,category:authoring-assitance,,,,,,,,"Guidance needed on how to 'override' template content
+
+# Access: Add Humira to Safety Information and Full Prescribing Information in the ""header""
+ !Access Header.png|thumbnail! 
+
+h1.Resolution
+# Header Content
+## Step 1: Add a component to Container [Root]
+ !Step 1.png|thumbnail! 
+## Step 2:  Remove flex-adjust class on the Advanced tab for the Container Root
+ !Remove Class.png|thumbnail! 
+"
+ISAAP-395,576071,,Done,11/Oct/24 2:15 PM,20/Nov/24 12:54 PM,TOLBEVX,DOR,No-QA,NOVA-Figma-Token,,,,,,"h1. {color:#172b4d}Description{color}
+
+Initial Figma Token work for container components
+h1. References
+||Name||Link||
+|Initiative|[ _{color:#ff8b00}insert Initiative Link{color}_ ]|
+|Epic|[ ISAAP-264 ]|
+h1. Acceptance Criteria
+ * {*}General{*}{*}{*}
+ ** Write the container.ts config/mapping file that should scrape the following tokens from a Container Component Set:
+ *** background
+ *** shadow
+ *** border top
+ *** border right
+ *** border bottom
+ *** border left
+ *** border radius top left
+ *** border radius top right
+ *** border radius bottom left
+ *** border radius bottom right
+ ** Within the [Test Brand Design System|https://www.figma.com/design/MjhKojTUqcWjC8YA71WXe7/Test-Brand?m=auto&amp;node-id=0-1&amp;t=Mk2Q19Lr0zOPvnOZ-1] figma file, using the NOVA plugin, validate that the tokens are properly being included in the exported token file
+ ** Run the token file through Style Dictionary build to create the CSS
+
+ "
+ISAAP-393,576069,,Done,11/Oct/24 2:11 PM,20/Nov/24 12:53 PM,TOLBEVX,DOR,No-QA,NOVA-Figma-Setup,,,,,,"h1. {color:#172b4d}Description{color}
+
+Initial Figma setup for container component
+h1. References
+||Name||Link||
+|Initiative|[ _{color:#ff8b00}insert Initiative Link{color}_ ]|
+|Epic|[ ISAAP-263 ]|
+h1. Acceptance Criteria
+ * *General*
+ ** Create Container Component in our [NOVA Enterprise Design System|https://www.figma.com/design/qFQ3LVJ4kkWkPwJwqhr11n/NOVA-Enterprise-Design-System?node-id=163-334&t=a5RtO4ya28pjGmCa-1] under section Components with the following properties:
+ *** container component should have a slot component
+ ** Publish Updated Library
+ *** Validate that component is now visible in the exported library from our [Test Brand Design System|https://www.figma.com/design/MjhKojTUqcWjC8YA71WXe7/Test-Brand?m=auto&node-id=0-1&t=Mk2Q19Lr0zOPvnOZ-1] file in Figma
+
+ "
+ISAAP-379,575717,,Open,10/Oct/24 3:53 PM,12/Nov/24 2:08 PM,TOLBEVX,IAE-Templates,,,,,,,,IAE Style Guides
+ISAAP-249,544171,,Done,20/Aug/24 1:21 PM,11/Nov/24 8:17 AM,TOLBEVX,t-shirt-size:l,,,,,,,,"h2. Acceptance Criteria
+ * Should cover styles for template and components per *Rinvoq RA.*
+
+ * Include Unique styles within Rinvoq Derm slides to cover following components:
+ ** Tables
+ ** Safety Bar
+ ** Vertical Navigation
+ ** Formulary
+ * Create Following Editable Templates to embed the stylesheets & validate them
+ ** Rinvoq RA Slide Template
+ ** Rinvoq RA Experience Fragment Template
+
+ * Author Initial Content for these templates as part of the Styles development
+ * Configure the templates to apply CSS Policies per component with CSS Class names defined & configured 
+ * Templates created must have appropriate brand specific thumbnails
+ * Allowed content paths for the created templates must be configured at the template level - 
+ ** Path: /content/NOVA/ISA/IAE and /content/NOVA/ISA/Rinvoq
+
+
+ * *Review the following comments & perform necessary fixes*
+ ** Logo on left and Right both ? update to right to be consistent?
+ ** All Component Styles and policies.
+ ** Safety bar on template.
+ ** Header to adjust columns
+ ** Footnotes and references not a part of header and footer or template
+ ** Placeholder should change to Tap Here instead of link to Imporatant Safety Informaiton.
+ ** Place for logo on header;
+
+h2. Assumptions:
+ * Fall back on Web for missing style/fonts
+ * Use the Brand Central for Rinvoq - [https://abbvie.sharepoint.com/teams/Ext_RinvoqUSBrandCentral]"
+ISAAP-325,561873,,Done,18/Sep/24 12:13 PM,27/Sep/24 11:58 AM,TOLBEVX,,,,,,,,,* Apply table styles for Rinvoq Derm
+ISAAP-248,544170,,Done,20/Aug/24 1:21 PM,17/Sep/24 6:02 PM,TOLBEVX,t-shirt-size:l,,,,,,,,"h2. Acceptance Criteria
+ * Create styles for template and components for *Rinvoq - Derm.*
+ * Include Unique styles within Rinvoq Derm slides to cover following components:
+ ** Tables
+ ** Safety Bar
+ ** Vertical Navigation
+ ** Formulary
+ * Create Following Editable Templates to embed the stylesheets & validate them
+ ** Rinvoq Derm Slide Template
+ ** Rinvoq Derm Experience Fragment Template
+
+ * Author Initial Content for these templates as part of the Styles development
+
+ * Configure the templates to apply CSS Policies per component with CSS Class names defined & configured 
+ * Templates created must have appropriate brand specific thumbnails
+ * Allowed content paths for the created templates must be configured at the template level - 
+ ** Path: /content/NOVA/ISA/IAE and /content/NOVA/ISA/Rinvoq
+
+
+ * *Review the following comments & perform necessary fixes* 
+ ** Footnotes and Indications  - Swipe up controls and Positioning Styles
+ ** Safety Bar component Policies and Styling.
+ ** All Component Styles and policies.
+ ** Footer and Header Brush Strokes background images (One image or separate for header? Footer background should be separate.)
+
+h2. Assumptions:
+ * Fall back on Web for missing style/fonts
+ * Use the Brand Central for Rinvoq - [https://abbvie.sharepoint.com/teams/Ext_RinvoqUSBrandCentral]"
+ISAAP-246,544168,,Done,20/Aug/24 1:15 PM,06/Sep/24 3:25 PM,TOLBEVX,,,,,,,,,"Following observations as documented in ISAAP-193 needs to be addressed in IAE Template styling:
+
+*Skyrizi Gastro*
+ * -Content Container to float up-
+ * -Styles for References and Footnotes for Header (positioning vertical)-
+ * Column control for logo(s) on header(Check Safety Slide)
+ * -Column control for Reference and Footnotes on Footer.-
+ * Following component Policies and Styling.
+ ** -Safety Bar-
+ ** -Tables-
+ ** -VerticalNav-
+ ** -Formulary-
+ ** -Modal-
+ * -Initial Content to have background image that can be modified on page.-
+ * -Bottom Footer design to have blue edging (Mask)-
+ * -All Component Styles and policies.-
+ * -Safety bar on template.-
+ * -Move the DAM assets needed for Template level initial content to the folder: /content/dam/<brand>/ISA/Template-Assets/-
+ * Create Style Guide content pages for Authoring Handoff of Style Templates"
+ISAAP-166,509148,,Done,18/Jun/24 11:51 AM,06/Sep/24 3:25 PM,TOLBEVX,t-shirt-size:l,,,,,,,,"h2. Acceptance Criteria
+ * Create styles for template and components for *Rinvoq - Derm.*
+ * Include Unique styles within Rinvoq Derm slides to cover following components:
+ ** Tables
+ ** Safety Bar
+ ** Vertical Navigation
+ ** Formulary
+ * Create Following Editable Templates to embed the stylesheets & validate them
+ ** Rinvoq Derm Slide Template
+ ** Rinvoq Derm Experience Fragment Template
+
+ * Author Initial Content for these templates as part of the Styles development
+
+ * Configure the templates to apply CSS Policies per component with CSS Class names defined & configured 
+ * Templates created must have appropriate brand specific thumbnails
+ * Allowed content paths for the created templates must be configured at the template level - 
+ ** Path: /content/NOVA/ISA/IAE and /content/NOVA/ISA/Rinvoq
+
+
+ * *Review the following comments & perform necessary fixes* 
+ ** Footnotes and Indications  - Swipe up controls and Positioning Styles
+ ** Safety Bar component Policies and Styling.
+ ** All Component Styles and policies.
+ ** Footer and Header Brush Strokes background images (One image or separate for header? Footer background should be separate.)
+
+h2. Assumptions:
+ * Fall back on Web for missing style/fonts
+ * Use the Brand Central for Rinvoq - [https://abbvie.sharepoint.com/teams/Ext_RinvoqUSBrandCentral]"
+ISAAP-192,519724,519723,Done,09/Jul/24 11:23 PM,20/Aug/24 11:03 PM,TOLBEVX,,,,,,,,,[~TOLBEVX]  to list the components that are part of the Styleguide but are not available in AEM for him to complete the styles development.
+ISAAP-191,519723,,Done,09/Jul/24 11:23 PM,20/Aug/24 1:38 PM,TOLBEVX,No-QA,t-shirt-size:l,,,,,,,"Should cover styles for template and components for Skyrizi all franchise.
+ * Use Style Guide in  ISAAP-188 to create style sheets for following franchises
+ ** *Skyrizi Gastro*
+ * Create Following Editable Templates to embed the stylesheets & validate them
+ ** Skyrizi *Gastro* Slide Template ISAAP-193
+ ** Skyrizi *Gastro* Experience Fragment Template ISAAP-142
+ * Skyrizi Gastro Flip Slide specific stylistic requirements
+ ** Use Brand CSS to hide flip icon for Skyrizi
+ ** Use Brand CSS to align the 3 Flip Container instances to meet the requirements
+ ** In SKyrizi Gastro slide the following should be part of the background image:
+    a. 12-week....
+    b. 52-week...
+    c. Non-Randomized placebo...
+    d. CO-Primary...
+    e. Open label...
+ * Configure the templates to apply CSS Policies per component with CSS Class names defined & configured 
+ * Templates created must have appropriate brand specific thumbnails
+ * Allowed content paths for the created templates must be configured at the template level - 
+ ** Path: /content/NOVA/ISA/IAE and /content/NOVA/ISA/Skyrizi
+
+h2. Assumptions:
+ * Fall back on Web for missing style/fonts"
+ISAAP-145,501345,,Done,03/Jun/24 5:02 PM,12/Aug/24 9:40 AM,TOLBEVX,t-shirt-size:l,,,,,,,,"Should cover styles for template and components for Skyrizi all franchise.
+ * Use Style Guide in  ISAAP-144 to create style sheets for following franchises
+ ** Skyrizi Global
+ *** Skyrizi Derm
+ *** -Skyrizi Gastro-
+ * Create Following Editable Templates to embed the stylesheets & validate them
+ ** Skyrizi Derm Slide Template
+ ** Skyrizi Derm Experience Fragment Template
+ ** Based on ISAAP-144{color:#ff8b00} we may determine that we will need to create Skyrizi Derm & Skyrizi Gastro slide templates separately{color}
+
+ * Configure the templates to apply CSS Policies per component with CSS Class names defined & configured 
+ * Templates created must have appropriate brand specific thumbnails
+ * Allowed content paths for the created templates must be configured at the template level - 
+ ** Path: /content/NOVA/ISA/IAE and /content/NOVA/ISA/Skyrizi
+
+h2. Assumptions:
+ * Fall back on Web for missing style/fonts"

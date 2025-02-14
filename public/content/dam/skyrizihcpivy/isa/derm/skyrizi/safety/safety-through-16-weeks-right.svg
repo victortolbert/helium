@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="515.203" height="373.5" viewBox="0 0 515.203 373.5">
+  <defs>
+    <filter id="Rectangle" x="0" y="0" width="465" height="140" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="4.5" result="blur"/>
+      <feFlood flood-color="#00a3df" flood-opacity="0.427"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_3" data-name="Group 3" transform="translate(-1044 4312.313)">
+    <g id="Warnings" transform="translate(1057.5 -4300.813)">
+      <g transform="matrix(1, 0, 0, 1, -13.5, -11.5)" filter="url(#Rectangle)">
+        <rect id="Rectangle-2" data-name="Rectangle" width="438" height="113" rx="5.397" transform="translate(13.5 11.5)" fill="#fff"/>
+      </g>
+      <text id="no_routine_lab_monit" data-name="no routine lab monit" transform="translate(8.694 26.114)" fill="#1ba2da" font-size="11" font-family="SegoeUI, Segoe UI"><tspan x="0" y="12">NO ROUTINE LAB MONITORING REQUIRED DURING TREATMENT</tspan></text>
+      <g id="Group_6" data-name="Group 6" transform="translate(8.694 39.302)">
+        <text id="no_labeled_liver_tes" data-name="no labeled liver tes" transform="translate(0 1.812)" fill="#1ba2da" font-size="11" font-family="SegoeUI, Segoe UI"><tspan x="0" y="12">NO LABELED LIVER TESTING REQUIRED FOR INITIATION OR DURING TREATMENT FOR </tspan><tspan x="0" y="24.6">Ps OR PsA </tspan></text>
+        <g id="Small" transform="translate(403.693)">
+          <g id="Group_11" data-name="Group 11">
+            <rect id="Rectangle_2.5_4_" data-name="Rectangle [2.5 4]" width="9.996" height="13" rx="4.998" transform="translate(0 -1.502)" fill="#74caed"/>
+            <text id="_1" data-name="1" transform="translate(4.481 7.998)" fill="#fff" font-size="8" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">1</tspan></text>
+          </g>
+        </g>
+      </g>
+      <g id="Small-2" data-name="Small" transform="translate(280.387 23.302)">
+        <g id="Group_11-2" data-name="Group 11">
+          <rect id="Rectangle_2.5_4_2" data-name="Rectangle [2.5 4]" width="9.996" height="13" rx="4.998" transform="translate(0 -1.502)" fill="#74caed"/>
+          <text id="_1-2" data-name="1" transform="translate(4.481 7.998)" fill="#fff" font-size="8" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">1</tspan></text>
+        </g>
+      </g>
+      <path id="Line_4" data-name="Line 4" d="M.5,1.45,408.608,1" transform="translate(12.972 56.111)" fill="none" stroke="#10a4de" stroke-linecap="square" stroke-miterlimit="10" stroke-width="0.9" stroke-dasharray="0.9 3.6"/>
+      <text id="Initially_evaluate_f" data-name="Initially evaluate f" transform="translate(8.703 20.384)" fill="#1ba2da" font-size="11" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Initially evaluate for tuberculosis (TB) and instruct patients to report signs and symptoms of infection. </tspan></text>
+      <text id="NO_LABELED_WARNINGS" data-name="NO LABELED WARNINGS" transform="translate(8.703 81.755)" fill="#1b517b" font-size="11" font-family="SegoeUI, Segoe UI"><tspan x="0" y="12">NO LABELED WARNINGS OR PRECAUTIONS ON MALIGNANCY, IBD, DEPRESSION, </tspan><tspan x="0" y="24.6">OR CANDIDIASIS</tspan></text>
+      <g id="Small-3" data-name="Small" transform="translate(80.397 93.81)">
+        <g id="Group_11-3" data-name="Group 11">
+          <rect id="Rectangle_2.5_4_3" data-name="Rectangle [2.5 4]" width="9.996" height="13" rx="4.998" transform="translate(0 -1.502)" fill="#74caed"/>
+          <text id="_1-3" data-name="1" transform="translate(4.481 7.998)" fill="#fff" font-size="8" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">1</tspan></text>
+        </g>
+      </g>
+      <text id="Warnings_and_precaut" data-name="Warnings and precaut" transform="translate(8.703 74.361)" fill="#1b517b" font-size="11" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">Warnings and precautions include hypersensitivity, infections, tuberculosis, and immunizations.</tspan></text>
+    </g>
+    <g id="Study_Designs" data-name="Study Designs" transform="translate(1059.5 -4170.813)">
+      <text id="UltIMMa-1_N_506_an" data-name="UltIMMa-1 (N=506) an" transform="translate(0 16)" fill="#23385b" font-size="11" font-family="SegoeUI, Segoe UI"><tspan x="0" y="12">UltIMMa-1 (N=506) and UltIMMa-2 (N=491) were replicate Phase 3, randomized, </tspan><tspan x="0" y="24">double-blind, </tspan><tspan x="0" y="36">placebo- and active-controlled studies to evaluate the efficacy and safety of SKYRIZI </tspan><tspan x="0" y="48">(150 mg) vs placebo </tspan><tspan x="0" y="60">at 16 weeks and ustekinumab at 52 weeks in adult patients with moderate to severe </tspan><tspan x="0" y="72">plaque psoriasis.</tspan></text>
+      <g id="Small-4" data-name="Small" transform="translate(421 39)">
+        <g id="Group_11-4" data-name="Group 11">
+          <rect id="Rectangle_2.5_4_4" data-name="Rectangle [2.5 4]" width="18" height="13" rx="6.5" transform="translate(0 -3)" fill="#74caed"/>
+          <text id="_1-4" data-name="1" transform="translate(4.481 6.5)" fill="#fff" font-size="8" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">1,10</tspan></text>
+        </g>
+      </g>
+      <text id="Study_Designs-2" data-name="Study Designs" transform="translate(0 0.495)" fill="#10a4de" font-size="10.495" font-family="SegoeUI, Segoe UI"><tspan x="0" y="11">STUDY DESIGNS</tspan></text>
+      <text id="IMMvent_was_a_Phase" data-name="IMMvent was a Phase" transform="translate(0 62)" fill="#23385b" font-size="11" font-family="SegoeUI, Segoe UI"><tspan x="0" y="12">IMMvent was a Phase 3, randomized, double-blind, double-dummy, active-controlled </tspan><tspan x="0" y="24">study to evaluate the efficacy and safety of SKYRIZI compared to HUMIRA </tspan><tspan x="0" y="36">(adalimumab) in adult patients with moderate to severe plaque psoriasis over 44 </tspan><tspan x="0" y="48">weeks.</tspan></text>
+      <g id="Small-5" data-name="Small" transform="translate(176 85)">
+        <g id="Group_11-5" data-name="Group 11">
+          <rect id="Rectangle_2.5_4_5" data-name="Rectangle [2.5 4]" width="13" height="13" rx="6.5" transform="translate(0 -2.5)" fill="#74caed"/>
+          <text id="_1-5" data-name="1" transform="translate(4.481 7)" fill="#fff" font-size="8" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">11</tspan></text>
+        </g>
+      </g>
+      <text id="IMMhance_was_a_Phase" data-name="IMMhance was a Phase" transform="translate(0 108)" fill="#23385b" font-size="11" font-family="SegoeUI, Segoe UI"><tspan x="0" y="12">IMMhance was a Phase 3, multicenter, randomized, double-blind, placebo-controlled </tspan><tspan x="0" y="24">study to evaluate the impact of treatment withdrawal and re-treatment of SKYRIZI </tspan><tspan x="0" y="36">compared to placebo in adult patients with moderate to severe plaque psoriasis.</tspan></text>
+      <g id="Small-6" data-name="Small" transform="translate(182 131)">
+        <g id="Group_11-6" data-name="Group 11">
+          <rect id="Rectangle_2.5_4_6" data-name="Rectangle [2.5 4]" width="19" height="13" rx="6.5" transform="translate(0 -2)" fill="#74caed"/>
+          <text id="_1-6" data-name="1" transform="translate(4.481 7.5)" fill="#fff" font-size="8" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">1,12</tspan></text>
+        </g>
+      </g>
+      <text id="ACTIVE_COMPARATOR" data-name="ACTIVE COMPARATOR" transform="translate(0.011 154)" fill="#0aabe1" font-size="11" font-family="SegoeUI, Segoe UI"><tspan x="0" y="12">ACTIVE COMPARATOR</tspan><tspan font-family="AvenirNextCondensed-Bold" font-weight="700"><tspan x="0" y="24"></tspan></tspan></text>
+      <text id="The_ustekinumab_used" data-name="The ustekinumab used" transform="translate(0 169)" fill="#23385b" font-size="11" font-family="SegoeUI, Segoe UI"><tspan x="0" y="12">The ustekinumab used as a biologic active control in UltlMMa-1 and UltlMMa-2 was </tspan><tspan x="0" y="24">sourced from the European Union. Comparability between non–US-approved </tspan><tspan x="0" y="36">ustekinumab and US-approved ustekinumab has not been established. See Full </tspan><tspan x="0" y="48">Prescribing Information for US-approved ustekinumab, which reflects different rates of </tspan><tspan x="0" y="60">adverse events from those observed for EU-approved ustekinumab in the UltIMMa trials.</tspan></text>
+    </g>
+  </g>
+</svg>
