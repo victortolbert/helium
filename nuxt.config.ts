@@ -87,7 +87,11 @@ export default defineNuxtConfig({
         },
       },
     },
-
+    database: {
+      type: 'postgres',
+      url: process.env.POSTGRES_URL,
+      /* Other options for `pg` */
+    },
   },
 
   ui: {
