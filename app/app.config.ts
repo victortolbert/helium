@@ -2,9 +2,9 @@ export default defineAppConfig({
   // https://ui3.nuxt.dev/getting-started/theme#design-system
   ui: {
     colors: {
-      neutral: 'gray',
-      primary: 'gray',
-      secondary: 'stone',
+      neutral: 'slate',
+      primary: 'amber',
+      secondary: 'blue',
       tertiary: 'stone',
     },
     container: {

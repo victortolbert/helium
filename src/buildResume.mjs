@@ -1,6 +1,6 @@
 import path from 'node:path'
 import process from 'node:process'
-import { fileURLToPath } from 'node:url'
+// import { fileURLToPath } from 'node:url'
 import axios from 'axios'
 import fs from 'fs-extra'
 import puppeteer from 'puppeteer'
@@ -25,7 +25,7 @@ const PDF_OPTIONS = {
 }
 
 // Get the directory name in ES modules
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
+// const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 /**
  * Builds the HTML version of the resume

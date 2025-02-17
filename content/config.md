@@ -1,5 +1,10 @@
 # Configuration
 
+```ts
+// https://nuxt.com/docs/guide/directory-structure/nuxt.config
+export default defineNuxtConfig({})
+```
+
 - **modules**: Specifies the Nuxt.js modules to include in the project. Modules are reusable packages that extend the core functionality of Nuxt.js.
 - **plugins**: Defines plugins to be used in the Nuxt.js application. Plugins can be used to add global functionality to the app.
 - **ssr**: Enables or disables server-side rendering. Setting it to false disables SSR.

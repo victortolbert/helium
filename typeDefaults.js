@@ -1,3 +1,5 @@
+import { em } from './app/utils/em'
+
 export default {
   DEFAULT: {
     css: {

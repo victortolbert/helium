@@ -93,9 +93,17 @@ function moveSlide(event) {
   if (event.key) {
     switch (event.key) {
       case 'Left': // IE/Edge key
-      case 'ArrowLeft': slideOffset.value = ((floatOffset.value - floatKeyboardStep.value) >= 0) ? floatOffset.value - floatKeyboardStep.value : 0; break
+      case 'ArrowLeft':
+        slideOffset.value = ((floatOffset.value - floatKeyboardStep.value) >= 0)
+          ? floatOffset.value - floatKeyboardStep.value
+          : 0
+        break
       case 'Right': // IE/Edge key
-      case 'ArrowRight': slideOffset.value = ((floatOffset.value + floatKeyboardStep.value) <= 1) ? floatOffset.value + floatKeyboardStep.value : 1; break
+      case 'ArrowRight':
+        slideOffset.value = ((floatOffset.value + floatKeyboardStep.value) <= 1)
+          ? floatOffset.value + floatKeyboardStep.value
+          : 1
+        break
       default:
     }
   }

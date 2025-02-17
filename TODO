@@ -19,6 +19,8 @@ Projects:
   - [ ] Add file upload example
   - [ ] Add form example
   - [ ] Add right-click to brand logo view the design kit
+  - [ ] Try `npx tsx ./script.ts` https://tsx.is/getting-started
+
 
 Todo:
   [+] Add a way to add a new todo

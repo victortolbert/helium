@@ -1,3 +1,6 @@
+import animate from 'tailwindcss-animate'
+import { setupInspiraUI } from '@inspira-ui/plugins'
+
 /** @type {import('tailwindcss').Config} */
 export default {
   theme: {
@@ -96,6 +99,8 @@ export default {
     },
   },
   plugins: [
+    animate,
+    setupInspiraUI,
     // function ({ addComponents, theme }) {
     //   const screens = theme('screens')
     //   const userStyles = theme('debugScreens.style', {})

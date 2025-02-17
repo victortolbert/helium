@@ -11,10 +11,10 @@ import fs from 'node:fs/promises'
 import http from 'node:http'
 import path from 'node:path'
 import process from 'node:process'
-import { fileURLToPath } from 'node:url'
+// import { fileURLToPath } from 'node:url'
 import minimist from 'minimist' // Modern replacement for optimist
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
+// const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const args = minimist(process.argv.slice(2))
 const PORT = process.env.PORT || 8888
 

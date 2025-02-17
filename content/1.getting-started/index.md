@@ -11,11 +11,6 @@ navigation.title: Introduction
 
 This is a Nuxt.js-based web application with comprehensive frontend and backend capabilities. The project uses pnpm as its package manager (v10.2.0) and is configured as a private module.
 
-::callout
-The .mjs extension makes the file use the ES modules (ESM) format. Node interprets .js files in the CommonJS (CJS) format by default, but if you have "type": "module" in your package.json, you can also use eslint.config.js.
-::
-
-
 ## Scripts
 
 ### Development
