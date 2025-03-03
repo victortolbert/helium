@@ -1,0 +1,9 @@
+---
+description: Best practices for state management with Pinia
+globs: **/*.{ts,tsx,js,jsx}
+---
+- Use Pinia stores for global state management
+- Implement proper store actions and getters
+- Use Pinia's devtools for debugging
+- Keep stores focused on specific domains
+- Utilize Pinia's reactivity with Vue's Composition API

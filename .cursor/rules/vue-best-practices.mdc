@@ -1,0 +1,9 @@
+---
+description: Best practices for Vue.js applications
+globs: **/*.{vue,ts,tsx,js,jsx}
+---
+- Use the Composition API for better code organization
+- Implement proper reactivity with ref and reactive
+- Use v-model for two-way data binding
+- Utilize Vue's built-in directives for DOM manipulation
+- Implement proper component lifecycle management

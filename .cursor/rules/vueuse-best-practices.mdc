@@ -1,0 +1,9 @@
+---
+description: Best practices for using VueUse utilities
+globs: **/*.{vue,ts,tsx,js,jsx}
+---
+- Use VueUse composables for common functionality
+- Implement proper reactivity with VueUse's reactive utilities
+- Utilize VueUse's DOM manipulation utilities
+- Use VueUse's animation utilities for smooth transitions
+- Implement proper error handling with VueUse's error utilities

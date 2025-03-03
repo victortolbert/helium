@@ -1,0 +1,9 @@
+---
+description: Best practices for using Tiptap in Vue applications
+globs: **/*.{vue,ts,tsx,js,jsx}
+---
+- Use Tiptap's extensions for custom functionality
+- Implement proper content serialization and deserialization
+- Utilize Tiptap's built-in commands for editor control
+- Use Tiptap's Vue component for easy integration
+- Implement proper event handling for user interactions

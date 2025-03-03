@@ -1,0 +1,9 @@
+---
+description: TypeScript coding standards and type safety guidelines
+globs: **/*.{ts,tsx}
+---
+- Use strict null checks for better type safety
+- Prefer interfaces over types for object shapes
+- Implement proper type guards and assertions
+- Use type inference where possible for cleaner code
+- Utilize TypeScript's utility types for advanced type manipulation

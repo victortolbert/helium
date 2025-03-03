@@ -1,0 +1,9 @@
+---
+description: Best practices for using Drizzle ORM with TypeScript
+globs: **/*.{ts,tsx}
+---
+- Use Drizzle's type-safe query builder for database operations
+- Implement proper schema definitions with Drizzle's schema system
+- Utilize Drizzle's migration system for database evolution
+- Use Drizzle's query result types for type-safe data handling
+- Implement proper error handling with Drizzle's error types

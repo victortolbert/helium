@@ -1,0 +1,109 @@
+Before diving into the best practices, please note that you may need to adapt the globs depending on your project structure.
+
+---
+
+name: nuxt-best-practices.mdc
+description: Best practices for Nuxt.js applications
+globs: **/*.{ts,tsx,js,jsx,vue}
+
+- Use asyncData for server-side data fetching
+- Implement proper error handling with NuxtErrorBoundary
+- Utilize Nuxt's built-in SEO features
+- Leverage Nuxt modules for extended functionality
+- Use Nuxt's routing system for better performance
+
+---
+
+name: vue-best-practices.mdc
+description: Best practices for Vue.js applications
+globs: **/*.{vue,ts,tsx,js,jsx}
+
+- Use the Composition API for better code organization
+- Implement proper reactivity with ref and reactive
+- Use v-model for two-way data binding
+- Utilize Vue's built-in directives for DOM manipulation
+- Implement proper component lifecycle management
+
+---
+
+name: pinia-best-practices.mdc
+description: Best practices for state management with Pinia
+globs: **/*.{ts,tsx,js,jsx}
+
+- Use Pinia stores for global state management
+- Implement proper store actions and getters
+- Use Pinia's devtools for debugging
+- Keep stores focused on specific domains
+- Utilize Pinia's reactivity with Vue's Composition API
+
+---
+
+name: tiptap-best-practices.mdc
+description: Best practices for using Tiptap in Vue applications
+globs: **/*.{vue,ts,tsx,js,jsx}
+
+- Use Tiptap's extensions for custom functionality
+- Implement proper content serialization and deserialization
+- Utilize Tiptap's built-in commands for editor control
+- Use Tiptap's Vue component for easy integration
+- Implement proper event handling for user interactions
+
+---
+
+name: vueuse-best-practices.mdc
+description: Best practices for using VueUse utilities
+globs: **/*.{vue,ts,tsx,js,jsx}
+
+- Use VueUse composables for common functionality
+- Implement proper reactivity with VueUse's reactive utilities
+- Utilize VueUse's DOM manipulation utilities
+- Use VueUse's animation utilities for smooth transitions
+- Implement proper error handling with VueUse's error utilities
+
+---
+
+name: tailwindcss-best-practices.mdc
+description: Best practices for using Tailwind CSS
+globs: **/*.{vue,ts,tsx,js,jsx,css}
+
+- Use utility classes for styling components
+- Implement responsive design with Tailwind's breakpoints
+- Utilize Tailwind's custom configuration for project-specific styles
+- Use Tailwind's pseudo-class variants for interactive states
+- Implement proper accessibility with Tailwind's focus states
+
+---
+
+name: typescript-best-practices.mdc
+description: TypeScript coding standards and type safety guidelines
+globs: **/*.{ts,tsx}
+
+- Use strict null checks for better type safety
+- Prefer interfaces over types for object shapes
+- Implement proper type guards and assertions
+- Use type inference where possible for cleaner code
+- Utilize TypeScript's utility types for advanced type manipulation
+
+---
+
+name: drizzle-orm-best-practices.mdc
+description: Best practices for using Drizzle ORM with TypeScript
+globs: **/*.{ts,tsx}
+
+- Use Drizzle's type-safe query builder for database operations
+- Implement proper schema definitions with Drizzle's schema system
+- Utilize Drizzle's migration system for database evolution
+- Use Drizzle's query result types for type-safe data handling
+- Implement proper error handling with Drizzle's error types
+
+---
+
+name: zod-best-practices.mdc
+description: Best practices for using Zod for schema validation
+globs: **/*.{ts,tsx,js,jsx}
+
+- Use Zod schemas for input validation
+- Implement proper error handling with Zod's error types
+- Utilize Zod's type inference for TypeScript integration
+- Use Zod's custom validation for complex data rules
+- Implement proper schema composition for reusable validation logic

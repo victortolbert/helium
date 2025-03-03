@@ -1,0 +1,9 @@
+---
+description: Best practices for using Zod for schema validation
+globs: **/*.{ts,tsx,js,jsx}
+---
+- Use Zod schemas for input validation
+- Implement proper error handling with Zod's error types
+- Utilize Zod's type inference for TypeScript integration
+- Use Zod's custom validation for complex data rules
+- Implement proper schema composition for reusable validation logic

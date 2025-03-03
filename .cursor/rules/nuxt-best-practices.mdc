@@ -1,0 +1,9 @@
+---
+description: Best practices for Nuxt.js applications
+globs: **/*.{ts,tsx,js,jsx,vue}
+---
+- Use asyncData for server-side data fetching
+- Implement proper error handling with NuxtErrorBoundary
+- Utilize Nuxt's built-in SEO features
+- Leverage Nuxt modules for extended functionality
+- Use Nuxt's routing system for better performance

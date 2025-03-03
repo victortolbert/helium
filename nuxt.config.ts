@@ -18,6 +18,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@pinia/nuxt',
     '@pinia/colada-nuxt',
+    'nuxt-llms',
     // '@nuxtjs/mdc',
     // '@nuxtjs/plausible',
     // '@vue-email/nuxt',
@@ -237,6 +238,28 @@ export default defineNuxtConfig({
     serverBundle: {
       collections: ['ph'],
     },
+  },
+  llms: {
+    domain: 'https://helium-blush.vercel.app',
+    full: {
+      title: 'Nuxt Documentation',
+      description: 'The complete documentation for Nuxt',
+    },
+    // title: 'Helium',
+    // description: 'Helium is a platform for building AI applications.',
+    // sections: [
+    //   {
+    //     title: 'Documentation',
+    //     description: 'Technical documentation and guides',
+    //     // Specify which content collection to use
+    //     // contentCollection: 'docs',
+    //     // Filter content as needed
+    //     contentFilters: [
+    //       { field: 'extension', operator: '=', value: 'md' },
+    //       // You can add more filters here
+    //     ],
+    //   },
+    // ],
   },
 
   uiPro: {

@@ -1,0 +1,9 @@
+---
+description: Best practices for using Tailwind CSS
+globs: **/*.{vue,ts,tsx,js,jsx,css}
+---
+- Use utility classes for styling components
+- Implement responsive design with Tailwind's breakpoints
+- Utilize Tailwind's custom configuration for project-specific styles
+- Use Tailwind's pseudo-class variants for interactive states
+- Implement proper accessibility with Tailwind's focus states
